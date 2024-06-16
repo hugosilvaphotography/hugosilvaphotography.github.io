@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Hugo Silva Photography</title>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            height: 100%; /* Garante que o html e body ocupem toda a altura da tela */
+            margin: 0; /* Remove margens padrão */
+        }
+        body {
+            background-image: url('imagens/gerais/fundo_site.png'); 
+            background-size: cover; /* Faz com que a imagem cubra toda a tela */
+            background-repeat: no-repeat; /* Impede que a imagem se repita */
+            background-attachment: fixed; /* Faz com que a imagem de fundo fique fixa ao rolar a página */
+            background-position: center; /* Centraliza a imagem */
+            display: flex; /* Usa flexbox para centralizar o conteúdo */
+            flex-direction: column; /* Alinha o conteúdo verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            text-align: center; /* Centraliza o texto */
+        }
+        header {
+            background-color: transparent;
+            position: fixed; /* Fixa o cabeçalho no topo */
+            top: 0px; /* Posiciona no topo */
+            width: 100%; /* Define a largura do cabeçalho */
+            z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+            text-align: center; /* Centraliza o texto */
+            display: flex; /* Usa flexbox para alinhar os itens */
+            flex-direction: column; /* Alinha os itens verticalmente */
+            align-items: center; /* Centraliza os itens */
+            padding-top: 10px; /* Adiciona espaçamento no topo */
+        }
+
+        header img {
+            width: 120px; /* Define a largura da imagem */
+            height: 120px; /* Define a altura da imagem */
+            margin: 0; /* Remove margem da imagem */
+            padding: 0; /* Remove padding da imagem */
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #000; /* Adiciona uma sombra ao texto */
+            font-family: "Marck Script", cursive; /* Define a fonte importada */
+            margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+            margin-top: 0; /* Remove margem do h1 */
+            padding: 0; /* Remove padding do h1 */
+        }
+
+        nav {
+            display: flex; /* Usa flexbox para alinhar os itens */
+            gap: 1em; /* Adiciona um espaço entre os links */
+        }
+        nav a {
+            padding: 7px; /* Define o padding interno dos links */
+            background-color: #8b9b82; /* Define a cor de fundo dos links */
+            color: #f8f4ef; /* Define a cor do texto dos links */
+            text-decoration: none; /* Remove o sublinhado dos links */
+            text-size-adjust: 12px;
+            border-radius: 15px; /* Adiciona bordas arredondadas */
+            transition: background-color 0.3s; /* Adiciona uma transição suave */
+        }
+        nav a:hover {
+            background-color: #f8f4ef; /* Muda a cor de fundo ao passar o mouse */
+            color: #2a2e30; /* Muda a cor do texto ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="2. sobre.html">Sobre</a>
+            <a href="3. testemunhos.html">Testemunhos</a>
+            <a href="4. serviços.html">Serviços</a>
+            <a href="5. portfolio.html">Portfólio</a>
+            <a href="6. contactos.html">Contactos</a>
+        </nav>
+    </header>
+</body>
+</html>
