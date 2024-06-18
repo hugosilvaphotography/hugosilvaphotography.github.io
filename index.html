@@ -78,19 +78,16 @@
         }
 
         /* Media query para dispositivos móveis */
-        @media (max-width: 600px) {
+        @media (max-width: 400px) {
             body {
                 padding-top: 150px; /* Adiciona espaço para o cabeçalho fixo em dispositivos móveis */
             }
             nav {
-                flex-direction: column; /* Alinha os links verticalmente em telas pequenas */
                 gap: 0.5em; /* Reduz o espaço entre os links */
             }
             nav a {
-                padding: 10px;
-                width: 100%;
-                max-width: 200px; /* Define uma largura máxima para os links */
-                text-align: center; /* Centraliza o texto dos links */
+                padding: 8px;
+                max-width: 80px; /* Reduz a largura máxima para os links em dispositivos móveis */
             }
         }
     </style>
