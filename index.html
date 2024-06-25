@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagens/gerais/Mancha Verde.png">
     <title>Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,142 +13,187 @@
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-image: url('imagens/gerais/fundo_site.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 350px;
+        margin: 0;
+        min-height: 100vh;
+        overflow-y: scroll;
+      }
+
+      header {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+      }
+
+      header h1 {
+        font-size: 31px;
+        color: #f8f4ef;
+        text-shadow: 2px 2px 4px #000;
+        font-family: "Marck Script", cursive;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap; /* Permite que os links se ajustem e quebrem linha em telas menores */
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 7px;
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      .ImagemInicial {
+        padding-bottom: 200px;
+      }
+
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      }
+  
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      }
+    
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      }
+    
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: "Helvetica", sans-serif;
+        color: #8b9b82;
+      }
+    
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: "Helvetica", sans-serif;
+        color: #8b9b82;
+      }
+    
+      #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: "Helvetica", sans-serif;
+        color: #8b9b82;
+      }
+    
+      #sib-container a {
+        text-decoration: underline;
+        color: #8b9b82;
+      }
+
+      footer {
+        background-color: transparent;
+        color: #f8f4ef;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .social-icons {
+        margin-bottom: 10px;
+      }
+
+      .social-icons a img {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+      }
+
+      .copyright {
+        margin-top: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #8b9b82 #2a2e30;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #8b9b82;
+        border-radius: 20px;
+        border: 3px solid #2a2e30;
+      }
+
+
+      /* Media query para dispositivos móveis */
+      @media (max-width: 400px) {
         body {
-            background-image: url('imagens/gerais/fundo_site.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding-top: 350px;
-            margin: 0;
-            min-height: 100vh;
-            overflow-y: scroll;
-        }
-        header {
-            background-color: transparent;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 10px;
-        }
-
-        header img {
-            width: 120px;
-            height: 120px;
-            margin: 0;
-            padding: 0;
-        }
-
-        header h1 {
-            font-size: 31px;
-            color: #f8f4ef;
-            text-shadow: 2px 2px 4px #000;
-            font-family: "Marck Script", cursive;
-            margin-bottom: 10px;
-            margin-top: 0;
-            padding: 0;
+          padding-top: 150px; /* Adiciona espaço para o cabeçalho fixo em dispositivos móveis */
         }
 
         nav {
-            display: flex;
-            gap: 1em;
-            flex-wrap: wrap; /* Permite que os links se ajustem e quebrem linha em telas menores */
-            justify-content: center;
+          gap: 0.5em; /* Reduz o espaço entre os links */
         }
+
         nav a {
-            padding: 7px;
-            background-color: #8b9b82;
-            color: #f8f4ef;
-            text-decoration: none;
-            border-radius: 15px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #f8f4ef;
-            color: #2a2e30;
+          padding: 8px;
+          max-width: 80px; /* Reduz a largura máxima para os links em dispositivos móveis */
         }
 
-        .ImagemInicial {
-            padding-bottom: 200px;
-        }
-
-        footer {
-            background-color: transparent;
-            color: #f8f4ef;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-            z-index: 1000;
-        }
-
-        .social-icons {
-            margin-bottom: 10px;
-        }
-
-        .social-icons a img {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-        }
-
-        .copyright {
-            margin-top: 10px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            
-        }
-
-        /* Barra de rolagem padrão para navegadores baseados em WebKit */
-        ::-webkit-scrollbar {
-            width: 12px; /* Largura da barra de rolagem */
-            height: 12px; /* Altura da barra de rolagem horizontal */
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent; /* Fundo transparente para o trilho da barra de rolagem */
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background-color: #f8f4ef; /* Cor do polegar da barra de rolagem */
-            border-radius: 6px; /* Borda arredondada para o polegar */
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background-color: #dcdcdc; /* Cor do polegar da barra de rolagem quando está em foco */
-        }
-
-        /* Barra de rolagem para Firefox */
-        * {
-            scrollbar-width: thin; /* Espessura da barra de rolagem */
-            scrollbar-color: #f8f4ef transparent; /* Cor do polegar e fundo transparente do trilho da barra de rolagem */
-        }
-
-
-        /* Media query para dispositivos móveis */
-        @media (max-width: 400px) {
-            body {
-                padding-top: 150px; /* Adiciona espaço para o cabeçalho fixo em dispositivos móveis */
-            }
-            nav {
-                gap: 0.5em; /* Reduz o espaço entre os links */
-            }
-            nav a {
-                padding: 8px;
-                max-width: 80px; /* Reduz a largura máxima para os links em dispositivos móveis */
-            }
-        }
+      }
     </style>
 </head>
 <body>
@@ -167,57 +213,8 @@
     <div id="ImagemInicial" class="ImagemInicial">
         <img src="imagens/gerais/Frase Inicial.svg" alt="Frase Inicial - HSP">
     </div>
-
-<!-- Begin Brevo Form -->
-<!-- START - We recommend to place the below code in head tag of your website html  -->
-<style>
-    @font-face {
-      font-display: block;
-      font-family: Roboto;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
-    }
   
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 600;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
-    }
-  
-    @font-face {
-      font-display: fallback;
-      font-family: Roboto;
-      font-weight: 700;
-      src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
-    }
-  
-    #sib-container input:-ms-input-placeholder {
-      text-align: left;
-      font-family: "Helvetica", sans-serif;
-      color: #8b9b82;
-    }
-  
-    #sib-container input::placeholder {
-      text-align: left;
-      font-family: "Helvetica", sans-serif;
-      color: #8b9b82;
-    }
-  
-    #sib-container textarea::placeholder {
-      text-align: left;
-      font-family: "Helvetica", sans-serif;
-      color: #8b9b82;
-    }
-  
-    #sib-container a {
-      text-decoration: underline;
-      color: #8b9b82;
-    }
-  </style>
-  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-  <!--  END - We recommend to place the above code in head tag of your website html -->
-  
-  <!-- START - We recommend to place the below code where you want the form in your website html  -->
+  <!-- BREVO FORM  -->
   <div class="sib-form" style="text-align: center;
            background-color: transparent;                                 ">
     <div id="sib-form-container" class="sib-form-container">
@@ -286,9 +283,7 @@
       </div>
     </div>
   </div>
-  <!-- END - We recommend to place the above code where you want the form in your website html  -->
   
-  <!-- START - We recommend to place the below code in footer or bottom of your website html  -->
   <script>
     window.REQUIRED_CODE_ERROR_MESSAGE = 'Escolha um código de país';
     window.LOCALE = 'pt';
@@ -312,10 +307,7 @@
   </script>
   
   <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-  
-  
-  <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
-  <!-- End Brevo Form -->
+  <!-- BREVO FORM -->
     
   <footer>
     <div class="social-icons">
