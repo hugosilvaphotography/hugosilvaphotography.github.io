@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
 
     <style>
       html, body {
@@ -85,16 +88,6 @@
         color: #2a2e30;
       }
 
-      .ImagemInicial {
-        padding-bottom: 200px;
-        max-width: 100%;
-        height: auto;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
       @font-face {
         font-display: block;
         font-family: Roboto;
@@ -142,7 +135,7 @@
         background-color: transparent;
         color: #f8f4ef;
         text-align: center;
-        padding: 20px 0;
+        padding: 40px 0;
         position: relative;
         z-index: 1000;
       }
@@ -152,8 +145,8 @@
       }
 
       .social-icons a img {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         margin: 0 10px;
       }
 
@@ -181,6 +174,44 @@
         background-color: #8b9b82;
         border-radius: 20px;
         border: 3px solid #2a2e30;
+      }
+
+      .FraseInicial {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-width: 1200px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 200px;
+      }
+
+      .FolhaEsquerda {
+        left: 20px;
+      }
+
+      .FolhaEsquerda img {
+        height: 200px;
+      }
+
+      .FolhaDireita {
+        right: 20px;
+      }
+
+      .FolhaDireita img{
+        height: 200px;
+      }
+
+      .Texto {
+        font-family: "Whisper", cursive, Arial, sans-serif;
+        font-size: 75px;
+        color: #f8f4ef;
+        text-shadow: #2a2e30;
+        text-align: center;
+        font-style: italic;
       }
 
 
@@ -234,8 +265,16 @@
         </nav>
     </header>
 
-    <div id="ImagemInicial" class="ImagemInicial">
-        <img src="imagens/gerais/Frase Inicial.svg" alt="Frase Inicial - HSP">
+    <div id="FraseInicial" class="FraseInicial">
+      <div class="FolhaEsquerda">
+        <img src="imagens/gerais/folha dourada_esquerda.png" alt="Folha Dourada Esquerda">
+      </div>
+      <div class="Texto">
+          Fotografar é eternizar um segundo...
+      </div>
+      <div class="FolhaDireita">
+          <img src="imagens/gerais/folha dourada_direita.png" alt="Folha Dourada Direita">
+      </div>
     </div>
   
   <!-- BREVO FORM  -->
