@@ -70,7 +70,7 @@
       nav {
         display: flex;
         gap: 1em;
-        flex-wrap: wrap; /* Permite que os links se ajustem e quebrem linha em telas menores */
+        flex-wrap: wrap;
         justify-content: center;
       }
 
@@ -88,47 +88,44 @@
         color: #2a2e30;
       }
 
-      @font-face {
-        font-display: block;
-        font-family: Roboto;
-        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      .FraseInicial {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-width: 1200px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 200px;
       }
-  
-      @font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 600;
-        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+
+      .FolhaEsquerda {
+        position: absolute;
+        left: 20px;
       }
-    
-      @font-face {
-        font-display: fallback;
-        font-family: Roboto;
-        font-weight: 700;
-        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+
+      .FolhaEsquerda img {
+        height: 200px;
       }
-    
-      #sib-container input:-ms-input-placeholder {
-        text-align: left;
-        font-family: "Helvetica", sans-serif;
-        color: #8b9b82;
+
+      .FolhaDireita {
+        position: absolute;
+        right: 20px;
       }
-    
-      #sib-container input::placeholder {
-        text-align: left;
-        font-family: "Helvetica", sans-serif;
-        color: #8b9b82;
+
+      .FolhaDireita img {
+        height: 200px;
       }
-    
-      #sib-container textarea::placeholder {
-        text-align: left;
-        font-family: "Helvetica", sans-serif;
-        color: #8b9b82;
-      }
-    
-      #sib-container a {
-        text-decoration: underline;
-        color: #8b9b82;
+
+      .Texto {
+        font-family: "Whisper", cursive, Arial, sans-serif;
+        font-size: 75px;
+        color: #f8f4ef;
+        text-shadow: 2px 2px 4px #2a2e30;
+        text-align: center;
+        font-style: italic;
       }
 
       footer {
@@ -176,45 +173,6 @@
         border: 3px solid #2a2e30;
       }
 
-      .FraseInicial {
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        max-width: 1200px;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 200px;
-      }
-
-      .FolhaEsquerda {
-        left: 20px;
-      }
-
-      .FolhaEsquerda img {
-        height: 200px;
-      }
-
-      .FolhaDireita {
-        right: 20px;
-      }
-
-      .FolhaDireita img{
-        height: 200px;
-      }
-
-      .Texto {
-        font-family: "Whisper", cursive, Arial, sans-serif;
-        font-size: 75px;
-        color: #f8f4ef;
-        text-shadow: #2a2e30;
-        text-align: center;
-        font-style: italic;
-      }
-
-
       /* Media query para dispositivos móveis */
       @media (max-width: 400px) {
         body {
@@ -243,19 +201,11 @@
           padding-bottom: 100px;
         }
 
-        .FolhaEsquerda {
-          left: 20px;
-        }
-
         .FolhaEsquerda img {
           height: 100px;
         }
 
-        .FolhaDireita {
-          right: 20px;
-        }
-
-        .FolhaDireita img{
+        .FolhaDireita img {
           height: 100px;
         }
 
@@ -263,8 +213,8 @@
           font-size: 20px;
         }
       }
-
     </style>
+    
 </head>
 <body>
     <header>
