@@ -1,45 +1,91 @@
-<form action="https://submit-form.com/erKQQ17FH">
-    <div>How satisfied are you with our product?</div>
-    <div>
-      <input
-        type="radio"
-        id="love"
-        name="satisfaction"
-        value="love"
-        required=""
-      />
-      <label for="love">😍</label>
-    </div>
-    <div>
-      <input
-        type="radio"
-        id="happy"
-        name="satisfaction"
-        value="happy"
-        required=""
-      />
-      <label for="happy">😃</label>
-    </div>
-    <div>
-      <input
-        type="radio"
-        id="neutral"
-        name="satisfaction"
-        value="neutral"
-        required=""
-      />
-      <label for="neutral">😐</label>
-    </div>
-    <div>
-      <input
-        type="radio"
-        id="unhappy"
-        name="satisfaction"
-        value="unhappy"
-        required=""
-      />
-      <label for="unhappy">😓</label>
-    </div>
-    <button type="submit">Submit</button>
-  </form>
-  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Satisfação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 10px #aaa;
+            display: inline-block;
+            text-align: left;
+        }
+        .form-container h1 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container input[type="file"],
+        .form-container textarea,
+        .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Formulário de Satisfação</h1>
+    <form action="https://submit-form.com/erKQQ17FH">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone">
+
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto">
+
+        <label for="satisfacao">Nível de Satisfação:</label>
+        <select id="satisfacao" name="satisfacao">
+            <option value="muito_satisfeito">Muito Satisfeito</option>
+            <option value="satisfeito">Satisfeito</option>
+            <option value="neutro">Neutro</option>
+            <option value="insatisfeito">Insatisfeito</option>
+            <option value="muito_insatisfeito">Muito Insatisfeito</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+        <label for="imagem">Enviar Imagem (apenas .jpg, .jpeg, .png):</label>
+        <input type="file" id="imagem" name="imagem" accept="image/*">
+
+        <input type="submit" name="submit" value="Enviar">
+    </form>
+</div>
+
+</body>
+</html>
