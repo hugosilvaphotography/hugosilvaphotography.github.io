@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <style>
       html, body {
         height: 100%;
@@ -315,7 +317,7 @@
       <p>Obrigado pelo seu apoio e confiança no nosso trabalho! ❤️</p>
     </section>
 
-    <form action="https://submit-form.com/erKQQ17FH">
+    <form action="https://submit-form.com/erKQQ17FH" method="POST">
       <label for="nome"><b>Nome<span style="color: red;">*</span></b></label>
       <input type="text" id="nome" minlength="3" required><br>
 
@@ -364,31 +366,31 @@
 
       <label for="qualidadeFotografias"><b>Como classificaria a qualidade das nossas fotografias?<span style="color: red;">*</span></b></label>
       <div class="star-rating">
-        <input type="radio" id="5-stars-1" name="qualidadeFotografias" value="5" required>
-        <label for="5-stars" class="fa fa-star"></label>
-        <input type="radio" id="4-stars-1" name="qualidadeFotografias" value="4">
-        <label for="4-stars" class="fa fa-star"></label>
-        <input type="radio" id="3-stars-1" name="qualidadeFotografias" value="3">
-        <label for="3-stars" class="fa fa-star"></label>
-        <input type="radio" id="2-stars-1" name="qualidadeFotografias" value="2">
-        <label for="2-stars" class="fa fa-star"></label>
-        <input type="radio" id="1-star-1" name="qualidadeFotografias" value="1">
-        <label for="1-star" class="fa fa-star"></label>
+        <input type="radio" id="5-estrelas-qualidade" name="qualidadeFotografias" value="5" required>
+        <label for="5-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="4-estrelas-qualidade" name="qualidadeFotografias" value="4">
+        <label for="4-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="3-estrelas-qualidade" name="qualidadeFotografias" value="3">
+        <label for="3-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="2-estrelas-qualidade" name="qualidadeFotografias" value="2">
+        <label for="2-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="1-estrelas-qualidade" name="qualidadeFotografias" value="1">
+        <label for="1-estrelas-qualidade" class="fa fa-star"></label>
       </div>
       <br>
 
       <label for="comunicacao"><b>Como avaliaria a comunicação com a nossa equipa durante todo o processo?<span style="color: red;">*</span></b></label>
       <div class="star-rating">
-        <input type="radio" id="5-stars-2" name="comunicacao" value="5" required>
-        <label for="5-stars" class="fa fa-star"></label>
-        <input type="radio" id="4-stars-2" name="comunicacao" value="4">
-        <label for="4-stars" class="fa fa-star"></label>
-        <input type="radio" id="3-stars-2" name="comunicacao" value="3">
-        <label for="3-stars" class="fa fa-star"></label>
-        <input type="radio" id="2-stars-2" name="comunicacao" value="2">
-        <label for="2-stars" class="fa fa-star"></label>
-        <input type="radio" id="1-star-2" name="comunicacao" value="1">
-        <label for="1-star" class="fa fa-star"></label>
+        <input type="radio" id="5-estrelas-comunicacao" name="comunicacao" value="5" required>
+        <label for="5-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="4-estrelas-comunicacao" name="comunicacao" value="4">
+        <label for="4-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="3-estrelas-comunicacao" name="comunicacao" value="3">
+        <label for="3-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="2-estrelas-comunicacao" name="comunicacao" value="2">
+        <label for="2-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="1-estrelas-comunicacao" name="comunicacao" value="1">
+        <label for="1-estrelas-comunicacao" class="fa fa-star"></label>
       </div>
       <br>
 
@@ -417,21 +419,24 @@
 
       <label for="classificacao"><b>Como classifica a sua experiência connosco no geral?<span style="color: red;">*</span></b></label>
       <div class="star-rating">
-        <input type="radio" id="5-stars-3" name="classificacao" value="5" required>
-        <label for="5-stars" class="fa fa-star"></label>
-        <input type="radio" id="4-stars-3" name="classificacao" value="4">
-        <label for="4-stars" class="fa fa-star"></label>
-        <input type="radio" id="3-stars-3" name="classificacao" value="3">
-        <label for="3-stars" class="fa fa-star"></label>
-        <input type="radio" id="2-stars-3" name="classificacao" value="2">
-        <label for="2-stars" class="fa fa-star"></label>
-        <input type="radio" id="1-star-3" name="classificacao" value="1">
-        <label for="1-star" class="fa fa-star"></label>
+        <input type="radio" id="5-estrelas-classificacao" name="classificacao" value="5" required>
+        <label for="5-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="4-estrelas-classificacao" name="classificacao" value="4">
+        <label for="5-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="3-estrelas-classificacao" name="classificacao" value="3">
+        <label for="3-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="2-estrelas-classificacao" name="classificacao" value="2">
+        <label for="2-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="1-estrelas-classificacao" name="classificacao" value="1">
+        <label for="1-estrelas-classificacao" class="fa fa-star"></label>
       </div>
       <br>
 
       <label for="opiniao"><b>A sua opinião é muito valiosa! Convidamo-lo a compartilhar um testemunho sobre a sua experiência connosco, que poderá ser publicado no nosso site para auxiliar futuros clientes.</b></label>
       <textarea name="opiniao" id="opiniao"></textarea><br>
+
+      <div class="g-recaptcha" data-sitekey="6LeL_NcpAAAAAGvnMjwe2OxhehQcvtkW6oGxO-Wk"></div>
+      <br>
 
       <input type="submit">
     </form>
