@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagens\gerais\Mancha Verde.png">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
     <title>Questionário de Satisfação</title>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
@@ -11,9 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
       html, body {
@@ -31,7 +32,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 350px;
+        padding-top: 300px;
         margin: 0;
         min-height: 100vh;
         overflow-y: scroll;
@@ -86,6 +87,118 @@
       nav a:hover {
         background-color: #f8f4ef;
         color: #2a2e30;
+      }
+
+      section h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 36px;
+        color: #f8f4ef;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+
+      section p {
+        font-family: 'Wittgenstein', sans-serif;
+        font-size: 15px;
+        color: #f8f4ef;
+        line-height: 1.6;
+        margin: 10px 0;
+        padding: 0 20px;
+      }
+
+      form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      form label {
+        font-family: 'Wittgenstein', sans-serif;
+        font-size: 15px;
+        color: #f8f4ef;
+        margin-bottom: 10px;
+      }
+
+      form textarea {
+        width: 100%;
+        height: 100px;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+
+      form input[type="text"] {
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+
+      form input[type="radio"] {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      form .radio-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      form .radio-group label {
+        margin-bottom: 0; /* remove bottom margin for radio labels */
+      }
+
+      form input[type="submit"] {
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        align-self: center;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      .star-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+
+      .star-rating input[type="radio"] {
+        display: none;
+      }
+
+      .star-rating label {
+        font-size: 30px;
+        color: #bbb;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .star-rating input[type="radio"]:checked ~ label {
+        color: #8b9b82;
+      }
+
+      .star-rating label:hover,
+      .star-rating label:hover ~ label {
+        color: #8b9b82;
       }
 
       footer {
@@ -158,6 +271,14 @@
           font-size: 22px; /* Ajusta o tamanho da fonte do título para dispositivos móveis */
           margin-bottom: 5px;
         }
+
+        section h1 {
+          font-size: 28px; /* Ajusta o tamanho da fonte do título para dispositivos móveis */
+        }
+
+        section p {
+          font-size: 10px; /* Ajusta o tamanho da fonte dos parágrafos para dispositivos móveis */
+        }
       }
 
     </style>
@@ -177,13 +298,143 @@
         </nav>
     </header>
 
-    <div>
+    <section>
       <h1>Questionário de Satisfação</h1>
       <p>Olá 😊!</p>
-      <p></p>
-      <p>Agradecemos por escolher os nossos serviços! Estamos empenhados em proporcionar a melhor experiência possível para todos os nossos clientes. Para nos ajudar a melhorar cada vez mais, gostaríamos muito de receber o seu feedback.</p>
       
-    </div>
+      <p>Agradecemos por escolher os nossos serviços! Estamos empenhados em proporcionar a melhor experiência possível para todos os nossos clientes. 
+        <br>Para nos ajudar a melhorar cada vez mais, gostaríamos muito de receber o seu feedback.</p>
+      
+      <p>Por favor, responda às seguintes perguntas com base na sua experiência geral connosco.</p>
+      
+      <p>Agradecemos desde já por dedicar um tempo para compartilhar as suas opiniões. <br>Se desejar fornecer mais detalhes ou tiver outras perguntas, sinta-se à vontade para entrar em contacto.</p>
+
+      <p><b>E-mail:</b> hugosilvaphotography@hotmail.com</p>
+      <p><b>Telemóvel:</b> 918434062</p>
+
+      <p>Obrigado pelo seu apoio e confiança no nosso trabalho! ❤️</p>
+    </section>
+
+    <form action="https://submit-form.com/erKQQ17FH">
+      <label for="nome"><b>Nome<span style="color: red;">*</span></b></label>
+      <input type="text" id="nome" minlength="3" required><br>
+
+      <label for="serviço"><b>Qual foi o serviço que contratou connosco?<span style="color: red;">*</span></b></label>
+           
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Grávida" value="Grávida" required>
+        <label for="Grávida">Grávida</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Bebé" value="Bebé">
+        <label for="Bebé">Bebé</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Batizado" value="Batizado">
+        <label for="Batizado">Batizado</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Comunhão" value="Comunhão">
+        <label for="Comunhão">Comunhão</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Outros Eventos" value="Outros Eventos">
+        <label for="Outros Eventos">Outros Eventos</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Gerações" value="Gerações">
+        <label for="Gerações">Gerações</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Casamento" value="Casamento">
+        <label for="Casamento">Casamento</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Sazonal" value="Sazonal">
+        <label for="Sazonal">Sazonal</label>
+      </div>
+      <br>
+
+      <label for="qualidadeFotografias"><b>Como classificaria a qualidade das nossas fotografias?<span style="color: red;">*</span></b></label>
+      <div class="star-rating">
+        <input type="radio" id="5-stars" name="qualidadeFotografias" value="5" required>
+        <label for="5-stars" class="fa fa-star"></label>
+        <input type="radio" id="4-stars" name="qualidadeFotografias" value="4">
+        <label for="4-stars" class="fa fa-star"></label>
+        <input type="radio" id="3-stars" name="qualidadeFotografias" value="3">
+        <label for="3-stars" class="fa fa-star"></label>
+        <input type="radio" id="2-stars" name="qualidadeFotografias" value="2">
+        <label for="2-stars" class="fa fa-star"></label>
+        <input type="radio" id="1-star" name="qualidadeFotografias" value="1">
+        <label for="1-star" class="fa fa-star"></label>
+      </div>
+      <br>
+
+      <label for="comunicacao"><b>Como avaliaria a comunicação com a nossa equipa durante todo o processo?<span style="color: red;">*</span></b></label>
+      <div class="star-rating">
+        <input type="radio" id="5-stars" name="comunicacao" value="5" required>
+        <label for="5-stars" class="fa fa-star"></label>
+        <input type="radio" id="4-stars" name="comunicacao" value="4">
+        <label for="4-stars" class="fa fa-star"></label>
+        <input type="radio" id="3-stars" name="comunicacao" value="3">
+        <label for="3-stars" class="fa fa-star"></label>
+        <input type="radio" id="2-stars" name="comunicacao" value="2">
+        <label for="2-stars" class="fa fa-star"></label>
+        <input type="radio" id="1-star" name="comunicacao" value="1">
+        <label for="1-star" class="fa fa-star"></label>
+      </div>
+      <br>
+
+      <label for="pontoForte"><b>Qual foi o ponto forte dos nossos serviços que mais o(a) impressionou?<span style="color: red;">*</span></b></label>
+      <textarea name="pontoForte" id="pontoForte" required></textarea><br>
+
+      <label for="melhorar"><b>O que podemos fazer para melhorar a qualidade dos nossos serviços?<span style="color: red;">*</span></b></label>
+      <textarea name="melhorar" id="melhorar" required></textarea><br>
+
+      <label for="recomendaria"><b>Recomendaria os nossos serviços a outras pessoas?<span style="color: red;">*</span></b></label>
+      <div class="radio-group">
+        <input type="radio" name="recomendaria" id="Sim" value="Sim" required>
+        <label for="Sim">Sim</label>
+      </div>
+
+      <div class="radio-group">
+        <input type="radio" name="recomendaria" id="Não" value="Não">
+        <label for="Não">Não</label>
+      </div>
+
+      <div class="radio-group">
+        <input type="radio" name="recomendaria" id="Talvez" value="Talvez">
+        <label for="Talvez">Talvez</label>
+      </div>
+      <br>
+
+      <label for="classificacao"><b>Como classifica a sua experiência connosco no geral?<span style="color: red;">*</span></b></label>
+      <div class="star-rating">
+        <input type="radio" id="5-stars" name="classificacao" value="5" required>
+        <label for="5-stars" class="fa fa-star"></label>
+        <input type="radio" id="4-stars" name="classificacao" value="4">
+        <label for="4-stars" class="fa fa-star"></label>
+        <input type="radio" id="3-stars" name="classificacao" value="3">
+        <label for="3-stars" class="fa fa-star"></label>
+        <input type="radio" id="2-stars" name="classificacao" value="2">
+        <label for="2-stars" class="fa fa-star"></label>
+        <input type="radio" id="1-star" name="classificacao" value="1">
+        <label for="1-star" class="fa fa-star"></label>
+      </div>
+      <br>
+
+      <label for="opiniao"><b>A sua opinião é muito valiosa! Convidamo-lo a compartilhar um testemunho sobre a sua experiência connosco, que poderá ser publicado no nosso site para auxiliar futuros clientes.</b></label>
+      <textarea name="opiniao" id="opiniao"></textarea><br>
+
+      <input type="submit">
+    </form>
     
   <footer>
     <div class="social-icons">
