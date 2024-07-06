@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery" id="gallery"></div>
+
+<script>
+    const images = [
+        'imagens/sessões/casamentos/Marco&Sonia-11.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-12.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-30.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-45.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-46.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-47.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-48.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-49.jpg',
+        'imagens/sessões/casamentos/Marco&Sonia-50.jpg'
+    ];
+
+    const galleryDiv = document.getElementById('gallery');
+
+    images.forEach(image => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = image.split('/').pop();
+        img.onerror = function() {
+            console.error('Error loading image:', img.src);
+        };
+        galleryDiv.appendChild(img);
+    });
+</script>
+
+</body>
+</html>
