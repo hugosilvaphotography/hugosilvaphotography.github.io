@@ -3,65 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Fotos</title>
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Portfólio | Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: #2a2e30;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 300px;
+        margin: 0;
+        min-height: 100vh;
+        overflow-y: scroll;
+      }
+
+      header {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+      }
+
+      header h1 {
+        font-size: 31px;
+        color: #f8f4ef;
+        text-shadow: 2px 2px 4px #000;
+        font-family: "Marck Script", cursive;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 7px;
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      footer {
+        background-color: transparent;
+        color: #f8f4ef;
+        text-align: center;
+        padding: 40px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .social-icons {
+        margin-bottom: 10px;
+      }
+
+      .social-icons a img {
+        width: 25px;
+        height: 25px;
+        margin: 0 10px;
+      }
+
+      .copyright {
+        margin-top: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #8b9b82 #2a2e30;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #8b9b82;
+        border-radius: 20px;
+        border: 3px solid #2a2e30;
+      }
+
+      /* Media query para dispositivos móveis */
+      @media (max-width: 600px) {
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 20px;
+          padding-top: 150px;
+          padding-left: 10px;
+          padding-right: 10px;
+          overflow-x: hidden;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            max-width: 1200px;
-            width: 100%;
+
+        nav {
+          gap: 0.5em; /* Reduz o espaço entre os links */
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            transition: transform 0.3s, box-shadow 0.3s;
+
+        nav a {
+          padding: auto; /* Ajusta o padding dos links */
+          max-width: 100px; /* Reduz a largura máxima para os links */
+          font-size: 14px; /* Ajusta o tamanho da fonte dos links */
         }
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+        header img {
+          width: 70px;
+          height: 70px;
         }
+
+        header h1 {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+      }
+
     </style>
+    
 </head>
 <body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
 
-<div class="gallery" id="gallery"></div>
+    <section>
+        <div>
+            <img src="" alt="">
+            <h2>Grávida</h2>
+            <p>Capturamos a beleza e a serenidade da maternidade, criando lembranças que durarão para sempre.</p>
+        </div>
+    </section>
 
-<script>
-    const images = [
-        'imagens/sessões/casamentos/Marco&Sonia-11.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-12.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-30.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-45.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-46.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-47.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-48.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-49.jpg',
-        'imagens/sessões/casamentos/Marco&Sonia-50.jpg'
-    ];
-
-    const galleryDiv = document.getElementById('gallery');
-
-    images.forEach(image => {
-        const img = document.createElement('img');
-        img.src = image;
-        img.alt = image.split('/').pop();
-        img.onerror = function() {
-            console.error('Error loading image:', img.src);
-        };
-        galleryDiv.appendChild(img);
-    });
-</script>
-
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
 </body>
 </html>
