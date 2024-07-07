@@ -20,150 +20,224 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <style>
-      html, body {
-        height: 100%;
-        margin: 0;
-      }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
 
-      body {
-        background-color: #2a2e30;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        padding-top: 300px;
-        margin: 0;
-        min-height: 100vh;
-        overflow-y: scroll;
-      }
-
-      header {
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 10px;
-      }
-
-      header img {
-        width: 120px;
-        height: 120px;
-        margin: 0;
-        padding: 0;
-      }
-
-      header h1 {
-        font-size: 31px;
-        color: #f8f4ef;
-        text-shadow: 2px 2px 4px #000;
-        font-family: "Marck Script", cursive;
-        margin-bottom: 10px;
-        margin-top: 0;
-        padding: 0;
-      }
-
-      nav {
-        display: flex;
-        gap: 1em;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      nav a {
-        padding: 7px;
-        background-color: #8b9b82;
-        color: #f8f4ef;
-        text-decoration: none;
-        border-radius: 15px;
-        transition: background-color 0.3s;
-      }
-
-      nav a:hover {
-        background-color: #f8f4ef;
-        color: #2a2e30;
-      }
-
-      footer {
-        background-color: transparent;
-        color: #f8f4ef;
-        text-align: center;
-        padding: 40px 0;
-        position: relative;
-        z-index: 1000;
-      }
-
-      .social-icons {
-        margin-bottom: 10px;
-      }
-
-      .social-icons a img {
-        width: 25px;
-        height: 25px;
-        margin: 0 10px;
-      }
-
-      .copyright {
-        margin-top: 10px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      }
-
-      /* Works on Firefox */
-      * {
-        scrollbar-width: thin;
-        scrollbar-color: #8b9b82 #2a2e30;
-      }
-
-      /* Works on Chrome, Edge, and Safari */
-      *::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      *::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      *::-webkit-scrollbar-thumb {
-        background-color: #8b9b82;
-        border-radius: 20px;
-        border: 3px solid #2a2e30;
-      }
-
-      /* Media query para dispositivos móveis */
-      @media (max-width: 600px) {
         body {
-          padding-top: 150px;
-          padding-left: 10px;
-          padding-right: 10px;
-          overflow-x: hidden;
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza horizontalmente */
+            justify-content: center; /* Centraliza verticalmente */
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: auto; /* Evita que o conteúdo transborde verticalmente */
+            padding-top: 800px;
         }
 
-        nav {
-          gap: 0.5em; /* Reduz o espaço entre os links */
-        }
-
-        nav a {
-          padding: auto; /* Ajusta o padding dos links */
-          max-width: 100px; /* Reduz a largura máxima para os links */
-          font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+        header {
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
         }
 
         header img {
-          width: 70px;
-          height: 70px;
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
         }
 
         header h1 {
-          font-size: 22px;
-          margin-bottom: 5px;
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #000;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
         }
-      }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 colunas iguais */
+            gap: 30px; /* Espaço entre os itens */
+            max-width: 90%; /* Largura máxima do container (ajusta conforme a tela) */
+            margin: auto; /* Centraliza o container horizontalmente */
+            padding: 20px;
+            box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
+        }
+
+        .item {
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+            padding: auto;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container {
+            width: 350px; /* Defina a largura desejada */
+            height: 350px; /* Defina a altura desejada */
+            margin-left: 20px;
+            margin-right: 20px;
+            overflow: hidden;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Manter a proporção e preencher o contêiner */
+        }
+
+        .description {
+            padding: 15px;
+        }
+
+        .description h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            color: #f8f4ef;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .description p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 15px;
+            color: #f8f4ef;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #788b76;
+            color: #f8f4ef;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+            padding-top: 150px;
+            padding-left: 10px;
+            padding-right: 10px;
+            overflow-x: hidden;
+            }
+
+            nav {
+            gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+            padding: auto; /* Ajusta o padding dos links */
+            max-width: 100px; /* Reduz a largura máxima para os links */
+            font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+            width: 70px;
+            height: 70px;
+            }
+
+            header h1 {
+            font-size: 22px;
+            margin-bottom: 5px;
+            }
+        }
 
     </style>
     
@@ -181,13 +255,96 @@
         </nav>
     </header>
 
-    <section>
-        <div>
-            <img src="" alt="">
-            <h2>Grávida</h2>
-            <p>Capturamos a beleza e a serenidade da maternidade, criando lembranças que durarão para sempre.</p>
+    <div class="container">
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/grávidas/12.png" alt="Grávida">
+            </div>
+            
+            <div class="description">
+                <h2>Grávida</h2>
+                <p>Capturamos a beleza e a serenidade da maternidade, criando lembranças que durarão para sempre.</p>
+                <a href="/portfolio/gravida.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
         </div>
-    </section>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/bebés/Rafael (4).jpg" alt="Bebé">
+            </div>
+            <div class="description">
+                <h2>Bebé</h2>
+                <p>Registamos os primeiros sorrisos, gestos e momentos especiais do seu bebé, em imagens que aquecem o coração.</p>
+                <a href="/portfolio/bebe.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/batizados/BatizadoRafael (22).jpg" alt="Batizado">
+            </div>
+            <div class="description">
+                <h2>Batizado</h2>
+                <p>Celebramos um ritual sagrado com fotos que capturam a alegria e a devoção deste momento especial para a família.</p>
+                <a href="/portfolio/batizado.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/comunhões/10.jpg" alt="Comunhão">
+            </div>
+            <div class="description">
+                <h2>Comunhão</h2>
+                <p>Documentamos a pureza e a espiritualidade deste marco religioso, com imagens que refletem fé e união familiar.</p>
+                <a href="/portfolio/comunhao.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/outros eventos/Diogo (10).jpg" alt="Outros Eventos">
+            </div>
+            <div class="description">
+                <h2>Outros Eventos</h2>
+                <p>Criamos memórias vívidas e emocionantes para qualquer ocasião especial, com uma abordagem personalizada e profissional.</p>
+                <a href="/portfolio/outros-eventos.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/gerações/Lidia 10.jpg" alt="Gerações">
+            </div>
+            <div class="description">
+                <h2>Gerações</h2>
+                <p>Unimos diferentes épocas e histórias de vida em fotografias que celebram a conexão familiar e o legado.</p>
+                <a href="/portfolio/geracoes.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/casamentos/Noivos  (30).png" alt="Casamento">
+            </div>
+            <div class="description">
+                <h2>Casamento</h2>
+                <p>Capturamos cada detalhe do dia mais importante da sua vida, com fotos que contam a história única do seu amor e da sua união.</p>
+                <a href="/portfolio/casamento.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="image-container">
+                <img src="imagens/sessões/sazonal/Natal Rafael (21).jpg" alt="Sazonal">
+            </div>
+            <div class="description">
+                <h2>Sazonal</h2>
+                <p>Capturamos a magia de épocas festivas, com sessões fotográficas temáticas que trazem à vida o espírito de cada ocasião.</p>
+                <a href="/portfolio/sazonal.html" class="btn-link"><button>Veja mais</button></a>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="social-icons">
