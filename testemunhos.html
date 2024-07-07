@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Testemunhos | Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding-top: 300px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #000;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .testimonials-container {
+            position: relative;
+            width: 70%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial {
+            display: none;
+            padding: 20px;
+            width: auto;
+            max-width: 100%;
+            height: 100%;
+            opacity: 0; /* Inicialmente invisível */
+            transition: opacity 1s; /* Transição suave */
+        }
+
+        .testimonial.fade {
+            opacity: 1; /* Visível durante a transição */
+        }
+
+        .image-container {
+            width: 350px; /* Defina a largura desejada */
+            height: 350px; /* Defina a altura desejada */
+            margin-left: 20px;
+            margin-right: 20px;
+            overflow: hidden;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .testimonial img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Manter a proporção e preencher o contêiner */
+        }
+
+        .testimonial-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            color: #f8f4ef;
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+
+        .testimonial-text h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+        }
+
+        button {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            color: #8b9b82;
+            font-weight: bold;
+            font-size: 30px;
+            border: none;
+            user-select: none;
+            transition: 0.6s ease;
+            background: transparent;
+        }
+
+        button:hover {
+            color: #f8f4ef;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 150px;
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .testimonial-content {
+                flex-direction: column;
+                align-items: center;
+                overflow-y: scroll;
+            }
+
+            .image-container {
+                width: 200px; /* Ajuste a largura conforme necessário */
+                height: 200px; /* Ajuste a altura conforme necessário */
+                float: none;
+            }
+
+            .testimonial-text {
+                font-size: 16px;
+                text-align: center; /* Centraliza o texto em telas menores */
+            }
+
+            .testimonial-text h2 {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="testimonials-container">
+        
+        <!-- Adicione mais divs de testemunhos conforme necessário -->
+        
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="imagens/sessões/gerações/Dia do pai (8).jpg" alt="Foto de Dia do Pai 2024" class="testimonial-image">
+            </div>
+
+            <div class="testimonial-text">
+                <h2>Leituras e Brincadeiras</h2>
+                <p>"Já vimos as fotos. Gostamos siiiim! 🥰<br><br>
+                    Uma vez mais, muito obrigada. Pela oportunidade, pela simpatia e empatia para connosco! <br><br>
+                    E claro, obrigada pela recordação com fotos lindas. 😍"</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="imagens/sessões/casamentos/Noivos  (27).png" alt="Andreia & Nuno" class="testimonial-image">
+            </div>
+            
+            <div class="testimonial-text">
+                <h2>Andreia & Nuno</h2>
+                <p>"O Hugo é uma pessoa fantástica e muito atenciosa! <br><br>
+                    Ficamos super à vontade com a sua presença.... ficamos muito contentes por fotografar o nosso casamento! <br><br>
+                    Foi uma cerimonia simples mas conseguiu captar com atenção todos os detalhes! <br><br>
+                    Foi super rápido na entrega das fotos e tem boa relação de preço/qualidade para quem não tem muitas possibilidades mas que quer de alguma forma marcar uma ocasiao especial! Que foi o nosso caso! <br><br>
+                    Obrigada Hugo e Diogo por todo envolvimento no nosso dia. ❤️❤️"</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="imagens/sessões/grávidas/16.png" alt="Sara" class="testimonial-image">
+            </div>
+            
+            <div class="testimonial-text">
+                <h2>Sara</h2>
+                <p>"Um trabalho fantástico, recomendo. <br><br>
+                    As minhas fotografias ficaram maravilhosas e somos pessoas que não gostamos muito de tirar fotos, mas o Hugo deixa-nos super à vontade. <br><br> 
+                    A sessão correu super bem! <br><br>
+                    Será para repetir noutras ocasiões com toda a certeza. 😁"</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="imagens/sessões/casamentos/Noivos  (27).png" alt="Mónica Nogueira" class="testimonial-image">
+            </div>
+            
+            <div class="testimonial-text">
+                <h2>Mónica Nogueira</h2>
+                <p>"Um trabalho fantástico, que resultou em fotos lindas da minha princesa🥰. <br><br>
+                    Sessão descontraída e maravilhosa mesmo."</p>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="image-container">
+                <img src="imagens/sessões/outros eventos/10.jpg" alt="Diogo Pereira" class="testimonial-image">
+            </div>
+            
+            <div class="testimonial-text">
+                <h2>Diogo Pereira</h2>
+                <p>"Já tive o prazer de participar em várias sessões do Hugo e percebi que é difícil encontrar palavras que possam capturar verdadeiramente a magia e a paixão que o trabalho dele demonstra, para além disso, a sua forma de trabalhar é verdadeiramente única e inspiradora. <br><br>
+                    O trabalho do Hugo não é apenas um ofício, mas sim uma forma de arte que toca a alma. A sua capacidade de eternizar momentos fugazes, transmitir emoções profundas e criar memórias duradouras é verdadeiramente extraordinária. Estou eternamente grato por ter tido a oportunidade de testemunhar e experienciar a magia que este fotógrafo traz ao mundo."</p>
+            </div>
+        </div>
+
+        <button class="prev" onclick="changeTestimonial(-1)">&#10094;</button>
+        <button class="next" onclick="changeTestimonial(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let currentTestimonial = 0;
+        const testimonials = document.getElementsByClassName("testimonial");
+        let testimonialTimer;
+
+        function showTestimonial(index) {
+            if (index >= testimonials.length) { currentTestimonial = 0 }
+            if (index < 0) { currentTestimonial = testimonials.length - 1 }
+            for (let i = 0; i < testimonials.length; i++) {
+                testimonials[i].style.display = "none";  
+                testimonials[i].classList.remove('fade'); 
+            }
+            testimonials[currentTestimonial].style.display = "block";
+            setTimeout(() => testimonials[currentTestimonial].classList.add('fade'), 10); // Adiciona a classe 'fade' para a transição
+        }
+
+        function changeTestimonial(n) {
+            showTestimonial(currentTestimonial += n);
+        }
+
+        function autoChangeTestimonial() {
+            changeTestimonial(1);
+            testimonialTimer = setTimeout(autoChangeTestimonial, 20000); // Mudar a cada 20 segundos
+        }
+
+        function manualChangeTestimonial(n) {
+            clearTimeout(testimonialTimer); // Limpa o temporizador atual
+            changeTestimonial(n);
+            testimonialTimer = setTimeout(autoChangeTestimonial, 20000); // Reinicia o temporizador
+        }
+
+        showTestimonial(currentTestimonial);
+        testimonialTimer = setTimeout(autoChangeTestimonial, 20000);
+
+    </script>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
