@@ -212,7 +212,7 @@
         /* Media query para dispositivos móveis */
         @media (max-width: 600px) {
             body {
-                padding-top: 1500px;
+                padding-top: 1450px;
                 padding-left: 10px;
                 padding-right: 10px;
                 overflow-x: hidden;
@@ -248,17 +248,30 @@
                 padding-bottom: 50px;
             }
 
+            .item {
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* Centraliza horizontalmente */
+                text-align: center;
+            }
+
             .image-container {
                 width: 150px; /* Ajuste a largura conforme necessário */
                 height: 150px; /* Ajuste a altura conforme necessário */
+                margin: 0 auto 10px; /* Centraliza a imagem e adiciona margem inferior */
                 float: none;
+            }
+
+            .container img {
+                width: 100%; /* Ocupa toda a largura do contêiner */
+                height: auto;
+                object-fit: cover;
             }
 
             .description {
                 font-size: 11px;
                 text-align: center; /* Centraliza o texto em telas menores */
-                margin-left: 40px;
-                margin-right: 40px;
+                margin: 0 auto;
             }
 
             .description h2 {
