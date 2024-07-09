@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Casamento | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'Casamento1 Casamento2 Casamento3 Casamento4'
+            'Casamento5 Casamento6 Casamento7 Casamento8'
+            'Casamento9 Casamento9 Casamento10 Casamento10'
+            'Casamento9 Casamento9 Casamento10 Casamento10'
+            'Casamento11 Casamento12 Casamento13 Casamento15'
+            'Casamento14 Casamento14 Casamento14 Casamento14'
+            'Casamento16 Casamento17 Casamento18 Casamento19'
+            'Casamento20 Casamento21 Casamento22 Casamento23'
+            'Casamento24 Casamento25 Casamento27 Casamento27'
+            'Casamento26 Casamento26 Casamento28 Casamento28'
+            'Casamento29 Casamento29 Casamento35 Casamento35'
+            'Casamento30 Casamento30 Casamento30 Casamento30'
+            'Casamento31 Casamento32 Casamento33 Casamento34'
+            'Casamento36 Casamento36 Casamento36 Casamento36'
+            'Casamento37 Casamento38 Casamento39 Casamento39'
+                
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .Casamento1 {
+            grid-area: Casamento1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (1).jpg");
+        }
+
+        .Casamento2 {
+            grid-area: Casamento2;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (2).jpg");
+        }
+
+        .Casamento3 {
+            grid-area: Casamento3;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (3).jpg");
+        }
+
+        .Casamento4 {
+            grid-area: Casamento4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (4).jpg");
+        }
+
+        .Casamento5 {
+            grid-area: Casamento5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (5).jpg");
+        }
+
+        .Casamento6 {
+            grid-area: Casamento6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (6).jpg");
+        }
+
+        .Casamento7 {
+            grid-area: Casamento7;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (7).jpg");
+        }
+
+        .Casamento8 {
+            grid-area: Casamento8;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (8).jpg");
+        }
+
+        .Casamento9 {
+            grid-area: Casamento9;
+            background-image: url("imagens/sessões/casamentos/Casamento (9).jpg");
+        }
+
+        .Casamento10 {
+            grid-area: Casamento10;
+            background-image: url("imagens/sessões/casamentos/Casamento (10).jpg");
+        }
+
+        .Casamento11 {
+            grid-area: Casamento11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (11).jpg");
+        }
+
+        .Casamento12 {
+            grid-area: Casamento12;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (12).jpg");
+        }
+
+        .Casamento13 {
+            grid-area: Casamento13;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (13).jpg");
+        }
+
+        .Casamento14 {
+            grid-area: Casamento14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (14).jpg");
+        }
+
+        .Casamento15 {
+            grid-area: Casamento15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (15).jpg");
+        }
+
+        .Casamento16 {
+            grid-area: Casamento16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (16).jpg");
+        }
+
+        .Casamento17 {
+            grid-area: Casamento17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (17).jpg");
+        }
+
+        .Casamento18 {
+            grid-area: Casamento18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (18).jpg");
+        }
+
+        .Casamento19 {
+            grid-area: Casamento19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (19).jpg");
+        }
+
+        .Casamento20 {
+            grid-area: Casamento20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (20).jpg");
+        }
+
+        .Casamento21 {
+            grid-area: Casamento21;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (21).jpg");
+        }
+
+        .Casamento22 {
+            grid-area: Casamento22;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (22).jpg");
+        }
+
+        .Casamento23 {
+            grid-area: Casamento23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (23).jpg");
+        }
+
+        .Casamento24 {
+            grid-area: Casamento24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (24).jpg");
+        }
+
+        .Casamento25 {
+            grid-area: Casamento25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (25).jpg");
+        }
+
+        .Casamento26 {
+            grid-area: Casamento26;
+            background-image: url("imagens/sessões/casamentos/Casamento (26).jpg");
+        }
+
+        .Casamento27 {
+            grid-area: Casamento27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (27).jpg");
+        }
+
+        .Casamento28 {
+            grid-area: Casamento28;
+            background-image: url("imagens/sessões/casamentos/Casamento (28).jpg");
+        }
+
+        .Casamento29 {
+            grid-area: Casamento29;
+            background-image: url("imagens/sessões/casamentos/Casamento (29).jpg");
+        }
+
+        .Casamento30 {
+            grid-area: Casamento30;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (30).jpg");
+        }
+
+        .Casamento31 {
+            grid-area: Casamento31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (31).jpg");
+        }
+
+        .Casamento32 {
+            grid-area: Casamento32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (32).jpg");
+        }
+
+        .Casamento33 {
+            grid-area: Casamento33;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (33).jpg");
+        }
+
+        .Casamento34 {
+            grid-area: Casamento34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (34).jpg");
+        }
+
+        .Casamento35 {
+            grid-area: Casamento35;
+            background-image: url("imagens/sessões/casamentos/Casamento (35).jpg");
+        }
+
+        .Casamento36 {
+            grid-area: Casamento36;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (36).jpg");
+        }
+
+        .Casamento37 {
+            grid-area: Casamento37;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (37).jpg");
+        }
+
+        .Casamento38 {
+            grid-area: Casamento38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (38).jpg");
+        }
+
+        .Casamento39 {
+            grid-area: Casamento39;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/casamentos/Casamento (39).jpg");
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Casamento</h2>
+        
+        <div class="image-galery">
+            
+            <a href="imagens/sessões/casamentos/Casamento (1).jpg" class="Casamento1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (2).jpg" class="Casamento2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (3).jpg" class="Casamento3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (4).jpg" class="Casamento4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (5).jpg" class="Casamento5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (6).jpg" class="Casamento6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (7).jpg" class="Casamento7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (8).jpg" class="Casamento8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (9).jpg" class="Casamento9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (10).jpg" class="Casamento10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (11).jpg" class="Casamento11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (12).jpg" class="Casamento12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (13).jpg" class="Casamento13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (14).jpg" class="Casamento14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (15).jpg" class="Casamento15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (16).jpg" class="Casamento16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (17).jpg" class="Casamento17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (18).jpg" class="Casamento18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (19).jpg" class="Casamento19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (20).jpg" class="Casamento20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (21).jpg" class="Casamento21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (22).jpg" class="Casamento22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (23).jpg" class="Casamento23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (24).jpg" class="Casamento24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (25).jpg" class="Casamento25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (26).jpg" class="Casamento26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (27).jpg" class="Casamento27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (28).jpg" class="Casamento28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (29).jpg" class="Casamento29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (30).jpg" class="Casamento30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (31).jpg" class="Casamento31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (32).jpg" class="Casamento32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (33).jpg" class="Casamento33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (34).jpg" class="Casamento34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (35).jpg" class="Casamento35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (36).jpg" class="Casamento36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (37).jpg" class="Casamento37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (38).jpg" class="Casamento38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/casamentos/Casamento (39).jpg" class="Casamento39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
