@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Contactos | Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding-top: 300px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #000;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .container section {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .container section h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #f8f4ef;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+
+        .container section p {
+            font-family: 'Wittgenstein', sans-serif;
+            font-size: 15px;
+            color: #f8f4ef;
+            line-height: 1.6;
+        }
+
+        .container form {
+            flex: 1;
+            background-color: #8b9b82;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .container form label {
+            font-family: 'Wittgenstein', sans-serif;
+            font-size: 14px;
+            color: #f8f4ef;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .container form input,
+        .container form textarea,
+        .container form button {
+            width: calc(50% - 10px);
+            background-color: #d1d5db;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-family: 'Wittgenstein', sans-serif;
+            font-size: 14px;
+            color: #2a2e30;
+            box-sizing: border-box;
+        }
+
+        .container form textarea {
+            width: 100%;
+            height: 100px;
+        }
+
+        .container form button {
+            width: 100%;
+            background-color: #9da5aa;
+            color: #2a2e30;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .container form button:hover {
+            background-color: #2a2e30;
+            color: #f8f4ef;
+        }
+
+        .container form input[type="text"]:nth-child(odd),
+        .container form input[type="email"] {
+            margin-right: 20px;
+        }
+
+        .container section a img {
+            width: 25px;
+            height: 25px;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 170px;
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .container section, .container form {
+                margin: 0;
+            }
+
+            .container form input,
+            .container form textarea,
+            .container form button {
+                width: 100%;
+            }
+
+            .container form input[type="text"]:nth-child(odd),
+            .container form input[type="email"] {
+                margin-right: 0;
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h1>Entre em contacto</h1>
+            <p>Porto, Portugal</p>
+            
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+        </section>
+
+        <form action="https://submit-form.com/XGLJND8S7">
+
+            <label for="nome"><b>Nome</b></label>
+            <input type="text" id="nome" name="nome" /><br><br>
+
+            <label for="email"><b>Email <span style="color: red;">*</span></b></label>
+            <input type="email" id="email" name="email" required /><br><br>
+
+            <label for="mensagem"><b>Mensagem <span style="color: red;">*</span></b></label>
+            <textarea
+            id="mensagem"
+            name="mensagem"
+            required
+            ></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6LeL_NcpAAAAAGvnMjwe2OxhehQcvtkW6oGxO-Wk"></div>
+
+            <button type="submit"><b>Enviar</b></button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
