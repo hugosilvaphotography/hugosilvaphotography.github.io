@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Bebé | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'Bebé1 Bebé1 Bebé2'
+                'Bebé4 Bebé3 Bebé3'
+                'Bebé5 Bebé6 Bebé7'
+                'Bebé8 Bebé9 Bebé9'
+                'Bebé10 Bebé11 Bebé12'
+                'Bebé13 Bebé14 Bebé15'
+                'Bebé16 Bebé17 Bebé18'
+                'Bebé19 Bebé19 Bebé19'
+                'Bebé21 Bebé21 Bebé20'
+                'Bebé23 Bebé22 Bebé22'
+                'Bebé24 Bebé24 Bebé24'
+                'Bebé25 Bebé25 Bebé25'
+                'Bebé26 Bebé26 Bebé27'
+                'Bebé29 Bebé28 Bebé28'
+                'Bebé30 Bebé30 Bebé31'
+                'Bebé32 Bebé32 Bebé34'
+                'Bebé33 Bebé33 Bebé33'
+                'Bebé35 Bebé37 Bebé36'
+                'Bebé38 Bebé38 Bebé38'
+                'Bebé41 Bebé41 Bebé39'
+                'Bebé41 Bebé41 Bebé40'
+                'Bebé42 Bebé42 Bebé42'
+                'Bebé43 Bebé43 Bebé43'
+                'Bebé44 Bebé44 Bebé45'
+                'Bebé44 Bebé44 Bebé46'
+                'Bebé47 Bebé47 Bebé47'
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .Bebé1 {
+            grid-area: Bebé1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (1).jpg");
+        }
+
+        .Bebé2 {
+            grid-area: Bebé2;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (2).jpg");
+        }
+
+        .Bebé3 {
+            grid-area: Bebé3;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (3).jpg");
+        }
+
+        .Bebé4 {
+            grid-area: Bebé4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (4).jpg");
+        }
+
+        .Bebé5 {
+            grid-area: Bebé5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (5).jpg");
+        }
+
+        .Bebé6 {
+            grid-area: Bebé6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (6).jpg");
+        }
+
+        .Bebé7 {
+            grid-area: Bebé7;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (7).jpg");
+        }
+
+        .Bebé8 {
+            grid-area: Bebé8;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (8).jpg");
+        }
+
+        .Bebé9 {
+            grid-area: Bebé9;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (9).jpg");
+        }
+
+        .Bebé10 {
+            grid-area: Bebé10;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (10).jpg");
+        }
+
+        .Bebé11 {
+            grid-area: Bebé11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (11).jpg");
+        }
+
+        .Bebé12 {
+            grid-area: Bebé12;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (12).jpg");
+        }
+
+        .Bebé13 {
+            grid-area: Bebé13;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (13).jpg");
+        }
+
+        .Bebé14 {
+            grid-area: Bebé14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (14).jpg");
+        }
+
+        .Bebé15 {
+            grid-area: Bebé15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (15).jpg");
+        }
+
+        .Bebé16 {
+            grid-area: Bebé16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (16).jpg");
+        }
+
+        .Bebé17 {
+            grid-area: Bebé17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (17).jpg");
+        }
+
+        .Bebé18 {
+            grid-area: Bebé18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (18).jpg");
+        }
+
+        .Bebé19 {
+            grid-area: Bebé19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (19).jpg");
+        }
+
+        .Bebé20 {
+            grid-area: Bebé20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (20).jpg");
+        }
+
+        .Bebé21 {
+            grid-area: Bebé21;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (21).jpg");
+        }
+
+        .Bebé22 {
+            grid-area: Bebé22;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (22).jpg");
+        }
+
+        .Bebé23 {
+            grid-area: Bebé23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (23).jpg");
+        }
+
+        .Bebé24 {
+            grid-area: Bebé24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (24).jpg");
+        }
+
+        .Bebé25 {
+            grid-area: Bebé25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (25).jpg");
+        }
+
+        .Bebé26 {
+            grid-area: Bebé26;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (26).jpg");
+        }
+
+        .Bebé27 {
+            grid-area: Bebé27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (27).jpg");
+        }
+
+        .Bebé28 {
+            grid-area: Bebé28;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (28).jpg");
+        }
+
+        .Bebé29 {
+            grid-area: Bebé29;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (29).jpg");
+        }
+
+        .Bebé30 {
+            grid-area: Bebé30;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (30).jpg");
+        }
+
+        .Bebé31 {
+            grid-area: Bebé31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (31).jpg");
+        }
+
+        .Bebé32 {
+            grid-area: Bebé32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (32).jpg");
+        }
+
+        .Bebé33 {
+            grid-area: Bebé33;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (33).jpg");
+        }
+
+        .Bebé34 {
+            grid-area: Bebé34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (34).jpg");
+        }
+
+        .Bebé35 {
+            grid-area: Bebé35;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (35).jpg");
+        }
+
+        .Bebé36 {
+            grid-area: Bebé36;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (36).jpg");
+        }
+
+        .Bebé37 {
+            grid-area: Bebé37;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (37).jpg");
+        }
+
+        .Bebé38 {
+            grid-area: Bebé38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (38).jpg");
+        }
+
+        .Bebé39 {
+            grid-area: Bebé39;
+            background-image: url("imagens/sessões/bebés/Bebé (39).jpg");
+        }
+
+        .Bebé40 {
+            grid-area: Bebé40;
+            background-image: url("imagens/sessões/bebés/Bebé (40).jpg");
+        }
+
+        .Bebé41 {
+            grid-area: Bebé41;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (41).jpg");
+        }
+
+        .Bebé42 {
+            grid-area: Bebé42;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (42).jpg");
+        }
+
+        .Bebé43 {
+            grid-area: Bebé43;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (43).jpg");
+        }
+
+        .Bebé44 {
+            grid-area: Bebé44;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (44).jpg");
+        }
+
+        .Bebé45 {
+            grid-area: Bebé45;
+            background-image: url("imagens/sessões/bebés/Bebé (45).jpg");
+        }
+
+        .Bebé46 {
+            grid-area: Bebé46;
+            background-image: url("imagens/sessões/bebés/Bebé (46).jpg");
+        }
+
+        .Bebé47 {
+            grid-area: Bebé47;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/bebés/Bebé (47).jpg");
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Bebé</h2>
+        
+        <div class="image-galery">
+            
+            <a href="imagens/sessões/bebés/Bebé (1).jpg" class="Bebé1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (2).jpg" class="Bebé2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (3).jpg" class="Bebé3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (4).jpg" class="Bebé4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (5).jpg" class="Bebé5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (6).jpg" class="Bebé6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (7).jpg" class="Bebé7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (8).jpg" class="Bebé8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (9).jpg" class="Bebé9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (10).jpg" class="Bebé10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (11).jpg" class="Bebé11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (12).jpg" class="Bebé12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (13).jpg" class="Bebé13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (14).jpg" class="Bebé14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (15).jpg" class="Bebé15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (16).jpg" class="Bebé16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (17).jpg" class="Bebé17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (18).jpg" class="Bebé18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (19).jpg" class="Bebé19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (20).jpg" class="Bebé20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (21).jpg" class="Bebé21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (22).jpg" class="Bebé22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (23).jpg" class="Bebé23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (24).jpg" class="Bebé24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (25).jpg" class="Bebé25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (26).jpg" class="Bebé26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (27).jpg" class="Bebé27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (28).jpg" class="Bebé28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (29).jpg" class="Bebé29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (30).jpg" class="Bebé30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (31).jpg" class="Bebé31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (32).jpg" class="Bebé32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (33).jpg" class="Bebé33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (34).jpg" class="Bebé34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (35).jpg" class="Bebé35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (36).jpg" class="Bebé36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (37).jpg" class="Bebé37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (38).jpg" class="Bebé38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (39).jpg" class="Bebé39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (40).jpg" class="Bebé40">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (41).jpg" class="Bebé41">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (42).jpg" class="Bebé42">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (43).jpg" class="Bebé43">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (44).jpg" class="Bebé44">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (45).jpg" class="Bebé45">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (46).jpg" class="Bebé46">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/bebés/Bebé (47).jpg" class="Bebé47">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>

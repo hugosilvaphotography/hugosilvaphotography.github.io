@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Grávida | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'Gravida1 Gravida2 Gravida3'
+                'Gravida4 Gravida5 Gravida6'
+                'Gravida7 Gravida8 Gravida9'
+                'Gravida10 Gravida11 Gravida12'
+                'Gravida10 Gravida11 Gravida13'
+                'Gravida14 Gravida15 Gravida16'
+                'Gravida17 Gravida18 Gravida19'
+                'Gravida20 Gravida21 Gravida22'
+                'Gravida23 Gravida24 Gravida25'
+                'Gravida26 Gravida27 Gravida28'
+                'Gravida29 Gravida30 Gravida31'
+                'Gravida32 Gravida34 Gravida35'
+                'Gravida33 Gravida33 Gravida33'
+                'Gravida36 Gravida37 Gravida38'
+                'Gravida39 Gravida40 Gravida41'
+                'Gravida42 Gravida43 Gravida44'
+                'Gravida45 Gravida46 Gravida47'
+                'Gravida48 Gravida49 Gravida50'
+                'Gravida51 Gravida52 Gravida53'
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .Gravida1 {
+            grid-area: Gravida1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (1).jpg");
+        }
+
+        .Gravida2 {
+            grid-area: Gravida2;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (2).jpg");
+        }
+
+        .Gravida3 {
+            grid-area: Gravida3;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (3).jpg");
+        }
+
+        .Gravida4 {
+            grid-area: Gravida4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (4).jpg");
+        }
+
+        .Gravida5 {
+            grid-area: Gravida5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (5).jpg");
+        }
+
+        .Gravida6 {
+            grid-area: Gravida6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (6).jpg");
+        }
+
+        .Gravida7 {
+            grid-area: Gravida7;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (7).jpg");
+        }
+
+        .Gravida8 {
+            grid-area: Gravida8;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (8).jpg");
+        }
+
+        .Gravida9 {
+            grid-area: Gravida9;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (9).jpg");
+        }
+
+        .Gravida10 {
+            grid-area: Gravida10;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (10).jpg");
+        }
+
+        .Gravida11 {
+            grid-area: Gravida11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (11).jpg");
+        }
+
+        .Gravida12 {
+            grid-area: Gravida12;
+            background-image: url("imagens/sessões/grávidas/gravida (12).jpg");
+        }
+
+        .Gravida13 {
+            grid-area: Gravida13;
+            background-image: url("imagens/sessões/grávidas/gravida (13).jpg");
+        }
+
+        .Gravida14 {
+            grid-area: Gravida14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (14).jpg");
+        }
+
+        .Gravida15 {
+            grid-area: Gravida15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (15).jpg");
+        }
+
+        .Gravida16 {
+            grid-area: Gravida16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (16).jpg");
+        }
+
+        .Gravida17 {
+            grid-area: Gravida17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (17).jpg");
+        }
+
+        .Gravida18 {
+            grid-area: Gravida18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (18).jpg");
+        }
+
+        .Gravida19 {
+            grid-area: Gravida19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (19).jpg");
+        }
+
+        .Gravida20 {
+            grid-area: Gravida20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (20).jpg");
+        }
+
+        .Gravida21 {
+            grid-area: Gravida21;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (21).jpg");
+        }
+
+        .Gravida22 {
+            grid-area: Gravida22;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (22).jpg");
+        }
+
+        .Gravida23 {
+            grid-area: Gravida23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (23).jpg");
+        }
+
+        .Gravida24 {
+            grid-area: Gravida24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (24).jpg");
+        }
+
+        .Gravida25 {
+            grid-area: Gravida25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (25).jpg");
+        }
+
+        .Gravida26 {
+            grid-area: Gravida26;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (26).jpg");
+        }
+
+        .Gravida27 {
+            grid-area: Gravida27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (27).jpg");
+        }
+
+        .Gravida28 {
+            grid-area: Gravida28;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (28).jpg");
+        }
+
+        .Gravida29 {
+            grid-area: Gravida29;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (29).jpg");
+        }
+
+        .Gravida30 {
+            grid-area: Gravida30;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (30).jpg");
+        }
+
+        .Gravida31 {
+            grid-area: Gravida31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (31).jpg");
+        }
+
+        .Gravida32 {
+            grid-area: Gravida32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (32).jpg");
+        }
+
+        .Gravida33 {
+            grid-area: Gravida33;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (33).jpg");
+        }
+
+        .Gravida34 {
+            grid-area: Gravida34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (34).jpg");
+        }
+
+        .Gravida35 {
+            grid-area: Gravida35;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (35).jpg");
+        }
+
+        .Gravida36 {
+            grid-area: Gravida36;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (36).jpg");
+        }
+
+        .Gravida37 {
+            grid-area: Gravida37;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (37).jpg");
+        }
+
+        .Gravida38 {
+            grid-area: Gravida38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (38).jpg");
+        }
+
+        .Gravida39 {
+            grid-area: Gravida39;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (39).jpg");
+        }
+
+        .Gravida40 {
+            grid-area: Gravida40;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (40).jpg");
+        }
+
+        .Gravida41 {
+            grid-area: Gravida41;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (41).jpg");
+        }
+
+        .Gravida42 {
+            grid-area: Gravida42;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (42).jpg");
+        }
+
+        .Gravida43 {
+            grid-area: Gravida43;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (43).jpg");
+        }
+
+        .Gravida44 {
+            grid-area: Gravida44;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (44).jpg");
+        }
+
+        .Gravida45 {
+            grid-area: Gravida45;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (45).jpg");
+        }
+
+        .Gravida46 {
+            grid-area: Gravida46;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (46).jpg");
+        }
+
+        .Gravida47 {
+            grid-area: Gravida47;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (47).jpg");
+        }
+
+        .Gravida48 {
+            grid-area: Gravida48;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (48).jpg");
+        }
+
+        .Gravida49 {
+            grid-area: Gravida49;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (49).jpg");
+        }
+
+        .Gravida50 {
+            grid-area: Gravida50;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (50).jpg");
+        }
+
+        .Gravida51 {
+            grid-area: Gravida51;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (51).jpg");
+        }
+
+        .Gravida52 {
+            grid-area: Gravida52;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (52).jpg");
+        }
+
+        .Gravida53 {
+            grid-area: Gravida53;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/grávidas/gravida (53).jpg");
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Grávida</h2>
+        
+        <div class="image-galery">
+            <a href="imagens/sessões/grávidas/gravida (1).jpg" class="Gravida1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (2).jpg" class="Gravida2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (3).jpg" class="Gravida3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (4).jpg" class="Gravida4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (5).jpg" class="Gravida5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (6).jpg" class="Gravida6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (7).jpg" class="Gravida7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (8).jpg" class="Gravida8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (9).jpg" class="Gravida9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (10).jpg" class="Gravida10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (11).jpg" class="Gravida11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (12).jpg" class="Gravida12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (13).jpg" class="Gravida13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/grávidas/gravida (14).jpg" class="Gravida14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (15).jpg" class="Gravida15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (16).jpg" class="Gravida16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (17).jpg" class="Gravida17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (18).jpg" class="Gravida18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (19).jpg" class="Gravida19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (20).jpg" class="Gravida20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (21).jpg" class="Gravida21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (22).jpg" class="Gravida22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (23).jpg" class="Gravida23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (24).jpg" class="Gravida24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (25).jpg" class="Gravida25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (26).jpg" class="Gravida26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (27).jpg" class="Gravida27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (28).jpg" class="Gravida28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (29).jpg" class="Gravida29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (30).jpg" class="Gravida30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (31).jpg" class="Gravida31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (32).jpg" class="Gravida32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (33).jpg" class="Gravida33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (34).jpg" class="Gravida34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (35).jpg" class="Gravida35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (36).jpg" class="Gravida36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (37).jpg" class="Gravida37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (38).jpg" class="Gravida38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (39).jpg" class="Gravida39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (40).jpg" class="Gravida40">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (41).jpg" class="Gravida41">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (42).jpg" class="Gravida42">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (43).jpg" class="Gravida43">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (44).jpg" class="Gravida44">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (45).jpg" class="Gravida45">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (46).jpg" class="Gravida46">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (47).jpg" class="Gravida47">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (48).jpg" class="Gravida48">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (49).jpg" class="Gravida49">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (50).jpg" class="Gravida50">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (51).jpg" class="Gravida51">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (52).jpg" class="Gravida52">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/grávidas/gravida (53).jpg" class="Gravida53">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
