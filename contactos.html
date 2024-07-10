@@ -253,6 +253,10 @@
             .container {
                 flex-direction: column;
             }
+            
+            .container section {
+                margin-bottom: 10px;
+            }
 
             .container section, .container form {
                 margin: 0;
@@ -267,6 +271,11 @@
             .container form input[type="text"]:nth-child(odd),
             .container form input[type="email"] {
                 margin-right: 0;
+            }
+
+            .container g-recaptcha {
+                width: 400px;
+
             }
         }
 
@@ -295,7 +304,13 @@
             <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
         </section>
 
-        <form action="https://submit-form.com/XGLJND8S7">
+        <form action="https://submit-form.com/XGLJND8S7" method="POST">
+
+            <input
+                type="hidden"
+                name="_redirect"
+                value="https://hugosilvaphotography.github.io/obrigado"
+            />
 
             <label for="nome"><b>Nome</b></label>
             <input type="text" id="nome" name="nome" /><br><br>
