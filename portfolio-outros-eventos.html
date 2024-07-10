@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Outros Eventos | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'OutrosEventos1 OutrosEventos2 OutrosEventos2'
+                'OutrosEventos1 OutrosEventos3 OutrosEventos3'
+                'OutrosEventos5 OutrosEventos4 OutrosEventos4'
+                'OutrosEventos7 OutrosEventos7 OutrosEventos6'
+                'OutrosEventos8 OutrosEventos8 OutrosEventos6'
+                'OutrosEventos9 OutrosEventos10 OutrosEventos11'
+                'OutrosEventos12 OutrosEventos13 OutrosEventos14'
+                'OutrosEventos15 OutrosEventos16 OutrosEventos17'
+                'OutrosEventos18 OutrosEventos19 OutrosEventos20'
+                'OutrosEventos21 OutrosEventos22 OutrosEventos23'
+                'OutrosEventos24 OutrosEventos25 OutrosEventos28'
+                'OutrosEventos26 OutrosEventos26 OutrosEventos27'
+                'OutrosEventos31 OutrosEventos29 OutrosEventos29'
+                'OutrosEventos31 OutrosEventos30 OutrosEventos30'
+                'OutrosEventos35 OutrosEventos35 OutrosEventos34'
+                'OutrosEventos36 OutrosEventos36 OutrosEventos34'
+                'OutrosEventos32 OutrosEventos33 OutrosEventos33'
+                'OutrosEventos32 OutrosEventos37 OutrosEventos37'
+                'OutrosEventos38 OutrosEventos39 OutrosEventos40'
+                'OutrosEventos41 OutrosEventos42 OutrosEventos44'
+                'OutrosEventos43 OutrosEventos43 OutrosEventos43'
+                'OutrosEventos45 OutrosEventos46 OutrosEventos47'
+                'OutrosEventos48 OutrosEventos49 OutrosEventos50'
+                'OutrosEventos51 OutrosEventos52 OutrosEventos53'
+                'OutrosEventos54 OutrosEventos55 OutrosEventos57'
+                'OutrosEventos56 OutrosEventos56 OutrosEventos56'
+                'OutrosEventos58 OutrosEventos59 OutrosEventos61'
+                'OutrosEventos60 OutrosEventos60 OutrosEventos60'
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .OutrosEventos1 {
+            grid-area: OutrosEventos1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (1).jpg");
+        }
+
+        .OutrosEventos2 {
+            grid-area: OutrosEventos2;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (2).jpg");
+        }
+
+        .OutrosEventos3 {
+            grid-area: OutrosEventos3;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (3).jpg");
+        }
+
+        .OutrosEventos4 {
+            grid-area: OutrosEventos4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (4).jpg");
+        }
+
+        .OutrosEventos5 {
+            grid-area: OutrosEventos5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (5).jpg");
+        }
+
+        .OutrosEventos6 {
+            grid-area: OutrosEventos6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (6).jpg");
+        }
+
+        .OutrosEventos7 {
+            grid-area: OutrosEventos7;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (7).jpg");
+        }
+
+        .OutrosEventos8 {
+            grid-area: OutrosEventos8;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (8).jpg");
+        }
+
+        .OutrosEventos9 {
+            grid-area: OutrosEventos9;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (9).jpg");
+        }
+
+        .OutrosEventos10 {
+            grid-area: OutrosEventos10;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (10).jpg");
+        }
+
+        .OutrosEventos11 {
+            grid-area: OutrosEventos11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (11).jpg");
+        }
+
+        .OutrosEventos12 {
+            grid-area: OutrosEventos12;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (12).jpg");
+        }
+
+        .OutrosEventos13 {
+            grid-area: OutrosEventos13;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (13).jpg");
+        }
+
+        .OutrosEventos14 {
+            grid-area: OutrosEventos14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (14).jpg");
+        }
+
+        .OutrosEventos15 {
+            grid-area: OutrosEventos15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (15).jpg");
+        }
+
+        .OutrosEventos16 {
+            grid-area: OutrosEventos16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (16).jpg");
+        }
+
+        .OutrosEventos17 {
+            grid-area: OutrosEventos17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (17).jpg");
+        }
+
+        .OutrosEventos18 {
+            grid-area: OutrosEventos18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (18).jpg");
+        }
+
+        .OutrosEventos19 {
+            grid-area: OutrosEventos19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (19).jpg");
+        }
+
+        .OutrosEventos20 {
+            grid-area: OutrosEventos20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (20).jpg");
+        }
+
+        .OutrosEventos21 {
+            grid-area: OutrosEventos21;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (21).jpg");
+        }
+
+        .OutrosEventos22 {
+            grid-area: OutrosEventos22;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (22).jpg");
+        }
+
+        .OutrosEventos23 {
+            grid-area: OutrosEventos23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (23).jpg");
+        }
+
+        .OutrosEventos24 {
+            grid-area: OutrosEventos24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (24).jpg");
+        }
+
+        .OutrosEventos25 {
+            grid-area: OutrosEventos25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (25).jpg");
+        }
+
+        .OutrosEventos26 {
+            grid-area: OutrosEventos26;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (26).jpg");
+        }
+
+        .OutrosEventos27 {
+            grid-area: OutrosEventos27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (27).jpg");
+        }
+
+        .OutrosEventos28 {
+            grid-area: OutrosEventos28;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (28).jpg");
+        }
+
+        .OutrosEventos29 {
+            grid-area: OutrosEventos29;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (29).jpg");
+        }
+
+        .OutrosEventos30 {
+            grid-area: OutrosEventos30;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (30).jpg");
+        }
+
+        .OutrosEventos31 {
+            grid-area: OutrosEventos31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (31).jpg");
+        }
+
+        .OutrosEventos32 {
+            grid-area: OutrosEventos32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (32).jpg");
+        }
+
+        .OutrosEventos33 {
+            grid-area: OutrosEventos33;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (33).jpg");
+        }
+
+        .OutrosEventos34 {
+            grid-area: OutrosEventos34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (34).jpg");
+        }
+
+        .OutrosEventos35 {
+            grid-area: OutrosEventos35;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (35).jpg");
+        }
+
+        .OutrosEventos36 {
+            grid-area: OutrosEventos36;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (36).jpg");
+        }
+
+        .OutrosEventos37 {
+            grid-area: OutrosEventos37;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (37).jpg");
+        }
+
+        .OutrosEventos38 {
+            grid-area: OutrosEventos38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (38).jpg");
+        }
+
+        .OutrosEventos39 {
+            grid-area: OutrosEventos39;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (39).jpg");
+        }
+
+        .OutrosEventos40 {
+            grid-area: OutrosEventos40;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (40).jpg");
+        }
+
+        .OutrosEventos41 {
+            grid-area: OutrosEventos41;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (41).jpg");
+        }
+
+        .OutrosEventos42 {
+            grid-area: OutrosEventos42;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (42).jpg");
+        }
+
+        .OutrosEventos43 {
+            grid-area: OutrosEventos43;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (43).jpg");
+        }
+
+        .OutrosEventos44 {
+            grid-area: OutrosEventos44;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (44).jpg");
+        }
+
+        .OutrosEventos45 {
+            grid-area: OutrosEventos45;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (45).jpg");
+        }
+
+        .OutrosEventos46 {
+            grid-area: OutrosEventos46;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (46).jpg");
+        }
+
+        .OutrosEventos47 {
+            grid-area: OutrosEventos47;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (47).jpg");
+        }
+
+        .OutrosEventos48 {
+            grid-area: OutrosEventos48;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (48).jpg");
+        }
+
+        .OutrosEventos49 {
+            grid-area: OutrosEventos49;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (49).jpg");
+        }
+
+        .OutrosEventos50 {
+            grid-area: OutrosEventos50;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (50).jpg");
+        }
+
+        .OutrosEventos51 {
+            grid-area: OutrosEventos51;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (51).jpg");
+        }
+
+        .OutrosEventos52 {
+            grid-area: OutrosEventos52;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (52).jpg");
+        }
+
+        .OutrosEventos53 {
+            grid-area: OutrosEventos53;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (53).jpg");
+        }
+
+        .OutrosEventos54 {
+            grid-area: OutrosEventos54;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (54).jpg");
+        }
+
+        .OutrosEventos55 {
+            grid-area: OutrosEventos55;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (55).jpg");
+        }
+
+        .OutrosEventos56 {
+            grid-area: OutrosEventos56;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (56).jpg");
+        }
+
+        .OutrosEventos57 {
+            grid-area: OutrosEventos57;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (57).jpg");
+        }
+
+        .OutrosEventos58 {
+            grid-area: OutrosEventos58;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (58).jpg");
+        }
+
+        .OutrosEventos59 {
+            grid-area: OutrosEventos59;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (59).jpg");
+        }
+
+        .OutrosEventos60 {
+            grid-area: OutrosEventos60;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (60).jpg");
+        }
+
+        .OutrosEventos61 {
+            grid-area: OutrosEventos61;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/outros eventos/OutrosEventos (61).jpg");
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Outros Eventos</h2>
+        
+        <div class="image-galery">
+            <a href="imagens/sessões/outros eventos/OutrosEventos (1).jpg" class="OutrosEventos1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (2).jpg" class="OutrosEventos2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (3).jpg" class="OutrosEventos3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (4).jpg" class="OutrosEventos4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (5).jpg" class="OutrosEventos5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (6).jpg" class="OutrosEventos6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (7).jpg" class="OutrosEventos7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (8).jpg" class="OutrosEventos8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (9).jpg" class="OutrosEventos9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (10).jpg" class="OutrosEventos10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (11).jpg" class="OutrosEventos11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (12).jpg" class="OutrosEventos12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (13).jpg" class="OutrosEventos13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (14).jpg" class="OutrosEventos14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (15).jpg" class="OutrosEventos15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (16).jpg" class="OutrosEventos16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (17).jpg" class="OutrosEventos17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (18).jpg" class="OutrosEventos18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (19).jpg" class="OutrosEventos19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (20).jpg" class="OutrosEventos20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (21).jpg" class="OutrosEventos21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (22).jpg" class="OutrosEventos22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (23).jpg" class="OutrosEventos23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (24).jpg" class="OutrosEventos24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (25).jpg" class="OutrosEventos25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (26).jpg" class="OutrosEventos26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (27).jpg" class="OutrosEventos27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (28).jpg" class="OutrosEventos28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (29).jpg" class="OutrosEventos29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (30).jpg" class="OutrosEventos30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (31).jpg" class="OutrosEventos31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (32).jpg" class="OutrosEventos32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (33).jpg" class="OutrosEventos33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (34).jpg" class="OutrosEventos34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (35).jpg" class="OutrosEventos35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (36).jpg" class="OutrosEventos36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (37).jpg" class="OutrosEventos37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (38).jpg" class="OutrosEventos38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (39).jpg" class="OutrosEventos39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (40).jpg" class="OutrosEventos40">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (41).jpg" class="OutrosEventos41">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (42).jpg" class="OutrosEventos42">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (43).jpg" class="OutrosEventos43">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (44).jpg" class="OutrosEventos44">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (45).jpg" class="OutrosEventos45">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (46).jpg" class="OutrosEventos46">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (47).jpg" class="OutrosEventos47">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (48).jpg" class="OutrosEventos48">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (49).jpg" class="OutrosEventos49">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (50).jpg" class="OutrosEventos50">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (51).jpg" class="OutrosEventos51">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (52).jpg" class="OutrosEventos52">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (53).jpg" class="OutrosEventos53">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (54).jpg" class="OutrosEventos54">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (55).jpg" class="OutrosEventos55">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (56).jpg" class="OutrosEventos56">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (57).jpg" class="OutrosEventos57">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (58).jpg" class="OutrosEventos58">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (59).jpg" class="OutrosEventos59">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (60).jpg" class="OutrosEventos60">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/outros eventos/OutrosEventos (61).jpg" class="OutrosEventos61">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
