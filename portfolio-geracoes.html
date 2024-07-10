@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Gerações | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'Gerações1 Gerações2 Gerações3'
+                'Gerações4 Gerações5 Gerações7'
+                'Gerações6 Gerações6 Gerações6'
+                'Gerações9 Gerações9 Gerações9'
+                'Gerações8 Gerações10 Gerações11'
+                'Gerações12 Gerações13 Gerações14'
+                'Gerações15 Gerações16 Gerações17'
+                'Gerações18 Gerações19 Gerações20'
+                'Gerações21 Gerações21 Gerações23'
+                'Gerações22 Gerações22 Gerações23'
+                'Gerações24 Gerações24 Gerações24'
+                'Gerações25 Gerações25 Gerações25'
+                'Gerações26 Gerações27 Gerações28'
+                'Gerações29 Gerações30 Gerações31'
+                'Gerações32 Gerações33 Gerações34'
+                'Gerações35 Gerações36 Gerações38'
+                'Gerações37 Gerações37 Gerações37'
+                'Gerações39 Gerações40 Gerações41'
+                'Gerações42 Gerações43 Gerações44'
+                'Gerações45 Gerações46 Gerações46'
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .Gerações1 {
+            grid-area: Gerações1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (1).jpg");
+        }
+
+        .Gerações2 {
+            grid-area: Gerações2;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (2).jpg");
+        }
+
+        .Gerações3 {
+            grid-area: Gerações3;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (3).jpg");
+        }
+
+        .Gerações4 {
+            grid-area: Gerações4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (4).jpg");
+        }
+
+        .Gerações5 {
+            grid-area: Gerações5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (5).jpg");
+        }
+
+        .Gerações6 {
+            grid-area: Gerações6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (6).jpg");
+        }
+
+        .Gerações7 {
+            grid-area: Gerações7;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (7).jpg");
+        }
+
+        .Gerações8 {
+            grid-area: Gerações8;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (8).jpg");
+        }
+
+        .Gerações9 {
+            grid-area: Gerações9;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (9).jpg");
+        }
+
+        .Gerações10 {
+            grid-area: Gerações10;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (10).jpg");
+        }
+
+        .Gerações11 {
+            grid-area: Gerações11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (11).jpg");
+        }
+
+        .Gerações12 {
+            grid-area: Gerações12;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (12).jpg");
+        }
+
+        .Gerações13 {
+            grid-area: Gerações13;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (13).jpg");
+        }
+
+        .Gerações14 {
+            grid-area: Gerações14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (14).jpg");
+        }
+
+        .Gerações15 {
+            grid-area: Gerações15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (15).jpg");
+        }
+
+        .Gerações16 {
+            grid-area: Gerações16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (16).jpg");
+        }
+
+        .Gerações17 {
+            grid-area: Gerações17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (17).jpg");
+        }
+
+        .Gerações18 {
+            grid-area: Gerações18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (18).jpg");
+        }
+
+        .Gerações19 {
+            grid-area: Gerações19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (19).jpg");
+        }
+
+        .Gerações20 {
+            grid-area: Gerações20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (20).jpg");
+        }
+
+        .Gerações21 {
+            grid-area: Gerações21;
+            background-image: url("imagens/sessões/gerações/Gerações (21).jpg");
+        }
+
+        .Gerações22 {
+            grid-area: Gerações22;
+            background-image: url("imagens/sessões/gerações/Gerações (22).jpg");
+        }
+
+        .Gerações23 {
+            grid-area: Gerações23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (23).jpg");
+        }
+
+        .Gerações24 {
+            grid-area: Gerações24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (24).jpg");
+        }
+
+        .Gerações25 {
+            grid-area: Gerações25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (25).jpg");
+        }
+
+        .Gerações26 {
+            grid-area: Gerações26;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (26).jpg");
+        }
+
+        .Gerações27 {
+            grid-area: Gerações27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (27).jpg");
+        }
+
+        .Gerações28 {
+            grid-area: Gerações28;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (28).jpg");
+        }
+
+        .Gerações29 {
+            grid-area: Gerações29;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (29).jpg");
+        }
+
+        .Gerações30 {
+            grid-area: Gerações30;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (30).jpg");
+        }
+
+        .Gerações31 {
+            grid-area: Gerações31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (31).jpg");
+        }
+
+        .Gerações32 {
+            grid-area: Gerações32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (32).jpg");
+        }
+
+        .Gerações33 {
+            grid-area: Gerações33;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (33).jpg");
+        }
+
+        .Gerações34 {
+            grid-area: Gerações34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (34).jpg");
+        }
+
+        .Gerações35 {
+            grid-area: Gerações35;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (35).jpg");
+        }
+
+        .Gerações36 {
+            grid-area: Gerações36;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (36).jpg");
+        }
+
+        .Gerações37 {
+            grid-area: Gerações37;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (37).jpg");
+        }
+
+        .Gerações38 {
+            grid-area: Gerações38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (38).jpg");
+        }
+
+        .Gerações39 {
+            grid-area: Gerações39;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (39).jpg");
+        }
+
+        .Gerações40 {
+            grid-area: Gerações40;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (40).jpg");
+        }
+
+        .Gerações41 {
+            grid-area: Gerações41;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (41).jpg");
+        }
+
+        .Gerações42 {
+            grid-area: Gerações42;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (42).jpg");
+        }
+
+        .Gerações43 {
+            grid-area: Gerações43;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (43).jpg");
+        }
+
+        .Gerações44 {
+            grid-area: Gerações44;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (44).jpg");
+        }
+
+        .Gerações45 {
+            grid-area: Gerações45;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (45).jpg");
+        }
+
+        .Gerações46 {
+            grid-area: Gerações46;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/gerações/Gerações (46).jpg");
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Gerações</h2>
+        
+        <div class="image-galery">
+            
+            <a href="imagens/sessões/gerações/Gerações (1).jpg" class="Gerações1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (2).jpg" class="Gerações2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (3).jpg" class="Gerações3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (4).jpg" class="Gerações4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (5).jpg" class="Gerações5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (6).jpg" class="Gerações6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (7).jpg" class="Gerações7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (8).jpg" class="Gerações8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (9).jpg" class="Gerações9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (10).jpg" class="Gerações10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (11).jpg" class="Gerações11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (12).jpg" class="Gerações12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (13).jpg" class="Gerações13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (14).jpg" class="Gerações14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (15).jpg" class="Gerações15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (16).jpg" class="Gerações16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (17).jpg" class="Gerações17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (18).jpg" class="Gerações18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (19).jpg" class="Gerações19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (20).jpg" class="Gerações20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (21).jpg" class="Gerações21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (22).jpg" class="Gerações22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (23).jpg" class="Gerações23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (24).jpg" class="Gerações24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (25).jpg" class="Gerações25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (26).jpg" class="Gerações26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (27).jpg" class="Gerações27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (28).jpg" class="Gerações28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (29).jpg" class="Gerações29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (30).jpg" class="Gerações30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (31).jpg" class="Gerações31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (32).jpg" class="Gerações32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (33).jpg" class="Gerações33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (34).jpg" class="Gerações34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (35).jpg" class="Gerações35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (36).jpg" class="Gerações36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (37).jpg" class="Gerações37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (38).jpg" class="Gerações38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (39).jpg" class="Gerações39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (40).jpg" class="Gerações40">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (41).jpg" class="Gerações41">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (42).jpg" class="Gerações42">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (43).jpg" class="Gerações43">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (44).jpg" class="Gerações44">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (45).jpg" class="Gerações45">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/gerações/Gerações (46).jpg" class="Gerações46">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
