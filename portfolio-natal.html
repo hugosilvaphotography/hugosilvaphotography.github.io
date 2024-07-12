@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Natal | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas: 
+                'Natal1 Natal2 Natal4'
+                'Natal3 Natal3 Natal3'
+                'Natal5 Natal6 Natal7'
+                'Natal8 Natal8 Natal8'
+                'Natal9 Natal10 Natal11'
+                'Natal12 Natal13 Natal14'
+                'Natal15 Natal16 Natal17'
+                'Natal18 Natal19 Natal20'
+                'Natal21 Natal22 Natal24'
+                'Natal23 Natal23 Natal23'
+                'Natal25 Natal26 Natal27'
+                'Natal28 Natal29 Natal30'
+                'Natal31 Natal32 Natal35'
+                'Natal33 Natal33 Natal33'
+                'Natal34 Natal34 Natal34'
+                'Natal36 Natal36 Natal36'
+                'Natal37 Natal37 Natal37'
+                'Natal38 Natal38 Natal38'
+                'Natal39 Natal40 Natal41'
+                'Natal42 Natal43 Natal43'
+                'Natal44 Natal45 Natal47'
+                'Natal46 Natal46 Natal46'
+                'Natal48 Natal48 Natal49'
+                'Natal50 Natal51 Natal51'
+                'Natal52 Natal52 Natal52'
+                'Natal54 Natal54 Natal53'
+                'Natal56 Natal55 Natal55'
+                'Natal57 Natal57 Natal58'
+                'Natal61 Natal59 Natal59'
+                'Natal61 Natal60 Natal60'
+                'Natal62 Natal63 Natal64'
+                'Natal65 Natal65 Natal66'
+                'Natal67 Natal68 Natal68'
+                'Natal69 Natal69 Natal69'
+                'Natal70 Natal70 Natal70'
+                'Natal71 Natal71 Natal71'
+                'Natal72 Natal72 Natal72'
+                'Natal73 Natal73 Natal73'
+                'Natal74 Natal74 Natal74'
+                'Natal75 Natal76 Natal77'
+                'Natal79 Natal78 Natal78'
+                'Natal80 Natal81 Natal83'
+                'Natal82 Natal82 Natal82'
+                'Natal84 Natal85 Natal86'
+                'Natal87 Natal88 Natal89'
+                'Natal90 Natal91 Natal92'
+                'Natal93 Natal94 Natal95'
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .Natal1 {
+            grid-area: Natal1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (1).jpg");
+        }
+
+        .Natal2 {
+            grid-area: Natal2;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (2).jpg");
+        }
+
+        .Natal3 {
+            grid-area: Natal3;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (3).jpg");
+        }
+
+        .Natal4 {
+            grid-area: Natal4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (4).jpg");
+        }
+
+        .Natal5 {
+            grid-area: Natal5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (5).jpg");
+        }
+
+        .Natal6 {
+            grid-area: Natal6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (6).jpg");
+        }
+
+        .Natal7 {
+            grid-area: Natal7;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (7).jpg");
+        }
+
+        .Natal8 {
+            grid-area: Natal8;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (8).jpg");
+        }
+
+        .Natal9 {
+            grid-area: Natal9;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (9).jpg");
+        }
+
+        .Natal10 {
+            grid-area: Natal10;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (10).jpg");
+        }
+
+        .Natal11 {
+            grid-area: Natal11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (11).jpg");
+        }
+
+        .Natal12 {
+            grid-area: Natal12;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (12).jpg");
+        }
+
+        .Natal13 {
+            grid-area: Natal13;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (13).jpg");
+        }
+
+        .Natal14 {
+            grid-area: Natal14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (14).jpg");
+        }
+
+        .Natal15 {
+            grid-area: Natal15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (15).jpg");
+        }
+
+        .Natal16 {
+            grid-area: Natal16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (16).jpg");
+        }
+
+        .Natal17 {
+            grid-area: Natal17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (17).jpg");
+        }
+
+        .Natal18 {
+            grid-area: Natal18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (18).jpg");
+        }
+
+        .Natal19 {
+            grid-area: Natal19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (19).jpg");
+        }
+
+        .Natal20 {
+            grid-area: Natal20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (20).jpg");
+        }
+
+        .Natal21 {
+            grid-area: Natal21;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (21).jpg");
+        }
+
+        .Natal22 {
+            grid-area: Natal22;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (22).jpg");
+        }
+
+        .Natal23 {
+            grid-area: Natal23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (23).jpg");
+        }
+
+        .Natal24 {
+            grid-area: Natal24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (24).jpg");
+        }
+
+        .Natal25 {
+            grid-area: Natal25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (25).jpg");
+        }
+
+        .Natal26 {
+            grid-area: Natal26;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (26).jpg");
+        }
+
+        .Natal27 {
+            grid-area: Natal27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (27).jpg");
+        }
+
+        .Natal28 {
+            grid-area: Natal28;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (28).jpg");
+        }
+
+        .Natal29 {
+            grid-area: Natal29;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (29).jpg");
+        }
+
+        .Natal30 {
+            grid-area: Natal30;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (30).jpg");
+        }
+
+        .Natal31 {
+            grid-area: Natal31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (31).jpg");
+        }
+
+        .Natal32 {
+            grid-area: Natal32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (32).jpg");
+        }
+
+        .Natal33 {
+            grid-area: Natal33;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (33).jpg");
+        }
+
+        .Natal34 {
+            grid-area: Natal34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (34).jpg");
+        }
+
+        .Natal35 {
+            grid-area: Natal35;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (35).jpg");
+        }
+
+        .Natal36 {
+            grid-area: Natal36;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (36).jpg");
+        }
+
+        .Natal37 {
+            grid-area: Natal37;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (37).jpg");
+        }
+
+        .Natal38 {
+            grid-area: Natal38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (38).jpg");
+        }
+
+        .Natal39 {
+            grid-area: Natal39;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (39).jpg");
+        }
+
+        .Natal40 {
+            grid-area: Natal40;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (40).jpg");
+        }
+
+        .Natal41 {
+            grid-area: Natal41;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (41).jpg");
+        }
+
+        .Natal42 {
+            grid-area: Natal42;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (42).jpg");
+        }
+
+        .Natal43 {
+            grid-area: Natal43;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (43).jpg");
+        }
+
+        .Natal44 {
+            grid-area: Natal44;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (44).jpg");
+        }
+
+        .Natal45 {
+            grid-area: Natal45;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (45).jpg");
+        }
+
+        .Natal46 {
+            grid-area: Natal46;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (46).jpg");
+        }
+
+        .Natal47 {
+            grid-area: Natal47;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (47).jpg");
+        }
+
+        .Natal48 {
+            grid-area: Natal48;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (48).jpg");
+        }
+
+        .Natal49 {
+            grid-area: Natal49;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (49).jpg");
+        }
+
+        .Natal50 {
+            grid-area: Natal50;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (50).jpg");
+        }
+
+        .Natal51 {
+            grid-area: Natal51;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (51).jpg");
+        }
+
+        .Natal52 {
+            grid-area: Natal52;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (52).jpg");
+        }
+
+        .Natal53 {
+            grid-area: Natal53;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (53).jpg");
+        }
+
+        .Natal54 {
+            grid-area: Natal54;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (54).jpg");
+        }
+
+        .Natal55 {
+            grid-area: Natal55;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (55).jpg");
+        }
+
+        .Natal56 {
+            grid-area: Natal56;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (56).jpg");
+        }
+
+        .Natal57 {
+            grid-area: Natal57;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (57).jpg");
+        }
+
+        .Natal58 {
+            grid-area: Natal58;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (58).jpg");
+        }
+
+        .Natal59 {
+            grid-area: Natal59;
+            background-image: url("imagens/sessões/natal/Natal (59).jpg");
+        }
+
+        .Natal60 {
+            grid-area: Natal60;
+            background-image: url("imagens/sessões/natal/Natal (60).jpg");
+        }
+
+        .Natal61 {
+            grid-area: Natal61;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (61).jpg");
+        }
+
+        .Natal62 {
+            grid-area: Natal62;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (62).jpg");
+        }
+
+        .Natal63 {
+            grid-area: Natal63;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (63).jpg");
+        }
+
+        .Natal64 {
+            grid-area: Natal64;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (64).jpg");
+        }
+
+        .Natal65 {
+            grid-area: Natal65;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (65).jpg");
+        }
+
+        .Natal66 {
+            grid-area: Natal66;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (66).jpg");
+        }
+
+        .Natal67 {
+            grid-area: Natal67;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (67).jpg");
+        }
+
+        .Natal68 {
+            grid-area: Natal68;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (68).jpg");
+        }
+
+        .Natal69 {
+            grid-area: Natal69;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (69).jpg");
+        }
+
+        .Natal70 {
+            grid-area: Natal70;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (70).jpg");
+        }
+
+        .Natal71 {
+            grid-area: Natal71;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (71).jpg");
+        }
+
+        .Natal72 {
+            grid-area: Natal72;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (72).jpg");
+        }
+
+        .Natal73 {
+            grid-area: Natal73;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (73).jpg");
+        }
+
+        .Natal74 {
+            grid-area: Natal74;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (74).jpg");
+        }
+
+        .Natal75 {
+            grid-area: Natal75;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (75).jpg");
+        }
+
+        .Natal76 {
+            grid-area: Natal76;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (76).jpg");
+        }
+
+        .Natal77 {
+            grid-area: Natal77;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (77).jpg");
+        }
+
+        .Natal78 {
+            grid-area: Natal78;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (78).jpg");
+        }
+
+        .Natal79 {
+            grid-area: Natal79;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (79).jpg");
+        }
+
+        .Natal80 {
+            grid-area: Natal80;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (80).jpg");
+        }
+
+        .Natal81 {
+            grid-area: Natal81;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (81).jpg");
+        }
+
+        .Natal82 {
+            grid-area: Natal82;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (82).jpg");
+        }
+
+        .Natal83 {
+            grid-area: Natal83;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (83).jpg");
+        }
+
+        .Natal84 {
+            grid-area: Natal84;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (84).jpg");
+        }
+
+        .Natal85 {
+            grid-area: Natal85;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (85).jpg");
+        }
+
+        .Natal86 {
+            grid-area: Natal86;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (86).jpg");
+        }
+
+        .Natal87 {
+            grid-area: Natal87;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (87).jpg");
+        }
+
+        .Natal88 {
+            grid-area: Natal88;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (88).jpg");
+        }
+
+        .Natal89 {
+            grid-area: Natal89;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (89).jpg");
+        }
+
+        .Natal90 {
+            grid-area: Natal90;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (90).jpg");
+        }
+
+        .Natal91 {
+            grid-area: Natal91;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (91).jpg");
+        }
+
+        .Natal92 {
+            grid-area: Natal92;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (92).jpg");
+        }
+
+        .Natal93 {
+            grid-area: Natal93;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (93).jpg");
+        }
+
+        .Natal94 {
+            grid-area: Natal94;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (94).jpg");
+        }
+
+        .Natal95 {
+            grid-area: Natal95;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/natal/Natal (95).jpg");
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Natal</h2>
+        
+        <div class="image-galery">
+            
+            <a href="imagens/sessões/natal/Natal (1).jpg" class="Natal1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (2).jpg" class="Natal2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (3).jpg" class="Natal3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (4).jpg" class="Natal4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (5).jpg" class="Natal5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (6).jpg" class="Natal6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (7).jpg" class="Natal7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (8).jpg" class="Natal8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (9).jpg" class="Natal9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (10).jpg" class="Natal10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (11).jpg" class="Natal11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (12).jpg" class="Natal12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (13).jpg" class="Natal13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (14).jpg" class="Natal14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (15).jpg" class="Natal15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (16).jpg" class="Natal16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (17).jpg" class="Natal17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (18).jpg" class="Natal18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (19).jpg" class="Natal19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (20).jpg" class="Natal20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (21).jpg" class="Natal21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (22).jpg" class="Natal22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (23).jpg" class="Natal23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (24).jpg" class="Natal24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (25).jpg" class="Natal25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (26).jpg" class="Natal26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (27).jpg" class="Natal27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (28).jpg" class="Natal28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (29).jpg" class="Natal29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (30).jpg" class="Natal30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (31).jpg" class="Natal31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (32).jpg" class="Natal32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (33).jpg" class="Natal33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (34).jpg" class="Natal34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (35).jpg" class="Natal35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (36).jpg" class="Natal36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (37).jpg" class="Natal37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (38).jpg" class="Natal38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (39).jpg" class="Natal39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (40).jpg" class="Natal40">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (41).jpg" class="Natal41">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (42).jpg" class="Natal42">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (43).jpg" class="Natal43">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (44).jpg" class="Natal44">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (45).jpg" class="Natal45">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (46).jpg" class="Natal46">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (47).jpg" class="Natal47">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (48).jpg" class="Natal48">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (49).jpg" class="Natal49">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (50).jpg" class="Natal50">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (51).jpg" class="Natal51">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (52).jpg" class="Natal52">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (53).jpg" class="Natal53">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (54).jpg" class="Natal54">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (55).jpg" class="Natal55">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (56).jpg" class="Natal56">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (57).jpg" class="Natal57">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (58).jpg" class="Natal58">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (59).jpg" class="Natal59">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (60).jpg" class="Natal60">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (61).jpg" class="Natal61">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (62).jpg" class="Natal62">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (63).jpg" class="Natal63">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (64).jpg" class="Natal64">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (65).jpg" class="Natal65">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (66).jpg" class="Natal66">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (67).jpg" class="Natal67">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (68).jpg" class="Natal68">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (69).jpg" class="Natal69">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (70).jpg" class="Natal70">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (71).jpg" class="Natal71">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (72).jpg" class="Natal72">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (73).jpg" class="Natal73">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (74).jpg" class="Natal74">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (75).jpg" class="Natal75">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (76).jpg" class="Natal76">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (77).jpg" class="Natal77">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (78).jpg" class="Natal78">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (79).jpg" class="Natal79">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (80).jpg" class="Natal80">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (81).jpg" class="Natal81">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (82).jpg" class="Natal82">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (83).jpg" class="Natal83">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (84).jpg" class="Natal84">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (85).jpg" class="Natal85">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (86).jpg" class="Natal86">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (87).jpg" class="Natal87">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (88).jpg" class="Natal88">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (89).jpg" class="Natal89">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (90).jpg" class="Natal90">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (91).jpg" class="Natal91">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (92).jpg" class="Natal92">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (93).jpg" class="Natal93">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (94).jpg" class="Natal94">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+            
+            <a href="imagens/sessões/natal/Natal (95).jpg" class="Natal95">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    
+
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2024 por Hugo Silva Photography
+        </div>
+    </footer>
+</body>
+</html>
