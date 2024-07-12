@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Mancha Verde.png">
+    <title>Questionário Comunhão | Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: #2a2e30;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 300px;
+        margin: 0;
+        min-height: 100vh;
+        overflow-y: scroll;
+      }
+
+      header {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+      }
+
+      header h1 {
+        font-size: 31px;
+        color: #f8f4ef;
+        text-shadow: 2px 2px 4px #000;
+        font-family: "Marck Script", cursive;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 7px;
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      section h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 36px;
+        color: #f8f4ef;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+
+      section p {
+        font-family: 'Wittgenstein', sans-serif;
+        font-size: 15px;
+        color: #f8f4ef;
+        line-height: 1.6;
+        margin: 10px 0;
+        padding: 0 20px;
+      }
+
+      form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      form label {
+        font-family: 'Wittgenstein', sans-serif;
+        font-size: 15px;
+        color: #f8f4ef;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: justify;
+      }
+
+      form textarea {
+        width: 100%;
+        height: 100px;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+
+      form input[type="text"], 
+      form input[type="number"],
+      form input[type="email"],
+      form input[type="date"],
+      form input[type="time"] {
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+
+      form input[type="radio"] {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      form .radio-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      form .radio-group label {
+        margin-bottom: 0; /* remove bottom margin for radio labels */
+      }
+
+      form input[type="submit"] {
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        align-self: center;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      .star-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+
+      .star-rating input[type="radio"] {
+        display: none;
+      }
+
+      .star-rating label {
+        font-size: 30px;
+        color: #bbb;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .star-rating input[type="radio"]:checked ~ label {
+        color: #8b9b82;
+      }
+
+      .star-rating label:hover,
+      .star-rating label:hover ~ label {
+        color: #8b9b82;
+      }
+
+      footer {
+        background-color: transparent;
+        color: #f8f4ef;
+        text-align: center;
+        padding: 40px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .social-icons {
+        margin-bottom: 10px;
+      }
+
+      .social-icons a img {
+        width: 25px;
+        height: 25px;
+        margin: 0 10px;
+      }
+
+      .copyright {
+        margin-top: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #8b9b82 #2a2e30;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #8b9b82;
+        border-radius: 20px;
+        border: 3px solid #2a2e30;
+      }
+
+      /* Media query para dispositivos móveis */
+      @media (max-width: 600px) {
+        body {
+          padding-top: 200px;
+          padding-left: 10px;
+          padding-right: 10px;
+          overflow-x: hidden;
+        }
+
+        nav {
+          gap: 0.5em; /* Reduz o espaço entre os links */
+        }
+
+        nav a {
+          padding: auto; /* Ajusta o padding dos links */
+          max-width: 100px; /* Reduz a largura máxima para os links */
+          font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+        }
+
+        header img {
+          width: 70px;
+          height: 70px;
+        }
+
+        header h1 {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        section h1 {
+          font-size: 28px; /* Ajusta o tamanho da fonte do título para dispositivos móveis */
+        }
+
+        section p {
+          font-size: 10px; /* Ajusta o tamanho da fonte dos parágrafos para dispositivos móveis */
+        }
+      }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Mancha Verde.png" alt="Hugo Silva Photography Logo">
+        <h1>Hugo Silva Photography</h1>
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/sobre.html">Sobre</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <section>
+      <h1>Questionário Comunhão</h1>
+      <p><b>Olá 😁!</b></p>
+      
+      <p>Este é apenas um questionário para nos ajudar a compilar num único local toda a informação 
+        <br>mais importante sobre o dia especial. Não descarta, de todo, uma reunião ou um telefonema
+        <br> pelo menos para definirmos todo o timeline do dia que será baseado nestas informações que 
+        <br>vocês nos vão fornecer. </p>
+      
+      <p>Se for possível, adicionem todas as moradas diretamente com um link do Google Maps para  
+        <br>termos a certeza que vamos ter ao sítio correto 😊 </p>
+      
+      <p>Se tiverem alguma dúvida, estejam à vontade para enviar e-mail ou telefonarem:</p>
+
+      <p><b>E-mail:</b> hugosilvaphotography@hotmail.com</p>
+      <p><b>Telemóvel:</b> 918434062</p>
+
+      <p>Obrigado pelo vosso apoio e confiança no nosso trabalho! ❤️</p>
+    </section>
+
+    <form action="https://submit-form.com/v0t4UXigb" method="POST">
+      
+      <input
+        type="hidden"
+        name="_redirect"
+        value="https://hugosilvaphotography.github.io/obrigado"
+      />
+
+      <label for="nomes"><b>Os Vossos Nomes<span style="color: red;">*</span></b></label>
+      <input type="text" name="nomes" id="nomes" minlength="3" required><br>
+
+      <label for="data"><b>Data da Comunhão<span style="color: red;">*</b></span></label>
+      <input type="date" name="data" id="data" required><br>
+
+      <label for="moradaPreparativos"><b>Morada dos Preparativos</b> <i>(quando necessário para o nosso trabalho)</i></label>
+      <input type="text" name="moradaPreparativos" id="moradaPreparativos"><br>
+
+      <label for="moradaCerimonia"><b>Morada da Cerimónia<span style="color: red;">*</span></b></label>
+      <input type="text" name="moradaCerimonia" id="moradaCerimonia"><br>
+
+      <label for="inicioCerimonia"><b>Início da Cerimónia<span style="color: red;">*</span></b></label>
+      <input type="time" name="inicioCerimonia" id="inicioCerimonia" required><br>
+
+      <label for="fimCerimonia"><b>Fim Previsto da Cerimónia<span style="color: red;">*</span></b></label>
+      <input type="time" name="fimCerimonia" id="fimCerimonia" required><br>
+
+      <label for="inicioCopoAgua"><b>Início do Copo de Água</b> <i>(quando necessário para o nosso trabalho)</i></label>
+      <input type="time" name="inicioCopoAgua" id="inicioCopoAgua"><br>
+
+      <label for="fimCopoAgua"><b>Fim Previsto do Copo de Água</b> <i>(quando necessário para o nosso trabalho)</i></label>
+      <input type="time" name="fimCopoAgua" id="fimCopoAgua"><br>
+
+      <label for="moradaCopoAgua"><b>Morada do Copo de Água</b> <i>(quando necessário para o nosso trabalho)</i><br><u>Se possível deixem o link para o Google Maps.</u></label>
+      <input type="text" name="moradaCopoAgua" id="moradaCopoAgua"><br>
+
+      <label for="tradiçoes"><b>Existem tradições ou eventos especiais que vão acontecer durante a comunhão que tenhamos de ter conhecimento?</b></label>
+      <textarea name="tradiçoes" id="tradiçoes"></textarea><br>
+
+      <label for="situacaoFamiliar"><b>Há alguma situação familiar da qual nós devamos estar cientes?</b></label>
+      <textarea name="situacaoFamiliar" id="situacaoFamiliar"></textarea><br>
+
+      <label for="numeroConvidados"><b>Número de convidados previsto<span style="color: red;">*</span></b></label>
+      <input type="number" name="numeroConvidados" id="numeroConvidados" required><br>
+
+      <label for="maisAlgumaCoisa"><b>Há mais alguma coisa que gostariam de mencionar?</b><br><i>Algum pedido, o momento mais importante para vocês de todo o dia, as pessoas mais importantes que vão estar presentes, etc.</i></label>
+      <textarea name="maisAlgumaCoisa" id="maisAlgumaCoisa"></textarea><br>
+
+      <label for="contacto"><b>Um Contacto Principal<span style="color: red;">*</span></b><br><i>Para o caso de ser preciso ligar de urgência no dia, para quem devemos ligar?</i></label>
+      <input type="text" name="contacto" id="contacto" required><br>
+
+      <label for="email"><b>E-mail de Contacto para Envio de Documentos<span style="color: red;">*</span></b></label>
+      <input type="email" name="email" id="email" required><br>
+
+      <label for="usoEmail"><b>Permite que usemos o e-mail fornecido supra para enviar informações sobre os nossos serviços, promoções e novidades relacionadas ao nosso trabalho? <span style="color: red;">*</span></b></label>
+
+      <div class="radio-group">
+        <input type="radio" name="usoEmail" id="Sim" value="Sim" required>
+        <label for="Sim">Sim</label>
+      </div>
+
+      <div class="radio-group">
+        <input type="radio" name="usoEmail" id="Não" value="Não" required>
+        <label for="Não">Não</label>
+      </div>
+      <br>
+
+      <label for="publicar"><b>Permite a publicação de algumas das fotografias nas nossas redes sociais? <span style="color: red;">*</span></b></label>
+
+      <div class="radio-group">
+        <input type="radio" name="publicar" id="Sim" value="Sim" required>
+        <label for="Sim">Sim</label>
+      </div>
+
+      <div class="radio-group">
+        <input type="radio" name="publicar" id="Não" value="Não" required>
+        <label for="Não">Não</label>
+      </div>
+      <br>
+
+      <div class="g-recaptcha" data-sitekey="6LeL_NcpAAAAAGvnMjwe2OxhehQcvtkW6oGxO-Wk"></div>
+      <br>
+
+      <input type="submit">
+    </form>
+    
+  <footer>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+        <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+    </div>
+    
+    <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+    <div class="copyright">
+        &copy;2024 por Hugo Silva Photography
+    </div>
+</footer>
+</body>
+</html>
