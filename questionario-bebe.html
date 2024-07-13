@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagens/gerais/Mancha Verde.png">
-    <title>Questionário Grávida | Hugo Silva Photography</title>
+    <title>Questionário Bebé | Hugo Silva Photography</title>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
     <!--Fontes-->
@@ -309,8 +309,8 @@
     </header>
 
     <section>
-      <h1>Questionário Grávida</h1>
-      <p><b>Olá, futuros papás 😁!</b></p>
+      <h1>Questionário Bebé</h1>
+      <p><b>Olá, papás 😁!</b></p>
       
       <p>Este é apenas um questionário para nos ajudar a compilar num único local toda a informação 
         <br>mais importante da vossa sessão especial. Não descarta, de todo, uma reunião ou um telefonema
@@ -336,57 +336,28 @@
         value="https://hugosilvaphotography.github.io/obrigado"
       />
 
-      <label for="nomeMae"><b>Nome da Futura Mãe<span style="color: red;">*</span></b></label>
-      <input type="text" name="nomeMae" id="nomeMae" minlength="3" required><br>
+      <label for="nomeBebe"><b>Nome do Bebé<span style="color: red;">*</span></b></label>
+      <input type="text" name="nomeBebe" id="nomeBebe" minlength="3" required><br>
 
-      <label for="nomePai"><b>Nome do Futuro Pai</b></label>
-      <input type="text" name="nomePai" id="nomePai" minlength="3"><br>
+      <label for="idade"><b>Idade do Bebé na Data da Sessão<span style="color: red;">*</span></b></label>
+      <input type="number" name="idade" id="idade" min="0" required><br>
 
-      <label for="numeroSemanas"><b>Número de Semanas na Data da Sessão<span style="color: red;">*</span></b></label>
-      <input type="number" name="numeroSemanas" id="numeroSemanas" required><br>
+      <label for="nomePais"><b>Nome dos Pais<span style="color: red;">*</span></b></label>
+      <input type="text" name="nomePais" id="nomePais" minlength="3" required><br>
 
-      <label for="localExterior"><b>No caso da sessão ser em exterior, têm algum lugar específico em mente para a sessão?</b></label>
-      <input type="text" name="localExterior" id="localExterior"><br>
+      <label for="incluirIrmaos"><b>Gostaria de incluir irmãos na sessão? Se sim, quantos e quais são os seus nomes e idades?<span style="color: red;">*</span></b></label>
+      <textarea name="incluirIrmaos" id="incluirIrmaos" required></textarea><br>
 
-      <label for="paiNaSessao"><b>Gostariam de incluir o pai na sessão? <span style="color: red;">*</span></b></label>
-      <div class="radio-group">
-        <input type="radio" name="paiNaSessao" id="Sim" value="Sim" required>
-        <label for="Sim">Sim</label>
-      </div>
+      <label for="incluirPais"><b>Gostaria de incluir os pais nas fotos?<span style="color: red;">*</span></b></label>
+      <textarea name="incluirPais" id="incluirPais" required></textarea><br>
 
-      <div class="radio-group">
-        <input type="radio" name="paiNaSessao" id="Não" value="Não" required>
-        <label for="Não">Não</label>
-      </div>
-      <br>  
-
-      <label for="outrosNaSessao"><b>Gostariam de incluir outros filhos ou familiares? Se sim, quem?  <span style="color: red;">*</span></b></label>
-      <input type="text" name="outrosNaSessao" id="outrosNaSessao" required><br>
-
-      <label for="objetosAIncluir"><b>Têm algum acessório especial que gostariam de incluir (faixa de maternidade, sapatinhos de bebé, ecografia, etc.)?</b></label>
-      <textarea name="objetosAIncluir" id="objetosAIncluir"></textarea><br>
-
-      <label for="estiloFotos"><b>Preferem fotos mais espontâneas ou mais posadas? <span style="color: red;">*</span></b></label>
-      <div class="radio-group">
-        <input type="radio" name="estiloFotos" id="Expontâneas" value="Expontâneas" required>
-        <label for="Espontâneas">Expontâneas</label>
-      </div>
-
-      <div class="radio-group">
-        <input type="radio" name="estiloFotos" id="MaisPousadas" value="MaisPousadas" required>
-        <label for="MaisPousadas">Mais Pousadas</label>
-      </div>
-
-      <div class="radio-group">
-        <input type="radio" name="estiloFotos" id="Indiferente" value="Indiferente" required>
-        <label for="Indiferente">Indiferente</label>
-      </div>
-      <br> 
+      <label for="incluirObjetos"><b>Tem algum acessório especial que gostaria de incluir (cobertores, brinquedos favoritos, etc.)?<span style="color: red;">*</span></b></label>
+      <textarea name="incluirObjetos" id="incluirObjetos"></textarea><br>
 
       <label for="ideias"><b>Há alguma imagem ou estilo que viram online e gostariam de replicar? Se sim, podem fornecer exemplos?</b> <i>(deixem os links para as ideias)</i></label>
       <textarea name="ideias" id="ideias"></textarea><br>
 
-      <label for="condicaoMedica"><b>Têm algum desconforto ou condição médica que precisamos de considerar durante a sessão?</b></label>
+      <label for="condicaoMedica"><b>O bebé tem algum desconforto ou condição médica que precisamos de considerar durante a sessão?</b></label>
       <textarea name="condicaoMedica" id="condicaoMedica"></textarea><br>
 
       <label for="maisAlgumaCoisa"><b>Há mais alguma coisa que gostariam de mencionar?</b><br></label>
