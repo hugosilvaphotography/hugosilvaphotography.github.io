@@ -108,7 +108,7 @@
       section p {
         font-family: 'Raleway', sans-serif;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         color: #f8f4ef;
         line-height: 1.6;
         margin: 10px 0;
@@ -116,10 +116,27 @@
         text-align: justify; /* justificar o texto */
       }
 
-      section img {
-        width: 25%;
+      .equipa img {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 40px; /* espaço entre o texto e a imagem */
+        border-radius: 15px;
+        animation: fadeIn 1s ease-in forwards;
+      }
+
+      .membro-direita img {
+        width: 30%;
         float: right;
         margin-left: 40px; /* espaço entre o texto e a imagem */
+        border-radius: 15px;
+        animation: fadeIn 1s ease-in forwards;
+      }
+
+      .membro-esquerda img {
+        width: 30%;
+        float: left;
+        margin-right: 40px; /* espaço entre o texto e a imagem */
         border-radius: 15px;
         animation: fadeIn 1s ease-in forwards;
       }
@@ -235,19 +252,53 @@
       </nav>
     </header>
 
-    <section>
-        <img src="imagens/gerais/Foto_Hugo.jpg" alt="Hugo Silva">
-        <h1>Olá!!</h1>
-        <p id="nome">Chamo-me Hugo Silva</p>
+    <section class="equipa">
+      <img src="imagens/gerais/Equipa.jpg" alt="Equipa">
+      <h1>A Nossa Equipa</h1>
+    
+      <p>Somos o Hugo, a Elsa e o Diogo, três apaixonados por contar histórias de maneiras únicas.</p>
+        
+      <p>Cada um de nós traz um toque especial a este projeto: o Hugo, com a sua experiência e paixão pela fotografia; a Elsa, com a sua habilidade em transformar cenários e momentos em obras de arte; e o Diogo, que combina tecnologia e criatividade para dar vida ao nosso trabalho no mundo digital.</p>
+
+      <p>Juntos, dedicamo-nos a capturar e partilhar momentos autênticos e inesquecíveis, sempre com um toque pessoal e uma visão artística única.</p>
+
+    </section>
+
+    <section class="membro-direita">
+        <h1>Hugo Silva</h1>
+        <img src="imagens/gerais/Foto de Perfil - Hugo 2.png" alt="Hugo Silva">
       
-        <p>Tenho 35 anos e resido no Porto. Sou um pequeno átomo deste imenso universo que é a Fotografia, apaixonado por capturar momentos únicos e emocionantes em cada sessão.</p>
+        <p>Olá, sou o Hugo, tenho 35 anos e resido no Porto. Sou um pequeno átomo deste imenso universo que é a Fotografia, apaixonado por capturar momentos únicos e emocionantes em cada sessão.</p>
       
         <p>Em 2014, concluí o meu curso na Contagiarte, no Porto, e desde então tenho me dedicado ao aprimoramento das minhas habilidades e ao aperfeiçoamento da minha técnica. Posso dizer que amo o que faço e estou sempre à procura de novas formas de contar histórias através da minha fotografia.</p>
 
         <p>Acredito que a fotografia tem o poder de capturar não apenas a beleza do mundo, mas também as emoções e a essência de cada pessoa. É por isso que trabalho de perto com os meus clientes para compreender as suas necessidades e desejos, e assim criar imagens que contem as suas histórias de uma forma autêntica e significativa.</p>
 
-        <p>Ao navegar pelo meu site, poderá conferir alguns dos meus trabalhos e conhecer um pouco mais sobre a minha abordagem à fotografia, para além disso, pode ainda conferir os depoimentos de alguns dos meus fantásticos clientes. Sinta-se à vontade para entrar em contacto comigo para saber mais ou agendar uma sessão. Estou ansioso para trabalhar consigo e acima de tudo para eternizar os seus momentos inesquecíveis!!</p>
-    </section>
+      </section>
+
+      <section class="membro-esquerda">
+        <h1>Diogo Pereira</h1>
+        <img src="imagens/gerais/Foto de Perfil - Diogo.png" alt="Diogo Pereira">
+      
+        <p>Olá, sou o Diogo, tenho 19 anos e atualmente mergulho nos estudos da Engenharia Informática no ISEP. Com uma paixão por tecnologia e criatividade, assumi o papel de gestor de redes sociais e videógrafo na equipa do Hugo.</p>
+
+        <p>Além de ser responsável pela gestão das redes sociais, sou também o ponto de contacto com os nossos clientes, garantindo que a comunicação flui de forma eficaz e que cada projeto reflete a essência da marca. Com a minha experiência em videografia e desenvolvimento web, trato do nosso site e contribuo para criar conteúdos visuais que contam histórias únicas.</p>
+          
+        <p>Estou entusiasmado em poder combinar a arte da fotografia com as mais recentes tendências digitais, explorando novas formas de captar e partilhar momentos especiais. Vamos juntos dar vida a estas histórias, tanto através das lentes como das linhas de código!</p>
+
+      </section>
+
+      <section class="membro-direita">
+        <h1>Elsa Monteiro</h1>
+        <img src="imagens/gerais/Foto de Perfil - Elsa.png" alt="Elsa Monteiro">
+      
+        <p>Olá a todos! Sou a Elsa, uma apaixonada pela criação e artesanato, com 34 anos. A minha jornada artística ganhou vida na página "Pimpolhas", onde me dedico a criar peças que refletem beleza e singularidade.</p>
+
+        <p>Na equipa do Hugo, sou responsável pela decoração dos cenários e pela preparação das grávidas, bebés e outros momentos especiais. A minha missão é transformar cada sessão fotográfica numa experiência visual única, cuidando de todos os detalhes para que o resultado final seja uma verdadeira obra de arte.</p>
+          
+        <p>Estou entusiasmada por fazer parte desta equipa talentosa, onde juntos, exploramos novas formas de capturar momentos com autenticidade e elegância. O seu projeto será uma fusão de criatividade e sofisticação, sempre com um toque pessoal e artístico.</p>
+
+      </section>
 
     <footer>
         <div class="social-icons">
