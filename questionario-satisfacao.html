@@ -34,7 +34,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 300px;
+        padding-top: 220px;
         margin: 0;
         min-height: 100vh;
         overflow-y: scroll;
@@ -335,60 +335,77 @@
       <label for="nome"><b>Nome<span style="color: red;">*</span></b></label>
       <input type="text" name="nome" id="nome" minlength="3" required><br>
 
-      <label for="serviço"><b>Qual foi o serviço que contratou connosco?<span style="color: red;">*</span></b></label>
+      <label for="sessão"><b>Qual o tipo de sessão que contratou connosco?<span style="color: red;">*</span></b></label>
            
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Grávida" value="Grávida" required>
+        <input type="radio" name="sessão" id="Grávida" value="Grávida" required>
         <label for="Grávida">Grávida</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Bebé" value="Bebé">
+        <input type="radio" name="sessão" id="Bebé" value="Bebé">
         <label for="Bebé">Bebé</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Batizado" value="Batizado">
+        <input type="radio" name="sessão" id="Batizado" value="Batizado">
         <label for="Batizado">Batizado</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Comunhão" value="Comunhão">
+        <input type="radio" name="sessão" id="Comunhão" value="Comunhão">
         <label for="Comunhão">Comunhão</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Outros Eventos" value="Outros Eventos">
+        <input type="radio" name="sessão" id="Outros Eventos" value="Outros Eventos">
         <label for="Outros Eventos">Outros Eventos</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Gerações" value="Gerações">
+        <input type="radio" name="sessão" id="Gerações" value="Gerações">
         <label for="Gerações">Gerações</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Casamento" value="Casamento">
+        <input type="radio" name="sessão" id="Casamento" value="Casamento">
         <label for="Casamento">Casamento</label>
       </div>
       
       <div class="radio-group">
-        <input type="radio" name="serviço" id="Sazonal" value="Sazonal">
-        <label for="Sazonal">Sazonal</label>
+        <input type="radio" name="sessão" id="Natal" value="Natal">
+        <label for="Natal">Natal</label>
       </div>
       <br>
 
-      <label for="qualidadeFotografias"><b>Como classificaria a qualidade das nossas fotografias?<span style="color: red;">*</span></b></label>
+      <label for="serviço"><b>Qual foi o serviço que contratou connosco?<span style="color: red;">*</span></b></label>
+           
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Fotografia" value="Fotografia" required>
+        <label for="Fotografia">Fotografia</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Vídeo" value="Vídeo">
+        <label for="Vídeo">Vídeo</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Fotografia&Vídeo" value="Fotografia&Vídeo">
+        <label for="Fotografia&Vídeo">Fotografia e Vídeo</label>
+      </div><br>
+
+      <label for="qualidade"><b>Como classificaria a qualidade do trabalho entregue?<span style="color: red;">*</span></b></label>
       <div class="star-rating">
-        <input type="radio" id="5-estrelas-qualidade" name="qualidadeFotografias" value="5" required>
+        <input type="radio" id="5-estrelas-qualidade" name="qualidade" value="5" required>
         <label for="5-estrelas-qualidade" class="fa fa-star"></label>
-        <input type="radio" id="4-estrelas-qualidade" name="qualidadeFotografias" value="4">
+        <input type="radio" id="4-estrelas-qualidade" name="qualidade" value="4">
         <label for="4-estrelas-qualidade" class="fa fa-star"></label>
-        <input type="radio" id="3-estrelas-qualidade" name="qualidadeFotografias" value="3">
+        <input type="radio" id="3-estrelas-qualidade" name="qualidade" value="3">
         <label for="3-estrelas-qualidade" class="fa fa-star"></label>
-        <input type="radio" id="2-estrelas-qualidade" name="qualidadeFotografias" value="2">
+        <input type="radio" id="2-estrelas-qualidade" name="qualidade" value="2">
         <label for="2-estrelas-qualidade" class="fa fa-star"></label>
-        <input type="radio" id="1-estrelas-qualidade" name="qualidadeFotografias" value="1">
+        <input type="radio" id="1-estrelas-qualidade" name="qualidade" value="1">
         <label for="1-estrelas-qualidade" class="fa fa-star"></label>
       </div>
       <br>
