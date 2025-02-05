@@ -342,13 +342,13 @@
             }
 
             nav {
-                gap: 0.5em; /* Reduz o espaço entre os links */
+                gap: 0.5em;
             }
 
             nav a {
-                padding: auto; /* Ajusta o padding dos links */
-                max-width: 100px; /* Reduz a largura máxima para os links */
-                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+                padding: auto;
+                max-width: 100px;
+                font-size: 14px;
             }
 
             header img {
@@ -367,8 +367,20 @@
             }
 
             .image-galery {
-                display: flex;
-                flex-direction: column;
+                grid-gap: 0.5rem;
+            }
+
+            .image-galery a {
+                height: 12rem; /* Altura base para todas as imagens */
+            }
+
+            /* Reduz as imagens com min-height originalmente definido */
+            .Comunhão1, .Comunhão2, .Comunhão3, .Comunhão4, .Comunhão5, 
+            .Comunhão6, .Comunhão7, .Comunhão8, .Comunhão9, .Comunhão10, 
+            .Comunhão11, .Comunhão12, .Comunhão13, .Comunhão14, .Comunhão15, 
+            .Comunhão16, .Comunhão17, .Comunhão18, .Comunhão19, .Comunhão20
+            {
+                min-height: 25rem;
             }
         }
     </style>

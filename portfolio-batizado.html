@@ -516,13 +516,13 @@
             }
 
             nav {
-                gap: 0.5em; /* Reduz o espaço entre os links */
+                gap: 0.5em;
             }
 
             nav a {
-                padding: auto; /* Ajusta o padding dos links */
-                max-width: 100px; /* Reduz a largura máxima para os links */
-                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+                padding: auto;
+                max-width: 100px;
+                font-size: 14px;
             }
 
             header img {
@@ -541,8 +541,22 @@
             }
 
             .image-galery {
-                display: flex;
-                flex-direction: column;
+                grid-gap: 0.5rem;
+            }
+
+            .image-galery a {
+                height: 12rem; /* Altura base para todas as imagens */
+            }
+
+            /* Reduz as imagens com min-height originalmente definido */
+            .Batizado1, .Batizado2, .Batizado3, .Batizado4, .Batizado5, 
+            .Batizado6, .Batizado11, .Batizado12, .Batizado13, .Batizado14, 
+            .Batizado15, .Batizado16, .Batizado17, .Batizado24, .Batizado25, 
+            .Batizado28, .Batizado29, .Batizado30, .Batizado31, .Batizado32, 
+            .Batizado33, .Batizado34, .Batizado35, .Batizado36, .Batizado37, 
+            .Batizado42, .Batizado43, .Batizado44, .Batizado45, .Batizado46
+            {
+                min-height: 25rem;
             }
         }
     </style>
