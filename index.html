@@ -41,19 +41,18 @@
 
       body {
         background-image: url('imagens/gerais/fundo_site.png');
-        background-size: cover; /* Experimente alterar para 'contain' se necessário */
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         text-align: center;
-        padding-top: 350px;
         margin: 0;
         min-height: 100vh;
-        overflow-y: scroll;
+        overflow-y: auto;
         max-width: 100%;
       }
 
@@ -110,36 +109,38 @@
 
       .FraseInicial {
         display: flex;
-        justify-content: center; /* Alinha os itens ao centro horizontalmente */
-        align-items: center; /* Alinha os itens ao centro verticalmente */
-        margin-bottom: 200px; /* Ajuste de margem conforme necessário */
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        margin-bottom: 0;
       }
 
       .FolhaEsquerda,
       .FolhaDireita {
         width: 200px;
         height: auto;
-        margin: 10px; /* Espaçamento entre os elementos */
+        margin: 10px;
       }
 
       div h1 {
         font-family: "Whisper", cursive, Arial, sans-serif;
-        font-size: 70px; /* Ajuste o tamanho do texto conforme necessário */
+        font-size: 70px;
         color: #f8f4ef;
         text-shadow: 2px 2px 4px #2a2e30;
         text-align: center;
         font-style: italic;
-        margin: 10px; /* Espaçamento entre o texto e as imagens */
+        margin: 10px;
         font-weight: normal;
       }
-
 
       footer {
         background-color: transparent;
         color: #f8f4ef;
         text-align: center;
-        padding: 40px 0;
-        position: relative;
+        padding: 20px 0;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
         z-index: 1000;
       }
 
@@ -180,23 +181,26 @@
       }
 
       /* Media query para dispositivos móveis */
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
         body {
-          background-attachment: scroll;
-          padding-top: 150px;
+          background-size: cover;
+          background-attachment: fixed;
+          background-position: top center;
+          padding-top: 0;
           padding-left: 10px;
           padding-right: 10px;
           overflow-x: hidden;
+          overflow-y: hidden;
         }
 
         nav {
-          gap: 0.5em; /* Reduz o espaço entre os links */
+          gap: 0.5em;
         }
 
         nav a {
-          padding: auto; /* Ajusta o padding dos links */
-          max-width: 100px; /* Reduz a largura máxima para os links */
-          font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+          padding: auto;
+          max-width: 100px;
+          font-size: 14px;
         }
 
         header img {
@@ -204,9 +208,13 @@
           height: 70px;
         }
 
+        header {
+          padding-top: 20px;
+          margin-bottom: 0;
+        }
+
         header h1 {
-          font-size: 22px;
-          margin-bottom: 5px;
+          margin-bottom: 0;
         }
 
         .FolhaEsquerda,
@@ -215,13 +223,13 @@
         }
 
         div h1 {
-          font-size: 30px;
+          font-size: 29px;
         }
 
         .FraseInicial {
-          padding-top: 100px;
-          margin-bottom: 100px;
-          align-items: center;
+          padding-top: 10px;
+          margin-top: 0;
+          margin-bottom: 20px;
         }
 
         .FraseInicial img {
