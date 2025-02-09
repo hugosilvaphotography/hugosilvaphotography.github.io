@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="imagens/gerais/Logo Redondo - Fundo Branco.png">
-    <title>Preçário Casamento | Hugo Silva Photography</title>
+    <title>Preçário de Casamento | Hugo Silva Photography</title>
     <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
     <!--Fontes-->
@@ -48,7 +48,7 @@
             background-position: center;
             display: flex;
             flex-direction: column;
-            padding-top: 300px;
+            padding-top: 200px;
             margin: 0;
             min-height: 100vh;
             overflow-y: scroll;
@@ -105,85 +105,135 @@
             color: #2a2e30;
         }
 
-        .testimonials-container {
-            position: relative;
-            width: 70%;
+        .pricing-container {
+            width: 80%;
             margin: 0 auto;
-            overflow: hidden;
+            color: #f8f4ef;
+        }
+
+        .pricing-title {
+            text-align: center;
+            font-family: "Dancing Script", cursive;
+            font-size: 40px;
+            color: #f8f4ef;
+            margin-bottom: 30px;
+        }
+
+        .pricing-subtitle {
+            font-family: "Dancing Script", cursive;
+            font-size: 28px;
+            color: #f8f4ef;
+            margin: 40px 0 20px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-table tr {
+            background-color: rgba(139, 155, 130, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .pricing-table tr:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .pricing-table td {
             padding: 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .package-name {
+            font-size: 24px;
+            font-family: "Marck Script", cursive;
+            color: #8b9b82;
+        }
+
+        .package-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .package-price {
+            font-size: 24px;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .portfolio-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: 'Raleway', sans-serif;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .portfolio-button:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+            transform: translateY(-2px);
+        }
+
+        .terms-container {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(139, 155, 130, 0.1);
+            border-radius: 10px;
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .centered {
             text-align: center;
         }
 
-        .testimonial {
-            display: none;
-            padding: 20px;
-            width: auto;
-            max-width: 100%;
-            height: 100%;
-            opacity: 0; /* Inicialmente invisível */
-            transition: opacity 1s; /* Transição suave */
-        }
-
-        .testimonial.fade {
-            opacity: 1; /* Visível durante a transição */
-        }
-
-        .image-container {
-            width: 350px; /* Defina a largura desejada */
-            height: 350px; /* Defina a altura desejada */
-            margin-left: 20px;
-            margin-right: 20px;
-            overflow: hidden;
-            border-radius: 50%;
-            float: left;
-        }
-
-        .testimonial img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Manter a proporção e preencher o contêiner */
-        }
-
-        .testimonial-text {
+        .intro-text {
             font-family: 'Raleway', sans-serif;
             font-size: 16px;
+            line-height: 1.6;
             color: #f8f4ef;
-            margin-left: 60px;
-            margin-right: 60px;
+            margin: 20px 0 30px 0;
         }
 
-        .testimonial-text h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 36px;
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
         }
 
-        button {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            margin-top: -22px;
-            color: #8b9b82;
-            font-weight: bold;
-            font-size: 30px;
-            border: none;
-            user-select: none;
-            transition: 0.6s ease;
-            background: transparent;
+        .extra-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(139, 155, 130, 0.1);
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
         }
 
-        button:hover {
+        .extra-name, .extra-price {
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
             color: #f8f4ef;
+            transition: color 0.3s ease; /* Adicionar transição para a cor */
         }
 
-        .prev {
-            left: 0;
-            border-radius: 3px 0 0 3px;
+        .extra-item:hover {
+            background-color: #f8f4ef;
         }
 
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
+        .extra-item:hover .extra-name,
+        .extra-item:hover .extra-price {
+            color: #2a2e30;  /* Mudar a cor do texto quando hover */
         }
 
         footer {
@@ -260,31 +310,42 @@
                 margin-bottom: 5px;
             }
 
-            .testimonial-content {
-                flex-direction: column;
-                align-items: center;
-                flex-grow: 1;
+            .pricing-container {
+                width: 95%;
+                padding: 10px;
             }
 
-            .image-container {
-                width: 200px; /* Ajuste a largura conforme necessário */
-                height: 200px; /* Ajuste a altura conforme necessário */
-                float: none;
+            .pricing-title {
+                font-size: 28px;
             }
 
-            .testimonial-text {
-                font-size: 10px;
-                text-align: center; /* Centraliza o texto em telas menores */
-                margin-left: 40px;
-                margin-right: 40px;
-            }
-
-            .testimonial-text h2 {
+            .pricing-subtitle {
                 font-size: 24px;
             }
 
-            .testimonials-container {
-                padding-bottom: 100px; /* Adiciona espaço extra na parte inferior para evitar sobreposição com o footer */
+            .pricing-table td {
+                padding: 15px;
+            }
+
+            .package-name {
+                font-size: 20px;
+            }
+
+            .package-description {
+                font-size: 14px;
+            }
+
+            .package-price {
+                font-size: 20px;
+            }
+
+            .intro-text {
+                font-size: 14px;
+                margin: 15px 0 25px 0;
+            }
+
+            .extras-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -304,182 +365,267 @@
         </nav>
     </header>
 
-    <div class="testimonials-container">
+    <div class="pricing-container">
+        <h2 class="pricing-title">Preçário de Casamento</h2>
+
+        <h3 class="pricing-subtitle">Serviços Fotográficos</h3>
+        <table class="pricing-table">
+            <tbody>
+
+                <!--Preparação dos Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Preparação dos Noivos</div>
+                        <div class="package-description">
+                            <br> Momento emocionante onde o casal se prepara
+                            individualmente para o grande dia. 
+                            <br> Captura a antecipação, nervosismo e alegria durante a
+                            preparação. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">60€</td>
+                </tr>
+
+                <!--Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Cerimónia</div>
+                        <div class="package-description">
+                            <br> Ponto culminante do casamento, com troca de
+                            votos e promessas diante de amigos e familiares.
+                            <br> Captura a entrada da noiva, os votos, e o beijo final. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">150€</td>
+                </tr>
+
+                <!--Sessão de Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Sessão de Noivos</div>
+                        <div class="package-description">
+                            <br> Tempo reservado para celebrar a união e capturar
+                            fotos românticas juntos em locais especiais. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">50€</td>
+                </tr>
+
+                <!--Sessão com Convidados-->
+                <tr>
+                    <td>
+                        <div class="package-name">Sessão com Convidados</div>
+                        <div class="package-description">
+                            <br>  Captura a essência da celebração junto dos
+                            convidados, havendo fotos dos noivos com os convidados. 
+                            <br> Esta sessão abrange momentos de
+                            felicitações, alegria compartilhada e interações
+                            familiares, garantindo lembranças com todos os
+                            presentes.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">150€</td>
+                </tr>
+
+                <!--Pós-Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Pós-Cerimónia</div>
+                        <div class="package-description">
+                            <br> Registo dos momentos que se seguem à cerimónia,
+                            focando-se nas celebrações e reações posteriores.
+                            <br>Inclui sessões fotográficas especiais, além de
+                            capturar a decoração e o ambiente festivo.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">250€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Extras Das Fotos-->
+        <h3 class="pricing-subtitle">Extras</h3>
         
-        <!-- Adicione mais divs de testemunhos conforme necessário -->
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (10).webp" alt="Daniela" class="testimonial-image">
-            </div>
-
-            <div class="testimonial-text">
-                <h2>Daniela Mesquita</h2>
-                <p>"Adorei os serviços. Simpáticos, prestáveis com muita empatia. <br> <br>
-                    Conseguiram captar muitos momentos sem andar "em cima de ninguém".<br> <br>
-                    Adorei ❣️"</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (9).webp" alt="Susana" class="testimonial-image">
-            </div>
-
-            <div class="testimonial-text">
-                <h2>Susana Sousa</h2>
-                <p>"Olá Hugo, já vi as fotos e o vídeo! <br> <br>
-                    Está tudo muito bonito, obrigada 🥰"</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (8).webp" alt="Sara" class="testimonial-image">
-            </div>
-
-            <div class="testimonial-text">
-                <h2>Sara Mota</h2>
-                <p>"Obrigada pelo vosso trabalho, simpatia e criatividade! <br> <br>
-                    Adorei tudo!!! ❤️🥰"</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (7).webp" alt="Sérgio & Marisela" class="testimonial-image">
-            </div>
-
-            <div class="testimonial-text">
-                <h2>Marisela Mota</h2>
-                <p>"Hugo Silva Photography e Pimpolhas Pimpolhas. 2 projetos diferentes mas que tanto se encaixam um no outro. <br> <br>
-                    
-                    Obrigada Hugo e Elsa, por todo o vosso carinho e empenho em duas festas tão importantes para nós. O vosso trabalho merece ser divulgado! <br><br>
-                    
-                    Desejo que tenham muito sucesso e já sabem: festas por aqui, só convosco! <br><br>
-                    
-                    OBRIGADA do fundo do ❤️, por conseguirem manifestar tantas competências nos vossos projetos... Somos vossos fãs eternamente."</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (6).webp" alt="Foto Batizado Ariana" class="testimonial-image">
-            </div>
-
-            <div class="testimonial-text">
-                <h2>Diana Ribeiro</h2>
-                <p>"Contratamos o vosso serviço para um batizado, durante todo o dia foi simplesmente super profissional. <br><br>
-                    Adoramos a simpatia e o compromisso, faz-nos sentir sempre como se fossemos família. <br><br>
-                    Recomendo a 100%!"</p>
-            </div>
-        </div>
+        <p class="intro-text">
+            Caso deseje acrescentar algum extra ao seu pack é possível!!<br>
+            Aqui nesta tabela encontra todos os extras possíveis, assim como os seus valores.
+        </p>
         
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (5).webp" alt="Foto de Dia do Pai 2024" class="testimonial-image">
+        <div class="extras-grid">
+            <div class="extra-item">
+                <span class="extra-name">Foto 10x15</span>
+                <span class="extra-price">0.40€</span>
             </div>
-
-            <div class="testimonial-text">
-                <h2>Leituras e Brincadeiras</h2>
-                <p>"Já vimos as fotos. Gostamos siiiim! 🥰<br><br>
-                    Uma vez mais, muito obrigada. Pela oportunidade, pela simpatia e empatia para connosco! <br><br>
-                    E claro, obrigada pela recordação com fotos lindas. 😍"</p>
+            <div class="extra-item">
+                <span class="extra-name">Book 23x28 de 26 páginas</span>
+                <span class="extra-price">50€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Foto 15x20</span>
+                <span class="extra-price">0.90€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Calendário Personalizado</span>
+                <span class="extra-price">7.5€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Pen</span>
+                <span class="extra-price">20€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Globo de Neve/Corações</span>
+                <span class="extra-price">12€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Poster 60x40</span>
+                <span class="extra-price">15€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Chocolate Personalizado</span>
+                <span class="extra-price">4€</span>
             </div>
         </div>
 
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (4).webp" alt="Andreia & Nuno" class="testimonial-image">
+        <!--Botão do Portfólio-->
+        <div class="centered">
+            <h3 class="pricing-subtitle">Confira aqui o nosso Portfólio</h3>
+            <a href="/portfolio-casamento.html" class="portfolio-button" target="_blank">Ver Portfólio</a>
+        </div>
+
+        <h3 class="pricing-subtitle">Serviços Videográficos</h3>
+        <table class="pricing-table">
+            <tbody>
+
+                <!--Preparação dos Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Preparação dos Noivos</div>
+                        <div class="package-description">
+                            <br> Captura dos momentos de preparação dos noivos
+                            (making of), desde os detalhes dos trajes e
+                            acessórios até à interação com familiares e amigos. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">70€</td>
+                </tr>
+
+                <!--Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Cerimónia</div>
+                        <div class="package-description">
+                            <br> Filmagem integral da cerimónia, incluindo a
+                            entrada dos noivos, troca de alianças, votos, e
+                            outros momentos chave. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">170€</td>
+                </tr>
+
+                <!--Sessão de Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Sessão de Noivos</div>
+                        <div class="package-description">
+                            <br> Gravação de uma sessão especial dos noivos,
+                            focada em momentos íntimos e românticos, em
+                            cenários escolhidos pelos noivos. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">60€</td>
+                </tr>
+
+                <!--Depoimentos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Depoimentos</div>
+                        <div class="package-description">
+                            <br> Gravação de depoimentos espontâneos dos noivos,
+                            padrinhos, familiares ou convidados, capturando
+                            mensagens emocionantes.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">60€</td>
+                </tr>
+
+                <!--Pós-Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Pós-Cerimónia</div>
+                        <div class="package-description">
+                            <br> Filmagem dos momentos mais marcantes da
+                            receção, como a entrada dos noivos, o corte do
+                            bolo, a primeira dança, e interações com os
+                            convidados.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">180€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Estras do Vídeo-->
+        <h3 class="pricing-subtitle">Extras</h3>
+
+        <p class="intro-text">
+            Para complementar a cobertura videográfica do seu evento, oferecemos a opção de adicionar uma pen com o
+            vídeo final:
+        </p>
+
+        <div class="extras-grid">
+            <div class="extra-item">
+                <span class="extra-name">Pen com Vídeo</span>
+                <span class="extra-price">25€</span>
             </div>
+        </div>
+
+        <p class="intro-text">
+            Entregamos o vídeo final em pen, proporcionando um meio prático e moderno para guardar e partilhar as memórias
+            do seu evento.
+        </p>
+
+        <!--Termos e Condições-->
+        <h3 class="pricing-subtitle">Termos e Condições</h3>
+        <div class="terms-container">
+                        
+            <p><b> Cobertura Fotográfica e Videográfica: </b><br>
+                A cobertura fotográfica e videográfica é avaliada e cobrada com base no <b> evento </b> como um todo, não sendo
+                calculada por hora. </p><br>
             
-            <div class="testimonial-text">
-                <h2>Andreia & Nuno</h2>
-                <p>"O Hugo é uma pessoa fantástica e muito atenciosa! <br><br>
-                    Ficamos super à vontade com a sua presença.... ficamos muito contentes por fotografar o nosso casamento! <br><br>
-                    Foi uma cerimonia simples mas conseguiu captar com atenção todos os detalhes! <br><br>
-                    Foi super rápido na entrega das fotos e tem boa relação de preço/qualidade para quem não tem muitas possibilidades mas que quer de alguma forma marcar uma ocasiao especial! Que foi o nosso caso! <br><br>
-                    Obrigada Hugo e Diogo por todo envolvimento no nosso dia. ❤️❤️"</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (3).webp" alt="Sara" class="testimonial-image">
-            </div>
+            <p><b> Número de Profissionais: </b><br>
+                O número de fotógrafos e videógrafos atribuídos à cobertura do evento será determinado pela nossa equipa,
+                levando em consideração a complexidade e as necessidades específicas do trabalho, <b> variando entre 1 e 2
+                profissionais para a primeira área (no caso de ser contratada individualmente) </b> e <b> 1 profissional para a
+                segunda. </b></p><br>
             
-            <div class="testimonial-text">
-                <h2>Sara</h2>
-                <p>"Um trabalho fantástico, recomendo. <br><br>
-                    As minhas fotografias ficaram maravilhosas e somos pessoas que não gostamos muito de tirar fotos, mas o Hugo deixa-nos super à vontade. <br><br> 
-                    A sessão correu super bem! <br><br>
-                    Será para repetir noutras ocasiões com toda a certeza. 😁"</p>
-            </div>
-        </div>
-
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (2).webp" alt="Mónica Nogueira" class="testimonial-image">
-            </div>
+            <p><b> Oferta da Refeição aos Profissionais: </b><br>
+                No caso da opção pelo serviço de cobertura durante todo o evento ou pós-cerimónia, <b> o cliente
+                compromete-se a fornecer uma refeição completa </b> profissionais presentes no local do evento. Esta
+                refeição deverá incluir uma refeição principal e bebidas não alcoólicas adequadas ao horário do evento. </p><br>
             
-            <div class="testimonial-text">
-                <h2>Mónica Nogueira</h2>
-                <p>"Um trabalho fantástico, que resultou em fotos lindas da minha princesa🥰. <br><br>
-                    Sessão descontraída e maravilhosa mesmo."</p>
-            </div>
-        </div>
+            <p><b> Entrega do Material: </b><br>
+                O processo de edição e entrega das fotos e do vídeo demanda um prazo médio de <b> 1 a 2 meses. </b> Todo o
+                material será cuidadosamente editado e disponibilizado em formato digital. Caso haja interesse em cópias
+                físicas, como álbuns ou pen drives, os custos adicionais podem ser verificados na tabela dos “Extras”. </p><br>
 
-        <div class="testimonial">
-            <div class="image-container">
-                <img src="imagens/sessões/testemunhos/Testemunho (1).webp" alt="Diogo Pereira" class="testimonial-image">
-            </div>
-            
-            <div class="testimonial-text">
-                <h2>Diogo Pereira</h2>
-                <p>"Já tive o prazer de participar em várias sessões do Hugo e percebi que é difícil encontrar palavras que possam capturar verdadeiramente a magia e a paixão que o trabalho dele demonstra, para além disso, a sua forma de trabalhar é verdadeiramente única e inspiradora. <br><br>
-                    O trabalho do Hugo não é apenas um ofício, mas sim uma forma de arte que toca a alma. A sua capacidade de eternizar momentos fugazes, transmitir emoções profundas e criar memórias duradouras é verdadeiramente extraordinária. Estou eternamente grato por ter tido a oportunidade de testemunhar e experienciar a magia que este fotógrafo traz ao mundo."</p>
-            </div>
-        </div>
+            <p><b> Pagamento: </b><br>
+                O pagamento é dividido em duas parcelas, sendo que <b> 50% do valor total é pago no momento da reserva </b>
+                e os restantes 50% no dia do evento. </p><br>
 
-        <button class="prev" onclick="changeTestimonial(-1)">&#10094;</button>
-        <button class="next" onclick="changeTestimonial(1)">&#10095;</button>
+            <p><b> Cancelamento: </b><br>
+                Qualquer solicitação de cancelamento deve ser comunicada com pelo menos <b> 10 dias de antecedência </b> ao
+                evento. O não cumprimento deste prazo pode implicar a não restituição do valor inicialmente pago como
+                reserva. </p><br>
+
+            <p><b> Deslocação: </b><br>
+                Despesas relacionadas à deslocação para locais situados a mais de <b> 10km de Fânzeres </b> serão calculadas
+                separadamente e incluídas no orçamento final. </p><br>
+
+            <p><b> Direitos Autorais: </b><br>
+                Salvo acordo expresso em contrário, os direitos autorais das imagens e do material videográfico permanecem
+                exclusivamente com os profissionais responsáveis pela captura, edição e produção do conteúdo. </p><br>
+        </div>
     </div>
-
-    <script>
-        let currentTestimonial = 0;
-        const testimonials = document.getElementsByClassName("testimonial");
-        let testimonialTimer;
-
-        function showTestimonial(index) {
-            if (index >= testimonials.length) { currentTestimonial = 0 }
-            if (index < 0) { currentTestimonial = testimonials.length - 1 }
-            for (let i = 0; i < testimonials.length; i++) {
-                testimonials[i].style.display = "none";  
-                testimonials[i].classList.remove('fade'); 
-            }
-            testimonials[currentTestimonial].style.display = "block";
-            setTimeout(() => testimonials[currentTestimonial].classList.add('fade'), 10); // Adiciona a classe 'fade' para a transição
-        }
-
-        function changeTestimonial(n) {
-            showTestimonial(currentTestimonial += n);
-        }
-
-        function autoChangeTestimonial() {
-            changeTestimonial(1);
-            testimonialTimer = setTimeout(autoChangeTestimonial, 20000); // Mudar a cada 20 segundos
-        }
-
-        function manualChangeTestimonial(n) {
-            clearTimeout(testimonialTimer); // Limpa o temporizador atual
-            changeTestimonial(n);
-            testimonialTimer = setTimeout(autoChangeTestimonial, 20000); // Reinicia o temporizador
-        }
-
-        showTestimonial(currentTestimonial);
-        testimonialTimer = setTimeout(autoChangeTestimonial, 20000);
-
-    </script>
 
     <footer>
         <div class="social-icons">
