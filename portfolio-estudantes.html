@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/gerais/Logo Redondo - Fundo Branco.png">
+    <title>Estudantes | Hugo Silva Photography</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hugo Silva Photography | Fotógrafo de Família no Porto">
+    <meta property="og:description" content="Transformo momentos em memórias eternas.">
+    <meta property="og:image" content="https://hugosilvaphotography.github.io/imagens/gerais/banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://hugosilvaphotography.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card (opcional, para compatibilidade) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hugo Silva Photography | Fotógrafo no Porto">
+    <meta name="twitter:description" content="Transformo momentos em memórias eternas.">
+    <meta name="twitter:image" content="https://hugosilvaphotography.github.io/imagens/gerais/banner.jpg">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #2a2e30;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 78rem;
+            margin: auto;
+        }
+
+        .container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            color: #f8f4ef;
+            margin-bottom: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .image-galery {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'Estudantes1 Estudantes2 Estudantes3'
+                'Estudantes4 Estudantes5 Estudantes6'
+                'Estudantes7 Estudantes8 Estudantes9'
+                'Estudantes10 Estudantes11 Estudantes12'
+                'Estudantes13 Estudantes13 Estudantes13'
+                'Estudantes14 Estudantes16 Estudantes17'
+                'Estudantes18 Estudantes22 Estudantes23'
+                'Estudantes19 Estudantes19 Estudantes19'
+                'Estudantes20 Estudantes20 Estudantes20'
+                'Estudantes21 Estudantes21 Estudantes21'
+                'Estudantes24 Estudantes25 Estudantes26'
+                'Estudantes27 Estudantes28 Estudantes29'
+                'Estudantes30 Estudantes31 Estudantes32'
+                'Estudantes33 Estudantes34 Estudantes35'
+                'Estudantes36 Estudantes37 Estudantes38'
+                'Estudantes39 Estudantes40 Estudantes41'
+                'Estudantes42 Estudantes43 Estudantes44'
+                'Estudantes45 Estudantes46 Estudantes46'
+        }
+
+        .image-galery a {
+            font-family: 'Roboto', sans-serif;
+            font-size: 10px;
+            width: 100%;
+            height: 25rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .image-galery a ion-icon {
+            display: none;
+            font-size: 3rem;
+            position: relative;
+            z-index: 100;
+            padding: 1rem 3rem;
+            border: 2px solid #2a2e30 .6;
+            border-radius: .4rem;
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255, .8);
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        .image-galery a:hover ion-icon,
+        .image-galery a:hover::before{
+            opacity: 1;
+        }
+
+        .Estudantes1 {
+            grid-area: Estudantes1;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (1).webp");
+        }
+
+        .Estudantes2 {
+            grid-area: Estudantes2;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (2).webp");
+        }
+
+        .Estudantes3 {
+            grid-area: Estudantes3;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (3).webp");
+        }
+
+        .Estudantes4 {
+            grid-area: Estudantes4;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (4).webp");
+        }
+
+        .Estudantes5 {
+            grid-area: Estudantes5;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (5).webp");
+        }
+
+        .Estudantes6 {
+            grid-area: Estudantes6;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (6).webp");
+        }
+
+        .Estudantes7 {
+            grid-area: Estudantes7;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (7).webp");
+        }
+
+        .Estudantes8 {
+            grid-area: Estudantes8;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (8).webp");
+        }
+
+        .Estudantes9 {
+            grid-area: Estudantes9;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (9).webp");
+        }
+
+        .Estudantes10 {
+            grid-area: Estudantes10;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (10).webp");
+        }
+
+        .Estudantes11 {
+            grid-area: Estudantes11;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (11).webp");
+        }
+
+        .Estudantes12 {
+            grid-area: Estudantes12;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (12).webp");
+        }
+
+        .Estudantes13 {
+            grid-area: Estudantes13;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (13).webp");
+        }
+
+        .Estudantes14 {
+            grid-area: Estudantes14;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (14).webp");
+        }
+
+        .Estudantes15 {
+            grid-area: Estudantes15;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (15).webp");
+        }
+
+        .Estudantes16 {
+            grid-area: Estudantes16;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (16).webp");
+        }
+
+        .Estudantes17 {
+            grid-area: Estudantes17;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (17).webp");
+        }
+
+        .Estudantes18 {
+            grid-area: Estudantes18;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (18).webp");
+        }
+
+        .Estudantes19 {
+            grid-area: Estudantes19;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (19).webp");
+        }
+
+        .Estudantes20 {
+            grid-area: Estudantes20;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (20).webp");
+        }
+
+        .Estudantes21 {
+            grid-area: Estudantes21;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (21).webp");
+        }
+
+        .Estudantes22 {
+            grid-area: Estudantes22;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (22).webp");
+        }
+
+        .Estudantes23 {
+            grid-area: Estudantes23;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (23).webp");
+        }
+
+        .Estudantes24 {
+            grid-area: Estudantes24;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (24).webp");
+        }
+
+        .Estudantes25 {
+            grid-area: Estudantes25;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (25).webp");
+        }
+
+        .Estudantes26 {
+            grid-area: Estudantes26;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (26).webp");
+        }
+
+        .Estudantes27 {
+            grid-area: Estudantes27;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (27).webp");
+        }
+
+        .Estudantes28 {
+            grid-area: Estudantes28;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (28).webp");
+        }
+
+        .Estudantes29 {
+            grid-area: Estudantes29;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (29).webp");
+        }
+
+        .Estudantes30 {
+            grid-area: Estudantes30;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (30).webp");
+        }
+
+        .Estudantes31 {
+            grid-area: Estudantes31;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (31).webp");
+        }
+
+        .Estudantes32 {
+            grid-area: Estudantes32;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (32).webp");
+        }
+
+        .Estudantes33 {
+            grid-area: Estudantes33;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (33).webp");
+        }
+
+        .Estudantes34 {
+            grid-area: Estudantes34;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (34).webp");
+        }
+
+        .Estudantes35 {
+            grid-area: Estudantes35;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (35).webp");
+        }
+
+        .Estudantes36 {
+            grid-area: Estudantes36;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (36).webp");
+        }
+
+        .Estudantes37 {
+            grid-area: Estudantes37;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (37).webp");
+        }
+
+        .Estudantes38 {
+            grid-area: Estudantes38;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (38).webp");
+        }
+
+        .Estudantes39 {
+            grid-area: Estudantes39;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (39).webp");
+        }
+
+        .Estudantes40 {
+            grid-area: Estudantes40;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (40).webp");
+        }
+
+        .Estudantes41 {
+            grid-area: Estudantes41;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (41).webp");
+        }
+
+        .Estudantes42 {
+            grid-area: Estudantes42;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (42).webp");
+        }
+
+        .Estudantes43 {
+            grid-area: Estudantes43;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (43).webp");
+        }
+
+        .Estudantes44 {
+            grid-area: Estudantes44;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (44).webp");
+        }
+
+        .Estudantes45 {
+            grid-area: Estudantes45;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (45).webp");
+        }
+
+        .Estudantes46 {
+            grid-area: Estudantes46;
+            min-height: 51.5rem;
+            background-image: url("imagens/sessões/estudantes/Estudantes (46).webp");
+        }
+
+        /* Estilos para o modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #8b9b82;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: #8b9b82;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover, .close:hover {
+            color: #f8f4ef;
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em;
+            }
+
+            nav a {
+                padding: auto;
+                max-width: 100px;
+                font-size: 14px;
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .container h2 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+
+            .image-galery {
+                grid-gap: 0.5rem;
+            }
+
+            .image-galery a {
+                height: 12rem; /* Altura base para todas as imagens */
+            }
+
+            /* Reduz as imagens com min-height originalmente definido */
+            /*
+            .Batizado1, .Batizado2, .Batizado3, .Batizado4, .Batizado5, 
+            .Batizado6, .Batizado11, .Batizado12, .Batizado13, .Batizado14, 
+            .Batizado15, .Batizado16, .Batizado17, .Batizado24, .Batizado25, 
+            .Batizado28, .Batizado29, .Batizado30, .Batizado31, .Batizado32, 
+            .Batizado33, .Batizado34, .Batizado35, .Batizado36, .Batizado37, 
+            .Batizado42, .Batizado43, .Batizado44, .Batizado45, .Batizado46
+            {
+                min-height: 25rem;
+            }
+                */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/gerais/Logo - Letras Verdes.png" alt="Hugo Silva Photography Logo">
+
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/equipa.html">Equipa</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contactos.html">Contactos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Estudantes</h2>
+        
+        <div class="image-galery">
+            
+            <a href="imagens/sessões/estudantes/Estudantes (1).webp" class="Estudantes1">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (2).webp" class="Estudantes2">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (3).webp" class="Estudantes3">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (4).webp" class="Estudantes4">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (5).webp" class="Estudantes5">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (6).webp" class="Estudantes6">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (7).webp" class="Estudantes7">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (8).webp" class="Estudantes8">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (9).webp" class="Estudantes9">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (10).webp" class="Estudantes10">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (11).webp" class="Estudantes11">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (12).webp" class="Estudantes12">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (13).webp" class="Estudantes13">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (14).webp" class="Estudantes14">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (15).webp" class="Estudantes15">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (16).webp" class="Estudantes16">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (17).webp" class="Estudantes17">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (18).webp" class="Estudantes18">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (19).webp" class="Estudantes19">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (20).webp" class="Estudantes20">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (21).webp" class="Estudantes21">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (22).webp" class="Estudantes22">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (23).webp" class="Estudantes23">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (24).webp" class="Estudantes24">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (25).webp" class="Estudantes25">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (26).webp" class="Estudantes26">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (27).webp" class="Estudantes27">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (28).webp" class="Estudantes28">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (29).webp" class="Estudantes29">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (30).webp" class="Estudantes30">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (31).webp" class="Estudantes31">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (32).webp" class="Estudantes32">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (33).webp" class="Estudantes33">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (34).webp" class="Estudantes34">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (35).webp" class="Estudantes35">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (36).webp" class="Estudantes36">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (37).webp" class="Estudantes37">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (38).webp" class="Estudantes38">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (39).webp" class="Estudantes39">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (40).webp" class="Estudantes40">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (41).webp" class="Estudantes41">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (42).webp" class="Estudantes42">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (43).webp" class="Estudantes43">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (44).webp" class="Estudantes44">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (45).webp" class="Estudantes45">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+            <a href="imagens/sessões/estudantes/Estudantes (46).webp" class="Estudantes46">
+                <ion-icon name="expand-outline"></ion-icon>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
+            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+    
+        <div class="copyright">
+            &copy;2025 por Hugo Silva Photography
+        </div>
+    </footer>
+
+    <script>
+        // Array com as URLs das imagens
+        const images = Array.from(document.querySelectorAll('.image-galery a')).map(a => a.href);
+
+        // Função para abrir o modal
+        function openModal(index) {
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('img01');
+            modal.style.display = 'flex';
+            modalImg.src = images[index];
+            currentIndex = index;
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Função para navegar entre as imagens
+        function navigate(direction) {
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            document.getElementById('img01').src = images[currentIndex];
+        }
+
+        // Event listeners
+        document.querySelectorAll('.image-galery a').forEach((a, index) => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(index);
+            });
+        });
+
+        document.querySelector('.close').addEventListener('click', closeModal);
+        document.querySelector('.prev').addEventListener('click', () => navigate(-1));
+        document.querySelector('.next').addEventListener('click', () => navigate(1));
+
+        // Fechar o modal ao clicar fora da imagem
+        window.addEventListener('click', (e) => {
+            if (e.target === document.getElementById('myModal')) {
+                closeModal();
+            }
+        });
+
+        let currentIndex = 0;
+    </script>
+</body>
+</html>
