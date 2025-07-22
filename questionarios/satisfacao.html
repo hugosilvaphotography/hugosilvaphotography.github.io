@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imagens/gerais/Logo%20Redondo%20-%20Fundo%20Branco.png">
+    <title>Questionário de Satisfação | Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hugo Silva Photography | Fotógrafo de Família no Porto">
+    <meta property="og:description" content="Transformo momentos em memórias eternas.">
+    <meta property="og:image" content="https://hugosilvaphotography.github.io/imagens/gerais/banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://hugosilvaphotography.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card (opcional, para compatibilidade) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hugo Silva Photography | Fotógrafo no Porto">
+    <meta name="twitter:description" content="Transformo momentos em memórias eternas.">
+    <meta name="twitter:image" content="https://hugosilvaphotography.github.io/imagens/gerais/banner.jpg">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: #2a2e30;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 220px;
+        margin: 0;
+        min-height: 100vh;
+        overflow-y: scroll;
+      }
+
+      header {
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+      }
+
+      header img {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+      }
+
+      header h1 {
+        font-size: 31px;
+        color: #f8f4ef;
+        text-shadow: 2px 2px 4px #000;
+        font-family: "Marck Script", cursive;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding: 0;
+      }
+
+      nav {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      nav a {
+        padding: 7px;
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        text-decoration: none;
+        border-radius: 15px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      section h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 36px;
+        color: #f8f4ef;
+        margin-bottom: 20px;
+        margin-top: 0;
+      }
+
+      section p {
+        font-family: 'Wittgenstein', sans-serif;
+        font-size: 15px;
+        color: #f8f4ef;
+        line-height: 1.6;
+        margin: 10px 0;
+        padding: 0 20px;
+      }
+
+      form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 600px;
+      }
+
+      form label {
+        font-family: 'Wittgenstein', sans-serif;
+        font-size: 15px;
+        color: #f8f4ef;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: justify;
+      }
+
+      form textarea {
+        width: 100%;
+        height: 100px;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+
+      form input[type="text"] {
+        width: 100%;
+        height: 30px;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 20px;
+        resize: vertical;
+      }
+
+      form input[type="radio"] {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      form .radio-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      form .radio-group label {
+        margin-bottom: 0; /* remove bottom margin for radio labels */
+      }
+
+      form input[type="submit"] {
+        background-color: #8b9b82;
+        color: #f8f4ef;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        align-self: center;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #f8f4ef;
+        color: #2a2e30;
+      }
+
+      .star-rating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+      }
+
+      .star-rating input[type="radio"] {
+        display: none;
+      }
+
+      .star-rating label {
+        font-size: 30px;
+        color: #bbb;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .star-rating input[type="radio"]:checked ~ label {
+        color: #8b9b82;
+      }
+
+      .star-rating label:hover,
+      .star-rating label:hover ~ label {
+        color: #8b9b82;
+      }
+
+      footer {
+        background-color: transparent;
+        color: #f8f4ef;
+        text-align: center;
+        padding: 40px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .social-icons {
+        margin-bottom: 10px;
+      }
+
+      .social-icons a img {
+        width: 25px;
+        height: 25px;
+        margin: 0 10px;
+      }
+
+      .copyright {
+        margin-top: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #8b9b82 #2a2e30;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #8b9b82;
+        border-radius: 20px;
+        border: 3px solid #2a2e30;
+      }
+
+      /* Media query para dispositivos móveis */
+      @media (max-width: 600px) {
+        body {
+          padding-top: 200px;
+          padding-left: 10px;
+          padding-right: 10px;
+          overflow-x: hidden;
+        }
+
+        nav {
+          gap: 0.5em; /* Reduz o espaço entre os links */
+        }
+
+        nav a {
+          padding: auto; /* Ajusta o padding dos links */
+          max-width: 100px; /* Reduz a largura máxima para os links */
+          font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+        }
+
+        header img {
+          width: 70px;
+          height: 70px;
+        }
+
+        header h1 {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+
+        section h1 {
+          font-size: 28px; /* Ajusta o tamanho da fonte do título para dispositivos móveis */
+        }
+
+        section p {
+          font-size: 10px; /* Ajusta o tamanho da fonte dos parágrafos para dispositivos móveis */
+        }
+      }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+      <img src="../imagens/gerais/Logo%20-%20Letras%20Verdes.png" alt="Hugo Silva Photography Logo">
+
+      <nav>
+          <a href="/">Página Inicial</a>
+          <a href="/equipa.html">Equipa</a>
+          <a href="/testemunhos.html">Testemunhos</a>
+          <a href="/portfolio.html">Portfólio</a>
+          <a href="/contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Questionário de Satisfação</h1>
+      <p>Olá 😊!</p>
+      
+      <p>Agradecemos por escolher os nossos serviços! Estamos empenhados em proporcionar a melhor 
+        <br>experiência possível para todos os nossos clientes. Para nos ajudar a melhorar cada vez mais,
+        <br> gostaríamos muito de receber o seu feedback.</p>
+      
+      <p>Por favor, responda às seguintes perguntas com base na sua experiência geral connosco.</p>
+      
+      <p>Agradecemos desde já por dedicar um tempo para compartilhar as suas opiniões. 
+        <br>Se desejar fornecer mais detalhes ou tiver outras perguntas, sinta-se à vontade para entrar em 
+        <br>contacto.</p>
+
+      <p><b>E-mail:</b> hugosilvaphotography@hotmail.com</p>
+      <p><b>Telemóvel:</b> 918434062</p>
+
+      <p>Obrigado pelo seu apoio e confiança no nosso trabalho! ❤️</p>
+    </section>
+
+    <form action="https://submit-form.com/erKQQ17FH" method="POST">
+      
+      <input
+        type="hidden"
+        name="_redirect"
+        value="https://hugosilvaphotography.github.io/obrigado"
+      />
+
+      <label for="nome"><b>Nome<span style="color: red;">*</span></b></label>
+      <input type="text" name="nome" id="nome" minlength="3" required><br>
+
+      <label for="sessão"><b>Qual o tipo de sessão que contratou connosco?<span style="color: red;">*</span></b></label>
+           
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Grávida" value="Grávida" required>
+        <label for="Grávida">Grávida</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Bebé" value="Bebé">
+        <label for="Bebé">Bebé</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Batizado" value="Batizado">
+        <label for="Batizado">Batizado</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Comunhão" value="Comunhão">
+        <label for="Comunhão">Comunhão</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Outros Eventos" value="Outros Eventos">
+        <label for="Outros Eventos">Outros Eventos</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Gerações" value="Gerações">
+        <label for="Gerações">Gerações</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Casamento" value="Casamento">
+        <label for="Casamento">Casamento</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="sessão" id="Natal" value="Natal">
+        <label for="Natal">Natal</label>
+      </div>
+      <br>
+
+      <label for="serviço"><b>Qual foi o serviço que contratou connosco?<span style="color: red;">*</span></b></label>
+           
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Fotografia" value="Fotografia" required>
+        <label for="Fotografia">Fotografia</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Vídeo" value="Vídeo">
+        <label for="Vídeo">Vídeo</label>
+      </div>
+      
+      <div class="radio-group">
+        <input type="radio" name="serviço" id="Fotografia&Vídeo" value="Fotografia&Vídeo">
+        <label for="Fotografia&Vídeo">Fotografia e Vídeo</label>
+      </div><br>
+
+      <label for="qualidade"><b>Como classificaria a qualidade do trabalho entregue?<span style="color: red;">*</span></b></label>
+      <div class="star-rating">
+        <input type="radio" id="5-estrelas-qualidade" name="qualidade" value="5" required>
+        <label for="5-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="4-estrelas-qualidade" name="qualidade" value="4">
+        <label for="4-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="3-estrelas-qualidade" name="qualidade" value="3">
+        <label for="3-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="2-estrelas-qualidade" name="qualidade" value="2">
+        <label for="2-estrelas-qualidade" class="fa fa-star"></label>
+        <input type="radio" id="1-estrelas-qualidade" name="qualidade" value="1">
+        <label for="1-estrelas-qualidade" class="fa fa-star"></label>
+      </div>
+      <br>
+
+      <label for="comunicacao"><b>Como avaliaria a comunicação com a nossa equipa durante todo o processo?<span style="color: red;">*</span></b></label>
+      <div class="star-rating">
+        <input type="radio" id="5-estrelas-comunicacao" name="comunicacao" value="5" required>
+        <label for="5-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="4-estrelas-comunicacao" name="comunicacao" value="4">
+        <label for="4-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="3-estrelas-comunicacao" name="comunicacao" value="3">
+        <label for="3-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="2-estrelas-comunicacao" name="comunicacao" value="2">
+        <label for="2-estrelas-comunicacao" class="fa fa-star"></label>
+        <input type="radio" id="1-estrelas-comunicacao" name="comunicacao" value="1">
+        <label for="1-estrelas-comunicacao" class="fa fa-star"></label>
+      </div>
+      <br>
+
+      <label for="pontoForte"><b>Qual foi o ponto forte dos nossos serviços que mais o(a) impressionou?<span style="color: red;">*</span></b></label>
+      <textarea name="pontoForte" id="pontoForte" required></textarea><br>
+
+      <label for="melhorar"><b>O que podemos fazer para melhorar a qualidade dos nossos serviços?<span style="color: red;">*</span></b></label>
+      <textarea name="melhorar" id="melhorar" required></textarea><br>
+
+      <label for="recomendaria"><b>Recomendaria os nossos serviços a outras pessoas?<span style="color: red;">*</span></b></label>
+      <div class="radio-group">
+        <input type="radio" name="recomendaria" id="Sim" value="Sim" required>
+        <label for="Sim">Sim</label>
+      </div>
+
+      <div class="radio-group">
+        <input type="radio" name="recomendaria" id="Não" value="Não">
+        <label for="Não">Não</label>
+      </div>
+
+      <div class="radio-group">
+        <input type="radio" name="recomendaria" id="Talvez" value="Talvez">
+        <label for="Talvez">Talvez</label>
+      </div>
+      <br>
+
+      <label for="classificacao"><b>Como classifica a sua experiência connosco no geral?<span style="color: red;">*</span></b></label>
+      <div class="star-rating">
+        <input type="radio" id="5-estrelas-classificacao" name="classificacao" value="5" required>
+        <label for="5-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="4-estrelas-classificacao" name="classificacao" value="4">
+        <label for="5-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="3-estrelas-classificacao" name="classificacao" value="3">
+        <label for="3-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="2-estrelas-classificacao" name="classificacao" value="2">
+        <label for="2-estrelas-classificacao" class="fa fa-star"></label>
+        <input type="radio" id="1-estrelas-classificacao" name="classificacao" value="1">
+        <label for="1-estrelas-classificacao" class="fa fa-star"></label>
+      </div>
+      <br>
+
+      <label for="opiniao"><b>A sua opinião é muito valiosa! Convidamo-lo a compartilhar um testemunho sobre a sua experiência connosco, que poderá ser publicado no nosso site para auxiliar futuros clientes.</b></label>
+      <textarea name="opiniao" id="opiniao"></textarea><br>
+
+      <div class="g-recaptcha" data-sitekey="6LeL_NcpAAAAAGvnMjwe2OxhehQcvtkW6oGxO-Wk"></div>
+      <br>
+
+      <input type="submit">
+    </form>
+    
+  <footer>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="../imagens/gerais/Icon%20Instagram%20Branco.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="../imagens/gerais/Icon%20Facebook%20Branco.svg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="../imagens/gerais/Icon%20TikTok%20Branco.svg" alt="TikTok"></a>
+    </div>
+    
+    <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+
+      <div class="copyright">
+          &copy;2025 Hugo Silva Photography - por Diogo Pereira
+      </div>
+</footer>
+</body>
+</html>

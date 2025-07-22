@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../imagens/gerais/Logo%20Redondo%20-%20Fundo%20Branco.png">
+    <title>Preçário de Casamento | Hugo Silva Photography</title>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
+    <!--Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hugo Silva Photography | Fotógrafo de Família no Porto">
+    <meta property="og:description" content="Transformo momentos em memórias eternas.">
+    <meta property="og:image" content="https://hugosilvaphotography.github.io/imagens/gerais/banner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://hugosilvaphotography.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card (opcional, para compatibilidade) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hugo Silva Photography | Fotógrafo no Porto">
+    <meta name="twitter:description" content="Transformo momentos em memórias eternas.">
+    <meta name="twitter:image" content="https://hugosilvaphotography.github.io/imagens/gerais/banner.jpg">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: #2a2e30;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            padding-top: 200px;
+            margin: 0;
+            min-height: 100vh;
+            overflow-y: scroll;
+        }
+
+        header {
+            background-color: transparent;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        header img {
+            width: 120px;
+            height: 120px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 {
+            font-size: 31px;
+            color: #f8f4ef;
+            text-shadow: 2px 2px 4px #000;
+            font-family: "Marck Script", cursive;
+            margin-bottom: 10px;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1em;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 7px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .pricing-container {
+            width: 80%;
+            margin: 0 auto;
+            color: #f8f4ef;
+        }
+
+        .pricing-title {
+            text-align: center;
+            font-family: "Dancing Script", cursive;
+            font-size: 40px;
+            color: #f8f4ef;
+            margin-bottom: 30px;
+        }
+
+        .pricing-subtitle {
+            font-family: "Dancing Script", cursive;
+            font-size: 28px;
+            color: #f8f4ef;
+            margin: 40px 0 20px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 15px;
+            margin-bottom: 40px;
+        }
+
+        .pricing-table tr {
+            background-color: rgba(139, 155, 130, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .pricing-table tr:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+        }
+
+        .pricing-table td {
+            padding: 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .package-name {
+            font-size: 24px;
+            font-family: "Marck Script", cursive;
+            color: #8b9b82;
+        }
+
+        .package-description {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .package-price {
+            font-size: 24px;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .portfolio-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #8b9b82;
+            color: #f8f4ef;
+            text-decoration: none;
+            border-radius: 25px;
+            font-family: 'Raleway', sans-serif;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .portfolio-button:hover {
+            background-color: #f8f4ef;
+            color: #2a2e30;
+            transform: translateY(-2px);
+        }
+
+        .terms-container {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(139, 155, 130, 0.1);
+            border-radius: 10px;
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        .intro-text {
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #f8f4ef;
+            margin: 20px 0 30px 0;
+        }
+
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .extra-item {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(139, 155, 130, 0.1);
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .extra-name, .extra-price {
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            color: #f8f4ef;
+            transition: color 0.3s ease; /* Adicionar transição para a cor */
+        }
+
+        .extra-item:hover {
+            background-color: #f8f4ef;
+        }
+
+        .extra-item:hover .extra-name,
+        .extra-item:hover .extra-price {
+            color: #2a2e30;  /* Mudar a cor do texto quando hover */
+        }
+
+        footer {
+            background-color: transparent;
+            color: #f8f4ef;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .social-icons {
+            margin-bottom: 10px;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Works on Firefox */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #8b9b82 #2a2e30;
+        }
+
+        /* Works on Chrome, Edge, and Safari */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #8b9b82;
+            border-radius: 20px;
+            border: 3px solid #2a2e30;
+        }
+
+        /* Media query para dispositivos móveis */
+        @media (max-width: 600px) {
+            body {
+                padding-top: 170px;
+                padding-left: 10px;
+                padding-right: 10px;
+                overflow-x: hidden;
+            }
+
+            nav {
+                gap: 0.5em; /* Reduz o espaço entre os links */
+            }
+
+            nav a {
+                padding: auto; /* Ajusta o padding dos links */
+                max-width: 100px; /* Reduz a largura máxima para os links */
+                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+            }
+
+            header img {
+                width: 70px;
+                height: 70px;
+            }
+
+            header h1 {
+                font-size: 22px;
+                margin-bottom: 5px;
+            }
+
+            .pricing-container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .pricing-title {
+                font-size: 28px;
+            }
+
+            .pricing-subtitle {
+                font-size: 24px;
+            }
+
+            .pricing-table td {
+                padding: 15px;
+            }
+
+            .package-name {
+                font-size: 20px;
+            }
+
+            .package-description {
+                font-size: 14px;
+            }
+
+            .package-price {
+                font-size: 20px;
+            }
+
+            .intro-text {
+                font-size: 14px;
+                margin: 15px 0 25px 0;
+            }
+
+            .extras-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="../imagens/gerais/Logo%20-%20Letras%20Verdes.png" alt="Hugo Silva Photography Logo">
+
+        <nav>
+            <a href="/">Página Inicial</a>
+            <a href="/equipa.html">Equipa</a>
+            <a href="/testemunhos.html">Testemunhos</a>
+            <a href="/portfolio.html">Portfólio</a>
+            <a href="/contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="pricing-container">
+        <h2 class="pricing-title">Preçário de Casamento</h2>
+
+        <h3 class="pricing-subtitle">Serviços Fotográficos</h3>
+        <table class="pricing-table">
+            <tbody>
+
+                <!--Preparação dos Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Preparação dos Noivos</div>
+                        <div class="package-description">
+                            <br> Momento emocionante onde o casal se prepara
+                            individualmente para o grande dia. 
+                            <br> Captura a antecipação, nervosismo e alegria durante a
+                            preparação. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">60€</td>
+                </tr>
+
+                <!--Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Cerimónia</div>
+                        <div class="package-description">
+                            <br> Ponto culminante do casamento, com troca de
+                            votos e promessas diante de amigos e familiares.
+                            <br> Captura a entrada da noiva, os votos, e o beijo final. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">150€</td>
+                </tr>
+
+                <!--Sessão de Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Sessão de Noivos</div>
+                        <div class="package-description">
+                            <br> Tempo reservado para celebrar a união e capturar
+                            fotos românticas juntos em locais especiais. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">50€</td>
+                </tr>
+
+                <!--Sessão com Convidados-->
+                <tr>
+                    <td>
+                        <div class="package-name">Sessão com Convidados</div>
+                        <div class="package-description">
+                            <br>  Captura a essência da celebração junto dos
+                            convidados, havendo fotos dos noivos com os convidados. 
+                            <br> Esta sessão abrange momentos de
+                            felicitações, alegria compartilhada e interações
+                            familiares, garantindo lembranças com todos os
+                            presentes.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">150€</td>
+                </tr>
+
+                <!--Pós-Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Pós-Cerimónia</div>
+                        <div class="package-description">
+                            <br> Registo dos momentos que se seguem à cerimónia,
+                            focando-se nas celebrações e reações posteriores.
+                            <br>Inclui sessões fotográficas especiais, além de
+                            capturar a decoração e o ambiente festivo.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">250€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Extras Das Fotos-->
+        <h3 class="pricing-subtitle">Extras</h3>
+        
+        <p class="intro-text">
+            Caso deseje acrescentar algum extra ao seu pack é possível!!<br>
+            Aqui nesta tabela encontra todos os extras possíveis, assim como os seus valores.
+        </p>
+        
+        <div class="extras-grid">
+            <div class="extra-item">
+                <span class="extra-name">Foto 10x15</span>
+                <span class="extra-price">0.40€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Book 23x28 de 26 páginas</span>
+                <span class="extra-price">50€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Foto 15x20</span>
+                <span class="extra-price">0.90€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Calendário Personalizado</span>
+                <span class="extra-price">7.5€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Pen</span>
+                <span class="extra-price">20€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Globo de Neve/Corações</span>
+                <span class="extra-price">12€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Poster 60x40</span>
+                <span class="extra-price">15€</span>
+            </div>
+            <div class="extra-item">
+                <span class="extra-name">Chocolate Personalizado</span>
+                <span class="extra-price">4€</span>
+            </div>
+        </div>
+
+        <!--Botão do Portfólio-->
+        <div class="centered">
+            <h3 class="pricing-subtitle">Confira aqui o nosso Portfólio</h3>
+            <a href="/portfolio-casamento.html" class="portfolio-button" target="_blank">Ver Portfólio</a>
+        </div>
+
+        <h3 class="pricing-subtitle">Serviços Videográficos</h3>
+        <table class="pricing-table">
+            <tbody>
+
+                <!--Preparação dos Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Preparação dos Noivos</div>
+                        <div class="package-description">
+                            <br> Captura dos momentos de preparação dos noivos
+                            (making of), desde os detalhes dos trajes e
+                            acessórios até à interação com familiares e amigos. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">70€</td>
+                </tr>
+
+                <!--Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Cerimónia</div>
+                        <div class="package-description">
+                            <br> Filmagem integral da cerimónia, incluindo a
+                            entrada dos noivos, troca de alianças, votos, e
+                            outros momentos chave. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">170€</td>
+                </tr>
+
+                <!--Sessão de Noivos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Sessão de Noivos</div>
+                        <div class="package-description">
+                            <br> Gravação de uma sessão especial dos noivos,
+                            focada em momentos íntimos e românticos, em
+                            cenários escolhidos pelos noivos. <br>
+                        </div>
+                    </td>
+                    <td class="package-price">60€</td>
+                </tr>
+
+                <!--Depoimentos-->
+                <tr>
+                    <td>
+                        <div class="package-name">Depoimentos</div>
+                        <div class="package-description">
+                            <br> Gravação de depoimentos espontâneos dos noivos,
+                            padrinhos, familiares ou convidados, capturando
+                            mensagens emocionantes.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">60€</td>
+                </tr>
+
+                <!--Pós-Cerimónia-->
+                <tr>
+                    <td>
+                        <div class="package-name">Pós-Cerimónia</div>
+                        <div class="package-description">
+                            <br> Filmagem dos momentos mais marcantes da
+                            receção, como a entrada dos noivos, o corte do
+                            bolo, a primeira dança, e interações com os
+                            convidados.<br>
+                        </div>
+                    </td>
+                    <td class="package-price">180€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--Estras do Vídeo-->
+        <h3 class="pricing-subtitle">Extras</h3>
+
+        <p class="intro-text">
+            Para complementar a cobertura videográfica do seu evento, oferecemos a opção de adicionar uma pen com o
+            vídeo final:
+        </p>
+
+        <div class="extras-grid">
+            <div class="extra-item">
+                <span class="extra-name">Pen com Vídeo</span>
+                <span class="extra-price">25€</span>
+            </div>
+        </div>
+
+        <p class="intro-text">
+            Entregamos o vídeo final em pen, proporcionando um meio prático e moderno para guardar e partilhar as memórias
+            do seu evento.
+        </p>
+
+        <!--Termos e Condições-->
+        <h3 class="pricing-subtitle">Termos e Condições</h3>
+        <div class="terms-container">
+                        
+            <p><b> Cobertura Fotográfica e Videográfica: </b><br>
+                A cobertura fotográfica e videográfica é avaliada e cobrada com base no <b> evento </b> como um todo, não sendo
+                calculada por hora. </p><br>
+            
+            <p><b> Número de Profissionais: </b><br>
+                O número de fotógrafos e videógrafos atribuídos à cobertura do evento será determinado pela nossa equipa,
+                levando em consideração a complexidade e as necessidades específicas do trabalho, <b> variando entre 1 e 2
+                profissionais para a primeira área (no caso de ser contratada individualmente) </b> e <b> 1 profissional para a
+                segunda. </b></p><br>
+            
+            <p><b> Oferta da Refeição aos Profissionais: </b><br>
+                No caso da opção pelo serviço de cobertura durante todo o evento ou pós-cerimónia, <b> o cliente
+                compromete-se a fornecer uma refeição completa </b> profissionais presentes no local do evento. Esta
+                refeição deverá incluir uma refeição principal e bebidas não alcoólicas adequadas ao horário do evento. </p><br>
+            
+            <p><b> Entrega do Material: </b><br>
+                O processo de edição e entrega das fotos e do vídeo demanda um prazo médio de <b> 1 a 2 meses. </b> Todo o
+                material será cuidadosamente editado e disponibilizado em formato digital. Caso haja interesse em cópias
+                físicas, como álbuns ou pen drives, os custos adicionais podem ser verificados na tabela dos “Extras”. </p><br>
+
+            <p><b> Pagamento: </b><br>
+                O pagamento é dividido em duas parcelas, sendo que <b> 50% do valor total é pago no momento da reserva </b>
+                e os restantes 50% no dia do evento. </p><br>
+
+            <p><b> Cancelamento: </b><br>
+                Qualquer solicitação de cancelamento deve ser comunicada com pelo menos <b> 10 dias de antecedência </b> ao
+                evento. O não cumprimento deste prazo pode implicar a não restituição do valor inicialmente pago como
+                reserva. </p><br>
+
+            <p><b> Deslocação: </b><br>
+                A deslocação até <b>10 km de Fânzeres</b> está incluída. Para locais fora desse raio, será aplicada uma
+                taxa por km, calculada a partir de Fânzeres e incluída no orçamento final.</p><br>
+
+            <p><b> Direitos Autorais: </b><br>
+                Salvo acordo expresso em contrário, os direitos autorais das imagens e do material videográfico permanecem
+                exclusivamente com os profissionais responsáveis pela captura, edição e produção do conteúdo. </p><br>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="../imagens/gerais/Icon%20Instagram%20Branco.svg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="../imagens/gerais/Icon%20Facebook%20Branco.svg" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="../imagens/gerais/Icon%20TikTok%20Branco.svg" alt="TikTok"></a>
+        </div>
+    
+        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
+
+        <div class="copyright">
+            &copy;2025 Hugo Silva Photography - por Diogo Pereira
+        </div>
+    </footer>
+</body>
+</html>
