@@ -13,9 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Hugo Silva Photography | Fotógrafo de Família no Porto">
@@ -25,8 +27,8 @@
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://hugosilvaphotography.github.io/">
     <meta property="og:type" content="website">
-    
-    <!-- Twitter Card (opcional, para compatibilidade) -->
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Hugo Silva Photography | Fotógrafo no Porto">
     <meta name="twitter:description" content="Transformo momentos em memórias eternas.">
@@ -107,35 +109,38 @@
 
         .container {
             display: flex;
-            justify-content: space-between;
-            padding: 40px;
-        }
-
-        .container section {
-            flex: 1;
-            margin-right: 10px;
-        }
-
-        .container section h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 36px;
-            color: #f8f4ef;
-            margin-bottom: 20px;
-            margin-top: 0;
-        }
-
-        .container section p {
-            font-family: 'Wittgenstein', sans-serif;
-            font-size: 15px;
-            color: #f8f4ef;
-            line-height: 1.6;
+            justify-content: center;
+            padding: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .container form {
-            flex: 1;
+            width: 95%;
+            max-width: 800px;
             background-color: #8b9b82;
             padding: 40px;
             border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .form-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 42px;
+            color: #f8f4ef;
+            margin-bottom: 10px;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            font-family: 'Wittgenstein', sans-serif;
+            font-size: 16px;
+            color: #f8f4ef;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
         }
 
         .container form label {
@@ -161,9 +166,56 @@
             box-sizing: border-box;
         }
 
+        /* Remove o outline preto quando clica nos elementos */
+        .container form input:focus,
+        .container form textarea:focus,
+        .container form button:focus,
+        .container form input[type="radio"]:focus {
+            outline: none;
+            border: 2px solid #f8f4ef;
+        }
+
+        .container form .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px; /* Reduzido de 15px para 10px */
+            align-items: flex-start;
+        }
+
+        .container form .radio-group label {
+            display: flex;
+            align-items: center;
+            font-family: 'Wittgenstein', sans-serif;
+            font-size: 14px;
+            color: #f8f4ef;
+            cursor: pointer;
+            white-space: nowrap;
+            width: auto;
+            margin-bottom: 0;
+            line-height: 1.2;
+            min-width: 0;
+        }
+
+        .container form .radio-group input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            margin: 0 4px 0 0;
+            padding: 0;
+            flex-shrink: 0;
+            vertical-align: middle;
+        }
+
+        .container form input[type="text"],
+        .container form input[type="email"],
+        .container form input[type="date"] {
+            width: 100%;
+        }
+
         .container form textarea {
             width: 100%;
             height: 100px;
+            margin-top: 10px;
         }
 
         .container form button {
@@ -215,13 +267,12 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
-        /* Works on Firefox */
+        /* Scrollbar */
         * {
             scrollbar-width: thin;
             scrollbar-color: #8b9b82 #2a2e30;
         }
 
-        /* Works on Chrome, Edge, and Safari */
         *::-webkit-scrollbar {
             width: 12px;
         }
@@ -236,21 +287,21 @@
             border: 3px solid #2a2e30;
         }
 
-        /* Media query para dispositivos móveis */
+        /* Mobile */
         @media (max-width: 600px) {
             body {
-                padding-top: 170px; 
+                padding-top: 170px;
                 overflow-x: hidden;
             }
 
             nav {
-                gap: 0.5em; /* Reduz o espaço entre os links */
+                gap: 0.5em;
             }
 
             nav a {
-                padding: auto; /* Ajusta o padding dos links */
-                max-width: 100px; /* Reduz a largura máxima para os links */
-                font-size: 14px; /* Ajusta o tamanho da fonte dos links */
+                padding: auto;
+                max-width: 100px;
+                font-size: 14px;
             }
 
             header img {
@@ -267,14 +318,17 @@
                 flex-direction: column;
                 margin-right: 0;
                 margin-left: 0;
-            }
-            
-            .container section {
-                margin-bottom: 10px;
+                padding: 20px;
             }
 
-            .container section {
-                margin: 0;
+            .container form {
+                width: 100%;
+                padding: 20px;
+                margin-top: 0;
+            }
+
+            .form-title {
+                font-size: 32px;
             }
 
             .container form input,
@@ -288,81 +342,155 @@
                 margin-right: 0;
             }
 
-            .container form {
-                background-color: #8b9b82;
-                padding: 10px;
-                margin-top: 20px;
+            .container form .radio-group {
+                gap: 5px;
+                margin-bottom: 3px;
             }
-
-
         }
-
     </style>
-    
 </head>
 <body>
-    <header>
-        <img src="imagens/gerais/Logo - Letras Verdes.png" alt="Hugo Silva Photography Logo">
+<header>
+    <img src="imagens/gerais/Logo - Letras Verdes.png" alt="Hugo Silva Photography Logo">
 
-        <nav>
-            <a href="/">Página Inicial</a>
-            <a href="/equipa.html">Equipa</a>
-            <a href="/testemunhos.html">Testemunhos</a>
-            <a href="/portfolio.html">Portfólio</a>
-            <a href="/contactos.html">Contactos</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="/">Página Inicial</a>
+        <a href="/equipa.html">Equipa</a>
+        <a href="/testemunhos.html">Testemunhos</a>
+        <a href="/portfolio.html">Portfólio</a>
+        <a href="/contactos.html">Contactos</a>
+    </nav>
+</header>
 
-    <div class="container">
-        <section>
-            <h1>Entre em contacto</h1>
-            <p>Porto, Portugal</p>
-            
-            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
-            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
-        </section>
+<div class="container">
+    <form action="https://submit-form.com/XGLJND8S7">
+        <h1 class="form-title">Entre em contacto</h1>
+        <p class="form-subtitle">Porto, Portugal</p>
 
-        <form action="https://submit-form.com/XGLJND8S7">
-
-            <input
+        <input
                 type="hidden"
                 name="_redirect"
                 value="https://hugosilvaphotography.github.io/obrigado"
-            />
+        />
 
-            <label for="nome"><b>Nome</b></label>
-            <input type="text" id="nome" name="nome" /><br><br>
+        <label for="nome"><b>Nome <span style="color: red;">*</span></b></label>
+        <input type="text" id="nome" name="nome" required/><br><br>
 
-            <label for="email"><b>Email <span style="color: red;">*</span></b></label>
-            <input type="email" id="email" name="email" required /><br><br>
+        <label for="email"><b>Email <span style="color: red;">*</span></b></label>
+        <input type="email" id="email" name="email" required/><br><br>
 
-            <label for="mensagem"><b>Mensagem <span style="color: red;">*</span></b></label>
-            <textarea
-            id="mensagem"
-            name="mensagem"
-            required
-            ></textarea>
+        <label for="tipo"><b>Tipo de Sessão/Evento <span style="color: red;">*</span></b></label>
 
-            <div class="g-recaptcha" data-sitekey="6LeL_NcpAAAAAGvnMjwe2OxhehQcvtkW6oGxO-Wk"></div>
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Grávida" value="Grávida" required>
+            <label for="Grávida">Grávida</label>
+        </div>
 
-            <button type="submit"><b>Enviar</b></button>
-        </form>
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Bebé" value="Bebé">
+            <label for="Bebé">Bebé</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Batizado" value="Batizado">
+            <label for="Batizado">Batizado</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Comunhão" value="Comunhão">
+            <label for="Comunhão">Comunhão</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Gerações" value="Gerações">
+            <label for="Gerações">Gerações</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Casamento" value="Casamento">
+            <label for="Casamento">Casamento</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Natal" value="Natal">
+            <label for="Natal">Natal</label>
+        </div>
+
+        <div class="radio-group">
+            <input type="radio" name="tipo" id="Outro" value="outro">
+            <label for="Outro">Outro</label>
+        </div>
+        <br>
+
+        <label for="local"><b>Local (cidade, espaço ou morada aproximada) <span style="color: red;">*</span></b><br>
+            <u>Se possível deixe o link para o Google Maps.<br>
+                Se não for um evento, escreva "não se aplica".</u></label>
+        <input type="text" id="local" name="local" required/><br><br>
+
+        <label for="data"><b>Data <span style="color: red;">*</span></b><br>
+            <u>Se não for um evento, coloque uma data aproximada.</u></label>
+        <input type="date" id="data" name="data" required/><br><br>
+
+
+        <label for="como"><b>Como nos conheceu? <span style="color: red;">*</span></b></label>
+        <div class="radio-group">
+            <input type="radio" name="como" id="Instagram" value="Instagram" required>
+            <label for="Instagram">Instagram</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="como" id="Facebook" value="Facebook">
+            <label for="Facebook">Facebook</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="como" id="TikTok" value="TikTok">
+            <label for="TikTok">TikTok</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="como" id="Casamentos.pt" value="Casamentos.pt">
+            <label for="Casamentos.pt">Casamentos.pt</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="como" id="Recomendação" value="Recomendação">
+            <label for="Recomendação">Recomendação</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="como" id="Outro" value="outro">
+            <label for="Outro">Outro</label>
+        </div>
+        <br>
+
+        <label for="mensagem"><b>Mensagem <span style="color: red;">*</span></b></label>
+        <textarea
+                id="mensagem"
+                name="mensagem"
+                required
+        ></textarea>
+
+        <div class="g-recaptcha" data-sitekey="6LeL_NcpAAAAAGvnMjwe2OxhehQcvtkW6oGxO-Wk"></div>
+
+        <button type="submit"><b>Enviar</b></button>
+    </form>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img
+                src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img
+                src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
+        <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img
+                src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
     </div>
 
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/hugosilvaphotography" target="_blank"><img src="imagens/gerais/Icon Instagram Branco.svg" alt="Instagram"></a>
-            <a href="https://www.facebook.com/hugosilvaphotography/" target="_blank"><img src="imagens/gerais/Icon Facebook Branco.svg" alt="Facebook"></a>
-            <a href="https://www.tiktok.com/@hugosilvaphotography?_t=8fK02AtCQ5p&_r=1" target="_blank"><img src="imagens/gerais/Icon TikTok Branco.svg" alt="TikTok"></a>
-            <a href="mailto:hugosilvaphotography@hotmail.com"><img src="imagens/gerais/Icon Email Branco.svg" alt="Email"></a>
-        </div>
-    
-        <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt' src='https://www.casamentos.pt/images/sellos/partner--pp161403.png' style='border-width:0px;' /></a>
-    
-        <div class="copyright">
-            &copy;2025 por Hugo Silva Photography
-        </div>
-    </footer>
+    <a rel='nofollow' href='https://www.casamentos.pt' title='Casamentos.pt'><img alt='Casamentos.pt'
+                                                                                  src='https://www.casamentos.pt/images/sellos/partner--pp161403.png'
+                                                                                  style='border-width:0px;'/></a>
+
+    <div class="copyright">
+        &copy;2025 por Hugo Silva Photography
+    </div>
+</footer>
+
 </body>
 </html>
 
