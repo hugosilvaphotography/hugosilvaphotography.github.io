@@ -252,6 +252,21 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
+        /* Estilo do menu personalizado */
+        #customMenu {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            user-select: none;
+        }
+
         /* Works on Firefox */
         * {
             scrollbar-width: thin;
@@ -632,5 +647,26 @@
             &copy;2025 Hugo Silva Photography - por Diogo Pereira
         </div>
     </footer>
+
+    <div id="customMenu">
+        © Hugo Silva Photography
+    </div>
+
+    <script>
+        const menu = document.getElementById("customMenu");
+
+        // Mostra o menu personalizado no clique direito
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+            menu.style.top = e.pageY + "px";
+            menu.style.left = e.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        // Esconde o menu ao clicar em qualquer lado
+        document.addEventListener("click", function() {
+            menu.style.display = "none";
+        });
+    </script>
 </body>
 </html>

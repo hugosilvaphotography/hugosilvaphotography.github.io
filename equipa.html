@@ -172,6 +172,21 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       }
 
+      /* Estilo do menu personalizado */
+      #customMenu {
+          position: absolute;
+          background: rgba(0,0,0,0.9);
+          color: #fff;
+          padding: 10px 15px;
+          border-radius: 8px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          display: none;
+          z-index: 9999;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+          user-select: none;
+      }
+
       /* Works on Firefox */
       * {
         scrollbar-width: thin;
@@ -304,7 +319,7 @@
         <h2>Elsa Monteiro</h2>
         <img src="imagens/gerais/Foto de Perfil - Elsa.webp" alt="Elsa Monteiro">
       
-        <p>Olá a todos! Sou a Elsa, uma apaixonada pela criação e artesanato, com 34 anos. A minha jornada artística ganhou vida na página "Pimpolhas", onde me dedico a criar peças que refletem beleza e singularidade.</p>
+        <p>Olá a todos! Sou a Elsa, uma apaixonada pela criação e artesanato, com 35 anos. A minha jornada artística ganhou vida na página "Pimpolhas", onde me dedico a criar peças que refletem beleza e singularidade.</p>
 
         <p>Na equipa do Hugo, sou responsável pela decoração dos cenários e pela preparação das grávidas, bebés e outros momentos especiais. A minha missão é transformar cada sessão fotográfica numa experiência visual única, cuidando de todos os detalhes para que o resultado final seja uma verdadeira obra de arte.</p>
           
@@ -325,5 +340,27 @@
             &copy;2025 Hugo Silva Photography - por Diogo Pereira
         </div>
     </footer>
+
+    <div id="customMenu">
+        © Hugo Silva Photography
+    </div>
+
+    <script>
+        const menu = document.getElementById("customMenu");
+
+        // Mostra o menu personalizado no clique direito
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+            menu.style.top = e.pageY + "px";
+            menu.style.left = e.pageX + "px";
+            menu.style.display = "block";
+        });
+
+        // Esconde o menu ao clicar em qualquer lado
+        document.addEventListener("click", function() {
+            menu.style.display = "none";
+        });
+    </script>
+
 </body>
 </html>
