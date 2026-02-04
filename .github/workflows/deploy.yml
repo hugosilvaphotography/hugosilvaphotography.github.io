@@ -1,9 +1,9 @@
-name: Deploy de Teste
+name: Deploy Angular Project to GitHub Pages
 
 on:
   push:
     branches:
-      - test-deploy
+      - main
 
 permissions:
   contents: write
@@ -30,4 +30,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: angular-projeto/dist/angular-projeto/browser
-          branch: gh-pages-test
+          branch: gh-pages
