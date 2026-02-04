@@ -1,0 +1,28 @@
+﻿.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-shell.with-fixed-bars {
+  padding-top: var(--header-height);
+  padding-bottom: var(--footer-height);
+}
+
+.main {
+  display: flex;
+  flex: 1 1 auto;
+  /* allow children like sticky nav to behave correctly */
+  overflow: visible;
+  /* ensure children start from the left and stretch vertically */
+  justify-content: flex-start;
+  align-items: stretch;
+  /* stack header, nav and content vertically so nav can span full width and center its items */
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 0 1rem; /* remove top padding; header in normal flow will push content down */
+}

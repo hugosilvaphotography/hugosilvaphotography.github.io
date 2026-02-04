@@ -1,0 +1,58 @@
+<section class="precario-container">
+  <div class="precario-inner" role="main">
+    <h2 class="pricing-title">{{ title }}</h2>
+
+    <ng-container *ngIf="subtitle">
+      <h3 class="pricing-subtitle">{{ subtitle }}</h3>
+    </ng-container>
+
+    <!-- area where specific pricing content from child pages will be projected -->
+    <div class="projected-content">
+      <ng-content></ng-content>
+    </div>
+
+    <!-- Extras: common to all precários -->
+    <h3 class="pricing-subtitle">Extras</h3>
+    <p class="intro-text">
+      Caso deseje acrescentar algum extra ao seu pack é possível!!<br>
+      Aqui nesta tabela encontra todos os extras possíveis, assim como os seus valores.
+    </p>
+
+    <div class="extras-grid">
+      <div class="extra-item"><span class="extra-name">Foto 10x15</span><span class="extra-price">0.40€</span></div>
+      <div class="extra-item"><span class="extra-name">Book 23x28 de 26 páginas</span><span
+        class="extra-price">50€</span></div>
+      <div class="extra-item"><span class="extra-name">Foto 15x20</span><span class="extra-price">0.90€</span></div>
+      <div class="extra-item"><span class="extra-name">Calendário Personalizado</span><span
+        class="extra-price">7.5€</span></div>
+      <div class="extra-item"><span class="extra-name">Pen</span><span class="extra-price">20€</span></div>
+      <div class="extra-item"><span class="extra-name">Globo de Neve/Corações</span><span class="extra-price">12€</span>
+      </div>
+      <div class="extra-item"><span class="extra-name">Poster 60x40</span><span class="extra-price">15€</span></div>
+      <div class="extra-item"><span class="extra-name">Chocolate Personalizado</span><span class="extra-price">4€</span>
+      </div>
+    </div>
+
+    <!-- default portfolio button area; if the projected content includes its own button it can override or hide this -->
+    <div class="centered" *ngIf="portfolioLinks && portfolioLinks.length">
+      <h3 class="subtitle">Confira aqui o nosso Portfólio</h3>
+      <div class="buttons-row">
+        <ng-container *ngFor="let p of portfolioLinks">
+          <a [href]="p.href" class="portfolio-button" target="_blank">{{ p.label || 'Ver Portfólio' }}</a>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="centered" *ngIf="!portfolioLinks || !portfolioLinks.length">
+      <ng-container *ngIf="portfolioLink">
+        <h3 class="subtitle">Confira aqui o nosso Portfólio</h3>
+        <a [href]="portfolioLink" class="portfolio-button" target="_blank">Ver Portfólio</a>
+      </ng-container>
+    </div>
+
+    <!-- terms markdown rendered here -->
+    <h3 class="pricing-subtitle">Termos e Condições</h3>
+    <div class="terms-rendered" *ngIf="termsHtml" [innerHTML]="termsHtml"></div>
+
+  </div>
+</section>

@@ -1,0 +1,28 @@
+/* Footer styles taken from project root index.html — only rules related to the footer were kept. */
+.app-footer {
+  background-color: transparent;
+  color: #f8f4ef;
+  text-align: center;
+  padding: 20px 0;
+  height: var(--footer-height);
+  width: 100%;
+  position: relative; /* changed from fixed to relative */
+  bottom: auto;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a img {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

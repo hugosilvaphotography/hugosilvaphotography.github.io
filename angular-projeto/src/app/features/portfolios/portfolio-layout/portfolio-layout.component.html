@@ -1,0 +1,23 @@
+<main class="portfolio-page">
+  <h1 class="portfolio-title">{{ title }}</h1>
+
+  <div class="masonry-gallery" *ngIf="images.length">
+    <div class="gallery-item" *ngFor="let img of images; let i = index" (click)="openModal(i)">
+      <img [src]="img" [alt]="title + ' ' + (i + 1)" loading="lazy">
+    </div>
+  </div>
+
+  <div class="lightbox" [class.active]="modalOpen" (click)="closeModal()">
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+
+    <button class="nav-btn prev" (click)="$event.stopPropagation(); navigate(-1)">&#10094;</button>
+
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <img [src]="images[currentIndex]" alt="Visualização">
+    </div>
+
+    <button class="nav-btn next" (click)="$event.stopPropagation(); navigate(1)">&#10095;</button>
+  </div>
+
+  <div *ngIf="loading && !images.length" class="status-msg">A carregar momentos...</div>
+</main>
