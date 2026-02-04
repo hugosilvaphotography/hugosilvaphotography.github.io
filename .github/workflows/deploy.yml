@@ -21,7 +21,10 @@ jobs:
           node-version: 20
 
       - name: Install & Build
-        run: npx ng build --configuration production --base-href "/"
+        working-directory: ./angular-projeto
+        run: |
+          npm install
+          npm run build -- --configuration production --base-href "/"
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
