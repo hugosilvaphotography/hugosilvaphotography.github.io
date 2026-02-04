@@ -19,9 +19,9 @@ jobs:
 
       - name: Install & Build
         run: |
-          npm install
-          npx ng build --configuration production --base-href "/hugosilvaphotography.github.io/angular-projeto/"
-
+            cd angular-projeto 
+            npm install
+            npx ng build --configuration production --base-href "/hugosilvaphotography.github.io/"
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
