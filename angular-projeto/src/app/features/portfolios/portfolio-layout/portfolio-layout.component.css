@@ -1,0 +1,82 @@
+.portfolio-page {
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.portfolio-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  color: #f8f4ef;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Grelha Masonry que respeita a orientação (horizontal/vertical) */
+.masonry-gallery {
+  column-count: 3; /* 3 colunas em desktop */
+  column-gap: 20px;
+}
+
+.gallery-item {
+  break-inside: avoid; /* Impede que a foto se divida entre colunas */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #2a2e30;
+  transition: transform 0.3s ease;
+}
+
+/* Removemos ícones, desfoques e escalas exageradas */
+.gallery-item:hover {
+  transform: translateY(-5px); /* Pequeno movimento apenas para indicar interação */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto; /* Mantém a proporção original */
+  display: block;
+}
+
+/* Lightbox / Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 30000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox-content img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border: 1px solid #8b9b82;
+}
+
+.nav-btn, .close-btn {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #8b9b82;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-btn:hover, .close-btn:hover { color: #f8f4ef; }
+.close-btn { top: 20px; right: 30px; }
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Responsividade */
+@media (max-width: 1024px) { .masonry-gallery { column-count: 2; } }
+@media (max-width: 600px) {
+  .masonry-gallery { column-count: 1; }
+  .portfolio-title { font-size: 2.5rem; }
+}

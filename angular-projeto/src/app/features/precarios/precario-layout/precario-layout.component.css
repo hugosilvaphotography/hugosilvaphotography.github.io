@@ -1,0 +1,153 @@
+:host {
+  display: block;
+}
+
+.precario-container {
+  width: 80%;
+  margin: 0 auto;
+  color: #f8f4ef;
+  padding-top: 40px;
+}
+
+.pricing-title {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  color: #f8f4ef;
+  margin-bottom: 30px;
+}
+
+.pricing-subtitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
+  color: #f8f4ef;
+  margin: 40px 0 20px;
+  text-align: left;
+}
+
+/* TABLE STYLES (PROJECTED CONTENT) */
+:host ::ng-deep .pricing-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  margin-bottom: 40px;
+}
+
+:host ::ng-deep .pricing-table tr {
+  background-color: rgba(139, 155, 130, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+:host ::ng-deep .pricing-table tr:hover {
+  background-color: #f8f4ef;
+  color: #2a2e30;
+}
+
+:host ::ng-deep .pricing-table td {
+  padding: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+:host ::ng-deep .package-name {
+  font-size: 24px;
+  font-family: "Marck Script", cursive;
+  color: #8b9b82;
+}
+
+:host ::ng-deep .package-price {
+  font-size: 24px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* EXTRAS SECTION */
+
+.extras-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.extra-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(139, 155, 130, 0.1);
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.extra-name, .extra-price {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #f8f4ef;
+  transition: color 0.3s ease; /* Adicionar transição para a cor */
+}
+
+.extra-item:hover {
+  background-color: #f8f4ef;
+}
+
+.extra-item:hover .extra-name,
+.extra-item:hover .extra-price {
+  color: #2a2e30;  /* Mudar a cor do texto quando hover */
+}
+
+/* PORTFOLIO BUTTON */
+.centered {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.centered .subtitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
+  color: #f8f4ef;
+  margin-bottom: 40px;
+}
+
+.centered .buttons-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #8b9b82;
+  color: #f8f4ef;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'Raleway', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.portfolio-button:hover {
+  background-color: #f8f4ef;
+  color: #2a2e30;
+  transform: translateY(-2px);
+}
+
+/* TERMS SECTION (Markdown Output) */
+.terms-rendered {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(139, 155, 130, 0.1);
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.6;
+}
+
+/* Style the p tags inside the rendered markdown to match original */
+:host ::ng-deep .terms-rendered p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .extras-grid { grid-template-columns: 1fr; }
+  .precario-container { width: 95%; }
+}

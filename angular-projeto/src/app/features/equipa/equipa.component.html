@@ -1,0 +1,34 @@
+<section class="equipa">
+
+  <section class="equipa-intro">
+    <h1>A Nossa Equipa</h1>
+
+    <p>Somos o Hugo, a Elsa e o Diogo, três apaixonados por contar histórias de maneiras únicas.</p>
+
+    <p>Cada um de nós traz um toque especial a este projeto: o Hugo, com a sua experiência e paixão pela fotografia; a
+      Elsa, com a sua habilidade em transformar cenários e momentos em obras de arte; e o Diogo, que combina tecnologia
+      e criatividade para dar vida ao nosso trabalho no mundo digital.</p>
+
+    <p>Juntos, dedicamo-nos a capturar e partilhar momentos autênticos e inesquecíveis, sempre com um toque pessoal e
+      uma visão artística única.</p>
+
+  </section>
+
+  <ng-container *ngFor="let member of members; let i = index">
+    <section [ngClass]="i % 2 === 0 ? 'membro-direita' : 'membro-esquerda'">
+      <h2>{{ member.name }}</h2>
+      <img [src]="member.img" [alt]="member.name">
+
+      <p>
+        <!-- Intro line with calculated age -->
+        <span *ngIf="member.birthDate">Olá, sou {{ member.name }}, tenho {{ getAge(member.birthDate) }} anos e {{ member.introEnding }}</span>
+        <span *ngIf="!member.birthDate">Olá, sou {{ member.name }} e {{ member.introEnding }}</span>
+      </p>
+
+      <ng-container *ngFor="let p of member.paragraphs">
+        <p>{{ p }}</p>
+      </ng-container>
+    </section>
+  </ng-container>
+
+</section>

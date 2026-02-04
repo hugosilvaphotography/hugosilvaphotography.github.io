@@ -1,0 +1,21 @@
+<section class="portfolio-grid">
+  <div class="header-content">
+    <h1>O Nosso Portfólio</h1>
+  </div>
+
+  <div class="grid-container">
+    <div class="portfolio-card" *ngFor="let cat of categories">
+      <div class="image-container {{cat.imgPos}}">
+        <img [src]="cat.img" [alt]="cat.title">
+      </div>
+
+      <div class="overlay">
+        <div class="overlay-content">
+          <h2>{{ cat.title }}</h2>
+          <p>{{ cat.desc }}</p>
+          <a [routerLink]="[cat.link]" class="view-btn">Explorar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

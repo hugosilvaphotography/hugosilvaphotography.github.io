@@ -1,0 +1,20 @@
+<section class="testimonials-page">
+  <div class="header-text">
+    <h2>O que dizem de nós?</h2>
+  </div>
+
+  <div class="scroll-wrapper" #scrollContainer>
+    <div class="cards-container">
+      <div class="testimonial-card" *ngFor="let t of testimonials">
+        <div class="card-image">
+          <img [src]="t.img" [alt]="t.name">
+        </div>
+        <div class="card-content">
+          <h3>{{ t.name }}</h3>
+          <br>
+          <p class="text">{{ t.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

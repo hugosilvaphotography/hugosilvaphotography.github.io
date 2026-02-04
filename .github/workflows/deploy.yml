@@ -1,0 +1,29 @@
+name: Deploy de Teste
+
+on:
+  push:
+    branches:
+      - test-deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install & Build
+        run: |
+          npm install
+          npx ng build --configuration production --base-href "/hugosilvaphotography.github.io/"
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist/angular-projeto/browser
+          branch: gh-pages-test
