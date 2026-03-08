@@ -21,7 +21,7 @@ export class PortfolioComponent {
     },
     {
       title: 'Bebé',
-      img: '/imagens/sessões/bebés/Bebé (15).webp',
+      img: '/imagens/sessões/bebés/Bebé (10).webp',
       desc: 'Primeiros sorrisos e momentos únicos.',
       link: '/portfolio-bebe',
       imgPos: 'img-pos-center'
